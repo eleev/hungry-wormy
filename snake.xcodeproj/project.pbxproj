@@ -22,6 +22,20 @@
 		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD68932180A6ED009866CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686C2180A6ED009866CB /* Assets.xcassets */; };
 		A9DD68942180A6ED009866CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686C2180A6ED009866CB /* Assets.xcassets */; };
+		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
+		A9DD689F2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
+		A9DD68A22180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
+		A9DD68A32180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
+		A9DD68A52180A80F009866CB /* CellMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A42180A80F009866CB /* CellMovement.swift */; };
+		A9DD68A62180A80F009866CB /* CellMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A42180A80F009866CB /* CellMovement.swift */; };
+		A9DD68A82180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
+		A9DD68A92180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
+		A9DD68AB2180A89E009866CB /* MovementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AA2180A89E009866CB /* MovementProtocol.swift */; };
+		A9DD68AC2180A89E009866CB /* MovementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AA2180A89E009866CB /* MovementProtocol.swift */; };
+		A9DD68AE2180AA15009866CB /* SnakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AD2180AA15009866CB /* SnakeModel.swift */; };
+		A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AD2180AA15009866CB /* SnakeModel.swift */; };
+		A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
+		A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +54,13 @@
 		A9DD68872180A6ED009866CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A9DD688A2180A6ED009866CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9DD688C2180A6ED009866CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DD689D2180A71D009866CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9DD68A12180A74F009866CB /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		A9DD68A42180A80F009866CB /* CellMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMovement.swift; sourceTree = "<group>"; };
+		A9DD68A72180A868009866CB /* WorldSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSize.swift; sourceTree = "<group>"; };
+		A9DD68AA2180A89E009866CB /* MovementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProtocol.swift; sourceTree = "<group>"; };
+		A9DD68AD2180AA15009866CB /* SnakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeModel.swift; sourceTree = "<group>"; };
+		A9DD68B02180AEF8009866CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +84,7 @@
 		A9DD68632180A6EB009866CB = {
 			isa = PBXGroup;
 			children = (
+				A9DD689D2180A71D009866CB /* .gitignore */,
 				A9DD68682180A6EB009866CB /* snake Shared */,
 				A9DD68732180A6ED009866CB /* snake iOS */,
 				A9DD68842180A6ED009866CB /* snake macOS */,
@@ -73,6 +95,7 @@
 		A9DD68682180A6EB009866CB /* snake Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A9DD68A02180A72C009866CB /* Core */,
 				A9DD68692180A6EB009866CB /* Actions.sks */,
 				A9DD686A2180A6EB009866CB /* GameScene.sks */,
 				A9DD686B2180A6EB009866CB /* GameScene.swift */,
@@ -111,6 +134,19 @@
 				A9DD688C2180A6ED009866CB /* Info.plist */,
 			);
 			path = "snake macOS";
+			sourceTree = "<group>";
+		};
+		A9DD68A02180A72C009866CB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD68A12180A74F009866CB /* Direction.swift */,
+				A9DD68A42180A80F009866CB /* CellMovement.swift */,
+				A9DD68A72180A868009866CB /* WorldSize.swift */,
+				A9DD68AA2180A89E009866CB /* MovementProtocol.swift */,
+				A9DD68AD2180AA15009866CB /* SnakeModel.swift */,
+				A9DD68B02180AEF8009866CB /* Extensions.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +232,7 @@
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
+				A9DD689E2180A71D009866CB /* .gitignore in Resources */,
 				A9DD68932180A6ED009866CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD68902180A6ED009866CB /* GameScene.sks in Resources */,
 				A9DD68942180A6ED009866CB /* Assets.xcassets in Resources */,
@@ -219,8 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
+				A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A9DD68AB2180A89E009866CB /* MovementProtocol.swift in Sources */,
+				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
+				A9DD68A52180A80F009866CB /* CellMovement.swift in Sources */,
+				A9DD68AE2180AA15009866CB /* SnakeModel.swift in Sources */,
+				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
+				A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68882180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68862180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A9DD68AC2180A89E009866CB /* MovementProtocol.swift in Sources */,
+				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
+				A9DD68A62180A80F009866CB /* CellMovement.swift in Sources */,
+				A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */,
+				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
