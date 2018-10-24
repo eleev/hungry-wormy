@@ -16,17 +16,3 @@ protocol MovementProtocol {
     
     func move(point: CGPoint, withRespectTo worldSize: WorldSize) -> CGPoint
 }
-
-extension Int {
-    
-    var toCGFloat: CGFloat {
-        return CGFloat(self)
-    }
-}
-
-extension CGFloat {
-    
-    var toInt: Int {
-        return Int(self)
-    }
-}
