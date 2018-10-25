@@ -16,25 +16,28 @@ class SnakeModel {
     private let worldSize: WorldSize
     
     private(set) var pieces = [CGPoint]()
-    private(set) var direction: Direction = .left
-    private(set) var length = 0
+    private(set) var direction: Direction
+    private(set) var length = 1
     private(set) var directionLocked = false
     
     // MARK: - Initializers
     
-    init(worldSize: WorldSize, length: Int) {
-        movement = CellMovement(startingDirection: direction)
-        
+    init(worldSize: WorldSize, initial direction: Direction) {
         self.worldSize = worldSize
-        self.length = length
+        self.direction = direction
         
-        let x:Int = self.worldSize / 2
-        let y:Int = self.worldSize / 2
+        movement = CellMovement(startingDirection: self.direction)
         
-        for i in 0...self.length {
-            let p = CGPoint(x:x + i, y: y)
-            pieces += [p]
-        }
+        let x = self.worldSize / 2
+        let y = self.worldSize / 2
+        
+        // The initial piece of the Snake
+        pieces += [CGPoint(x: x, y: y)]
+        
+//        for i in 0...self.length {
+//            let p = CGPoint(x: x, y: y)
+//            pieces += [p]
+//        }
     }
     
     // MARK: - Methods
