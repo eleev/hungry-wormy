@@ -57,7 +57,7 @@ class SnakeModel {
         }
     }
     
-    func increaseLength(_ newLenght:Int) {
+    func increaseLength(by newLenght:Int) {
         let lastPoint = pieces[pieces.count-1]
         let theOneBeforeLastPoint = pieces[pieces.count-2]
         var x = lastPoint.x - theOneBeforeLastPoint.x
