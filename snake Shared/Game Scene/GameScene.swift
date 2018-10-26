@@ -10,6 +10,11 @@ import SpriteKit
 
 class GameScene: SKScene {
 
+    // MARK: - Properties
+    
+    private var snake: SnakeNode?
+    private var parser = TileLevel()
+    
     
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
@@ -19,27 +24,42 @@ class GameScene: SKScene {
         }
         
         // Set the scale mode to scale to fit the window
-        scene.scaleMode = .aspectFill
+        scene.scaleMode = .aspectFit
         
         return scene
     }
     
+    // MARK: - Methods
+    
     func setUpScene() {
-        // Get label node from scene and store it for use later
+        guard let wallsTileNode = scene?.childNode(withName: "Walls") as? SKTileMapNode else {
+            fatalError("Could not load Walls SKTileMapNode, the app cannot be futher executed")
+        }
+        
+        let walls = parser.parseWalls(for: wallsTileNode)
+        walls.forEach { self.addChild($0) }
+        
+        
+        
+        snake = SnakeNode(position: .zero, worldSize: 24, initial: .up)
+        snake?.zPosition = 50
+        addChild(snake!)
     }
     
-    #if os(watchOS)
-    override func sceneDidLoad() {
-        self.setUpScene()
-    }
-    #else
     override func didMove(to view: SKView) {
-        self.setUpScene()
+        setUpScene()
     }
-    #endif
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+    }
+}
+
+// Physics Simulation resolution
+extension GameScene: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        
     }
 }
 
