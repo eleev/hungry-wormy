@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
+		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
+		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
+		A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
+		A968F5662181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
+		A968F5672181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
 		A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68742180A6ED009866CB /* AppDelegate.swift */; };
 		A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68762180A6ED009866CB /* GameViewController.swift */; };
 		A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68782180A6ED009866CB /* Main.storyboard */; };
@@ -36,9 +42,30 @@
 		A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AD2180AA15009866CB /* SnakeModel.swift */; };
 		A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 		A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
+		A9EED40D218339F600E48508 /* FruitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FruitNode.swift */; };
+		A9EED40E218339F600E48508 /* FruitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FruitNode.swift */; };
+		A9EED4102183416E00E48508 /* SnakeParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40F2183416E00E48508 /* SnakeParts.swift */; };
+		A9EED4112183416E00E48508 /* SnakeParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40F2183416E00E48508 /* SnakeParts.swift */; };
+		A9EED4132183418300E48508 /* SnakeNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* SnakeNodeFactory.swift */; };
+		A9EED4142183418300E48508 /* SnakeNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* SnakeNodeFactory.swift */; };
+		A9EED4162183419800E48508 /* SnakeIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */; };
+		A9EED4172183419800E48508 /* SnakeIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */; };
+		A9EED419218341A700E48508 /* SnakePartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* SnakePartNode.swift */; };
+		A9EED41A218341A700E48508 /* SnakePartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* SnakePartNode.swift */; };
+		A9EED41D218341BF00E48508 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41C218341BF00E48508 /* Updatable.swift */; };
+		A9EED41E218341BF00E48508 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41C218341BF00E48508 /* Updatable.swift */; };
+		A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */; };
+		A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */; };
+		A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4232183420600E48508 /* FruitGenerator.swift */; };
+		A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4232183420600E48508 /* FruitGenerator.swift */; };
+		A9EED4272183423700E48508 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* Item.swift */; };
+		A9EED4282183423700E48508 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
+		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
+		A968F5652181B32F00E28ED9 /* SnakeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNode.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A9DD686A2180A6EB009866CB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -61,6 +88,15 @@
 		A9DD68AA2180A89E009866CB /* MovementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProtocol.swift; sourceTree = "<group>"; };
 		A9DD68AD2180AA15009866CB /* SnakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeModel.swift; sourceTree = "<group>"; };
 		A9DD68B02180AEF8009866CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A9EED40C218339F600E48508 /* FruitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNode.swift; sourceTree = "<group>"; };
+		A9EED40F2183416E00E48508 /* SnakeParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeParts.swift; sourceTree = "<group>"; };
+		A9EED4122183418300E48508 /* SnakeNodeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNodeFactory.swift; sourceTree = "<group>"; };
+		A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeIncreaseLevel.swift; sourceTree = "<group>"; };
+		A9EED418218341A700E48508 /* SnakePartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakePartNode.swift; sourceTree = "<group>"; };
+		A9EED41C218341BF00E48508 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegate.swift; sourceTree = "<group>"; };
+		A9EED4232183420600E48508 /* FruitGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitGenerator.swift; sourceTree = "<group>"; };
+		A9EED4262183423700E48508 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A968F5642181B31A00E28ED9 /* Snake */ = {
+			isa = PBXGroup;
+			children = (
+				A9EED4292183426700E48508 /* Nodes & Factories */,
+				A9DD68A02180A72C009866CB /* Model */,
+			);
+			path = Snake;
+			sourceTree = "<group>";
+		};
 		A9DD68632180A6EB009866CB = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +140,13 @@
 		A9DD68682180A6EB009866CB /* snake Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A9DD68A02180A72C009866CB /* Core */,
-				A9DD68692180A6EB009866CB /* Actions.sks */,
-				A9DD686A2180A6EB009866CB /* GameScene.sks */,
-				A9DD686B2180A6EB009866CB /* GameScene.swift */,
-				A9DD686C2180A6ED009866CB /* Assets.xcassets */,
+				A9EED42D218342AE00E48508 /* Actions */,
+				A9EED42C218342A200E48508 /* Game Scene */,
+				A9EED42B2183429600E48508 /* Assets */,
+				A9EED42A2183428600E48508 /* Level */,
+				A9EED422218341FC00E48508 /* Fruits */,
+				A9EED41B218341B400E48508 /* Protocols */,
+				A968F5642181B31A00E28ED9 /* Snake */,
 			);
 			path = "snake Shared";
 			sourceTree = "<group>";
@@ -136,7 +183,7 @@
 			path = "snake macOS";
 			sourceTree = "<group>";
 		};
-		A9DD68A02180A72C009866CB /* Core */ = {
+		A9DD68A02180A72C009866CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A9DD68A12180A74F009866CB /* Direction.swift */,
@@ -146,7 +193,72 @@
 				A9DD68AD2180AA15009866CB /* SnakeModel.swift */,
 				A9DD68B02180AEF8009866CB /* Extensions.swift */,
 			);
-			path = Core;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9EED41B218341B400E48508 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9EED41C218341BF00E48508 /* Updatable.swift */,
+				A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A9EED422218341FC00E48508 /* Fruits */ = {
+			isa = PBXGroup;
+			children = (
+				A9EED40C218339F600E48508 /* FruitNode.swift */,
+				A9EED4232183420600E48508 /* FruitGenerator.swift */,
+				A9EED4262183423700E48508 /* Item.swift */,
+			);
+			path = Fruits;
+			sourceTree = "<group>";
+		};
+		A9EED4292183426700E48508 /* Nodes & Factories */ = {
+			isa = PBXGroup;
+			children = (
+				A968F5652181B32F00E28ED9 /* SnakeNode.swift */,
+				A9EED40F2183416E00E48508 /* SnakeParts.swift */,
+				A9EED4122183418300E48508 /* SnakeNodeFactory.swift */,
+				A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */,
+				A9EED418218341A700E48508 /* SnakePartNode.swift */,
+			);
+			path = "Nodes & Factories";
+			sourceTree = "<group>";
+		};
+		A9EED42A2183428600E48508 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				A968F55B2181936000E28ED9 /* TileSet.sks */,
+				A968F56121819A0B00E28ED9 /* TileLevel.swift */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
+		A9EED42B2183429600E48508 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD686C2180A6ED009866CB /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A9EED42C218342A200E48508 /* Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD686A2180A6EB009866CB /* GameScene.sks */,
+				A9DD686B2180A6EB009866CB /* GameScene.swift */,
+			);
+			path = "Game Scene";
+			sourceTree = "<group>";
+		};
+		A9EED42D218342AE00E48508 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD68692180A6EB009866CB /* Actions.sks */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +344,7 @@
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
+				A968F55D2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689E2180A71D009866CB /* .gitignore in Resources */,
 				A9DD68932180A6ED009866CB /* Assets.xcassets in Resources */,
 			);
@@ -241,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD68902180A6ED009866CB /* GameScene.sks in Resources */,
@@ -256,14 +370,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EED4272183423700E48508 /* Item.swift in Sources */,
+				A9EED40D218339F600E48508 /* FruitNode.swift in Sources */,
 				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
+				A9EED4162183419800E48508 /* SnakeIncreaseLevel.swift in Sources */,
 				A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A9EED4132183418300E48508 /* SnakeNodeFactory.swift in Sources */,
+				A968F5662181B32F00E28ED9 /* SnakeNode.swift in Sources */,
+				A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */,
+				A9EED41D218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68AB2180A89E009866CB /* MovementProtocol.swift in Sources */,
 				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
 				A9DD68A52180A80F009866CB /* CellMovement.swift in Sources */,
+				A9EED4102183416E00E48508 /* SnakeParts.swift in Sources */,
+				A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
 				A9DD68AE2180AA15009866CB /* SnakeModel.swift in Sources */,
+				A9EED419218341A700E48508 /* SnakePartNode.swift in Sources */,
+				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,14 +397,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EED4282183423700E48508 /* Item.swift in Sources */,
+				A9EED40E218339F600E48508 /* FruitNode.swift in Sources */,
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
+				A9EED4172183419800E48508 /* SnakeIncreaseLevel.swift in Sources */,
 				A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68882180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68862180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A9EED4142183418300E48508 /* SnakeNodeFactory.swift in Sources */,
+				A968F5672181B32F00E28ED9 /* SnakeNode.swift in Sources */,
+				A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */,
+				A9EED41E218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68AC2180A89E009866CB /* MovementProtocol.swift in Sources */,
 				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
 				A9DD68A62180A80F009866CB /* CellMovement.swift in Sources */,
+				A9EED4112183416E00E48508 /* SnakeParts.swift in Sources */,
+				A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
 				A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */,
+				A9EED41A218341A700E48508 /* SnakePartNode.swift in Sources */,
+				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
