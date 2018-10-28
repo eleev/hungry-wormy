@@ -29,7 +29,13 @@ class SnakeNode: SKNode {
         let node = factory.produceRandom() ?? factory.produce(from: .chicken)
         node.position = position
         addChild(node)
-        nodes += [node]
+        
+        let nodeSecond = factory.produceRandom() ?? factory.produce(from: .chicken)
+        nodeSecond.position = CGPoint(x: position.x - 1, y: position.y)
+        addChild(nodeSecond)
+        
+        nodes += [node, nodeSecond]
+        model.pieces += [node.position, nodeSecond.position]
     }
     
     required init?(coder aDecoder: NSCoder) {
