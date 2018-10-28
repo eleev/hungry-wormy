@@ -28,7 +28,7 @@ struct FruitGenerator {
         let randomItem = Item.random() ?? Item.red
         let texture = randomItem.get()
         
-        let index = Int.random(in: 0..<spawnPoints.count - 1)
+        let index = Int.random(in: 0..<spawnPoints.count)
         let point = spawnPoints.remove(at: index)
         
         let node = FruitNode(position: point, zPosition: zPosition, texture: texture)
@@ -37,12 +37,6 @@ struct FruitGenerator {
     
     func isDrained() -> Bool {
         return spawnPoints.isEmpty
-    }
-}
-
-extension FruitGenerator: Updatable {
-    func update() {
-        
     }
 }
 
