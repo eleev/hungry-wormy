@@ -14,7 +14,8 @@ class GameScene: SKScene {
     
     private var snake: SnakeNode?
     private var parser = TileLevel()
-    
+    private var fruitGenerator: FruitGenerator!
+    private var spawnControllr: SpawnController!
     
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
@@ -32,18 +33,26 @@ class GameScene: SKScene {
     // MARK: - Methods
     
     func setUpScene() {
-        guard let wallsTileNode = scene?.childNode(withName: "Walls") as? SKTileMapNode else {
-            fatalError("Could not load Walls SKTileMapNode, the app cannot be futher executed")
+        guard let wallsTileNode = scene?.childNode(withName: "Walls") as? SKTileMapNode, let markerTileNode = scene?.childNode(withName: "Markers") as? SKTileMapNode else {
+            fatalError("Could not load Walls or Markers SKTileMapNode, the app cannot be futher executed")
         }
+        print("markerTileNode.numberOfRows: ", markerTileNode.numberOfRows, " markerTileNode.numberOfColumns", markerTileNode.numberOfColumns)
+        
+        let markers = parser.parseMarkers(for: markerTileNode)
+        fruitGenerator = FruitGenerator(spawnPoints: markers.fruits, zPosition: 20)
+        let fruitNode = fruitGenerator.generate()
+        addChild(fruitNode)
         
         let walls = parser.parseWalls(for: wallsTileNode)
         walls.forEach { self.addChild($0) }
         
+
+        spawnControllr = SpawnController()
+        let spawnPoint = spawnControllr.generate(outOf: markers.spawnPoints)
         
-        
-        snake = SnakeNode(position: .zero, worldSize: 24, initial: .up)
+        snake = SnakeNode(position: spawnPoint!, worldSize: 24, initial: .up)
         snake?.zPosition = 50
-        addChild(snake!)
+        addChild(snake!)        
     }
     
     override func didMove(to view: SKView) {
@@ -52,6 +61,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        snake?.update()
     }
 }
 
