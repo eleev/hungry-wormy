@@ -67,7 +67,6 @@ class TileLevel {
                 nodePosition.x += tileDef.size.width / 2
                 nodePosition.y += tileDef.size.height / 2
                 
-                
                 if tileDef.name == "Food" {
                     fruits += [nodePosition]
                 } else if tileDef.name == "Player Spawn Point" {
