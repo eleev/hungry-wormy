@@ -34,6 +34,8 @@ struct CellMovement: MovementProtocol {
         case .down:
             y += 1
             if y > worldSize.toCGFloat { y = 0 }
+        case .none:
+            return point
         }
         return CGPoint(x: x, y: y)
     }
