@@ -13,6 +13,8 @@
 		A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
 		A968F5662181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
 		A968F5672181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
+		A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
+		A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
 		A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
 		A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68742180A6ED009866CB /* AppDelegate.swift */; };
@@ -28,8 +30,6 @@
 		A9DD68902180A6ED009866CB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* GameScene.sks */; };
 		A9DD68912180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
-		A9DD68932180A6ED009866CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686C2180A6ED009866CB /* Assets.xcassets */; };
-		A9DD68942180A6ED009866CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686C2180A6ED009866CB /* Assets.xcassets */; };
 		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD689F2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD68A22180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
@@ -68,11 +68,11 @@
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* SnakeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNode.swift; sourceTree = "<group>"; };
+		A98C44E5218756DC00E74C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A9DD686A2180A6EB009866CB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		A9DD686C2180A6ED009866CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9DD68712180A6ED009866CB /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68742180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DD68762180A6ED009866CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 		A9EED42B2183429600E48508 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A9DD686C2180A6ED009866CB /* Assets.xcassets */,
+				A98C44E5218756DC00E74C4E /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -356,9 +356,9 @@
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
+				A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A968F55D2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689E2180A71D009866CB /* .gitignore in Resources */,
-				A9DD68932180A6ED009866CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD68902180A6ED009866CB /* GameScene.sks in Resources */,
-				A9DD68942180A6ED009866CB /* Assets.xcassets in Resources */,
+				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
