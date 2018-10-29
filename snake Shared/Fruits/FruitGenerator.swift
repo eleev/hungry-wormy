@@ -14,6 +14,7 @@ struct FruitGenerator {
     
     private var spawnPoints: [CGPoint]
     private let zPosition: CGFloat
+    private var lastFruit: FoodNode?
     
     // MARK: - Initializers
     
@@ -24,15 +25,21 @@ struct FruitGenerator {
     
     // MARK: - Methods
     
-    mutating func generate() -> FruitNode {
-        let randomItem = Item.random() ?? Item.red
-        let texture = randomItem.get()
-        
+    mutating func generate() -> FoodNode {
+//        let randomItem = Item.random() ?? Item.red
+//        let texture = randomItem.get()
+//
+
         let index = Int.random(in: 0..<spawnPoints.count)
         let point = spawnPoints.remove(at: index)
         
-        let node = FruitNode(position: point, zPosition: zPosition, texture: texture)
+        let node = FoodNode(position: point, zPosition: zPosition, type: .bee)
+        lastFruit = node
         return node
+    }
+    
+    func removeLastFruit() {
+        lastFruit?.remove()
     }
     
     func isDrained() -> Bool {
@@ -44,16 +51,16 @@ extension FruitGenerator: PhysicsContactDelegate {
     
     func didBeginPhysicsContact(_ contact: SKPhysicsContact, completion:  @escaping (Bool) -> ()) {
         
-        func removeAndComplete(_ fruit: FruitNode) {
+        func removeAndComplete(_ fruit: FoodNode) {
             fruit.remove()
             completion(true)
         }
         
         // SnakePart + FruitNode intersection
-        if contact.bodyA.node is SnakePartNode, let fruit = contact.bodyB.node as? FruitNode  {
+        if contact.bodyA.node is SnakePartNode, let fruit = contact.bodyB.node as? FoodNode  {
             // Remove fruit and grow the snake
             removeAndComplete(fruit)
-        } else if contact.bodyB.node is SnakePartNode, let fruit =  contact.bodyA.node as? FruitNode {
+        } else if contact.bodyB.node is SnakePartNode, let fruit =  contact.bodyA.node as? FoodNode {
             // Remove fruit and grow the snake
             removeAndComplete(fruit)
         } else {
