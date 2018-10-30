@@ -12,7 +12,7 @@ class GameScene: SKScene {
 
     // MARK: - Properties
     
-    private var snake: SnakeNode?
+    private var snake: WormNode?
     private var parser = TileLevel()
     fileprivate var fruitGenerator: FruitGenerator!
     private var spawnControllr: SpawnController!
@@ -55,7 +55,7 @@ class GameScene: SKScene {
         spawnControllr = SpawnController()
         let spawnPoint = spawnControllr.generate(outOf: markers.spawnPoints)
         
-        snake = SnakeNode(position: spawnPoint!, worldSize: 24, initial: .up)
+        snake = WormNode(position: spawnPoint ?? .zero)
         snake?.zPosition = 50
         addChild(snake!)        
     }
@@ -64,7 +64,7 @@ class GameScene: SKScene {
         setUpScene()
     }
     
-    let timePerMove = 0.3
+    let timePerMove = 0.1
     
     override func update(_ currentTime: TimeInterval) {
         
@@ -86,7 +86,7 @@ extension GameScene: SKPhysicsContactDelegate {
 //        let bodyA = contact.bodyA.node?.name
 //        let bodyB = contact.bodyB.node?.name
 //
-        if contact.bodyA.node is FoodNode, contact.bodyB.node is SnakePartNode {
+        if contact.bodyA.node is FoodNode, contact.bodyB.node is WormPartNode {
             debugPrint("body a is fruit & body b is snake")
             
             fruitGenerator.removeLastFruit()
@@ -97,7 +97,7 @@ extension GameScene: SKPhysicsContactDelegate {
 //            let grow = SKAction.run { self.snake?.grow() }
 //            snake?.run(SKAction.sequence([wait, grow]))
             snake?.grow()
-        } else if contact.bodyA.node is SnakePartNode, contact.bodyB.node is FoodNode {
+        } else if contact.bodyA.node is WormPartNode, contact.bodyB.node is FoodNode {
             debugPrint("body a is snake & body b is fruitr")
             
             fruitGenerator.removeLastFruit()
