@@ -1,5 +1,5 @@
 //
-//  SnakeNode.swift
+//  WormNode.swift
 //  snake
 //
 //  Created by Astemir Eleev on 25/10/2018.
@@ -8,15 +8,38 @@
 
 import SpriteKit
 
-class SnakeNode: SKNode {
+class WormNode: SKNode {
     
     // MARK: - Properties
     
-    private let factory: SnakeNodeFactory
-    private var nodes: [SnakePartNode] = []
-    private var direction: Direction = .none
-    private var head: SnakeHeadNode?
-    private var tail: SnakeTailNode?
+    private let factory: WormNodeFactory
+    private var nodes: [WormPartNode] = []
+    
+    private var direction: Direction = .none {
+        didSet {
+            head.direction = direction
+        }
+    }
+    private var lastStateSwitchTime: CFTimeInterval = 0
+    
+    private var initialPosition: CGPoint
+    private lazy var head: WormHeadNode = {
+        let head = factory.produceHead()
+        head.zPosition = 50
+        
+        head.position = initialPosition
+        nodes += [head]
+        return head
+    }()
+    private lazy var tail: SnakeTailNode = {
+        let tail = factory.produceTail()
+        tail.zPosition = 49
+        
+        tail.position = initialPosition
+        tail.position.y -= 32
+        nodes += [tail]
+        return tail
+    }()
     
     let SIZE = 64
     var CGSIZE: CGFloat {
@@ -25,23 +48,14 @@ class SnakeNode: SKNode {
     
     // MARK: - Initializsers
     
-    init(position: CGPoint, worldSize: WorldSize, initial direction: Direction) {
-        factory = SnakeNodeFactory(nodeSize: SIZE, zPosition: 50)
+    init(position: CGPoint) {
+        factory = WormNodeFactory(nodeSize: SIZE, zPosition: 50)
+        initialPosition = position
         
         super.init()
         
-        head = factory.produceHead()
-        head?.zPosition = 50
-        
-        head?.position = position
-        nodes += [head!]
-        addChild(head!)
-        
-//        let node = factory.produceRandom() ?? factory.produce(from: .chicken)
-//        node.position = position
-//        nodes += [node]
-//        addChild(node)
-
+        addChild(head)
+        addChild(tail)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -98,45 +112,23 @@ class SnakeNode: SKNode {
         }
     }
     
-    var nextDirection: Direction?
-    
-    private func directionHandler() {
-        guard let nextDirection = nextDirection else {
-            return
-        }
-        switch nextDirection {
-        case .left, .right:
-            if Int(nodes[0].position.x) % 32 == 0 {
-                direction = nextDirection
-                self.nextDirection = nil
-            }
-        case .up, .down:
-            if Int(nodes[0].position.y) % 32 == 0 {
-                direction = nextDirection
-                self.nextDirection = nil
-            }
-        case .none:
-            self.nextDirection = nil
-        }
-        
-    }
-    
     func change(direction: Direction) {
         self.direction = direction
-        head?.direction = direction
     }
     
-    func grow(for level: SnakeIncreaseLevel = .one) {
+    func grow(for level: WormIncreaseLevel = .one) {
         var growLevel = level.rawValue
         
         while growLevel != 0 {
             let node = factory.produceBody()
             node.alpha = 0.0
+            
+            // Store the last, tail node for later use
+            let lastNode = nodes.removeLast() as? SnakeTailNode
+            lastNode?.removeFromParent()
+            
             var lastPosition = nodes.last?.position ?? node.position
-            
-            //            let node = factory.produceRandom() ?? factory.produce(from: .chicken)
-            //            var lastPositon = (nodes.last?.position)!
-            
+     
             switch direction {
             case .left:
                 lastPosition.x += CGSIZE
@@ -157,15 +149,43 @@ class SnakeNode: SKNode {
             
             node.run(SKAction.sequence([SKAction.wait(forDuration: 0.5), SKAction.fadeAlpha(to: 1.0, duration: 1.0)]))
             
+            if let tailNode = lastNode {
+                nodes += [tailNode]
+                self.tail = tailNode
+                addChild(tailNode)
+            }
+            
             growLevel -= 1
         }
     }
 }
 
-extension SnakeNode: Updatable {
+extension WormNode: Updatable {
     
     func update() {
         move()
-        head?.update()
+        head.update()
+
+        // Resolved the orientation of the tail of the worm
+        if let prelastNode = nodes.dropLast().last, let last = nodes.last {
+            let position = prelastNode.position
+            let tailPosition = last.position
+            let diff = tailPosition - position
+            
+            switch (diff.x, diff.y) {
+            case (let x, _) where x < 0:
+                tail.direction = .right
+            case (let x, _) where x > 0:
+                tail.direction = .left
+            case (_, let y) where y < 0:
+                tail.direction = .up
+            case (_, let y) where y > 0:
+                tail.direction = .down
+            default:
+                tail.direction = head.direction
+            }
+        }
+        
+        tail.update()
     }
 }
