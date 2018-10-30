@@ -11,8 +11,8 @@
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
 		A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
-		A968F5662181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
-		A968F5672181B32F00E28ED9 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* SnakeNode.swift */; };
+		A968F5662181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
+		A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
 		A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
@@ -34,72 +34,60 @@
 		A9DD689F2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD68A22180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
 		A9DD68A32180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
-		A9DD68A52180A80F009866CB /* CellMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A42180A80F009866CB /* CellMovement.swift */; };
-		A9DD68A62180A80F009866CB /* CellMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A42180A80F009866CB /* CellMovement.swift */; };
 		A9DD68A82180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
 		A9DD68A92180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
-		A9DD68AB2180A89E009866CB /* MovementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AA2180A89E009866CB /* MovementProtocol.swift */; };
-		A9DD68AC2180A89E009866CB /* MovementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AA2180A89E009866CB /* MovementProtocol.swift */; };
-		A9DD68AE2180AA15009866CB /* SnakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AD2180AA15009866CB /* SnakeModel.swift */; };
-		A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68AD2180AA15009866CB /* SnakeModel.swift */; };
 		A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 		A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
-		A9EED40D218339F600E48508 /* FruitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FruitNode.swift */; };
-		A9EED40E218339F600E48508 /* FruitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FruitNode.swift */; };
-		A9EED4102183416E00E48508 /* SnakeParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40F2183416E00E48508 /* SnakeParts.swift */; };
-		A9EED4112183416E00E48508 /* SnakeParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40F2183416E00E48508 /* SnakeParts.swift */; };
-		A9EED4132183418300E48508 /* SnakeNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* SnakeNodeFactory.swift */; };
-		A9EED4142183418300E48508 /* SnakeNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* SnakeNodeFactory.swift */; };
-		A9EED4162183419800E48508 /* SnakeIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */; };
-		A9EED4172183419800E48508 /* SnakeIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */; };
-		A9EED419218341A700E48508 /* SnakePartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* SnakePartNode.swift */; };
-		A9EED41A218341A700E48508 /* SnakePartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* SnakePartNode.swift */; };
+		A9EED40D218339F600E48508 /* FoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FoodNode.swift */; };
+		A9EED40E218339F600E48508 /* FoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FoodNode.swift */; };
+		A9EED4132183418300E48508 /* WormNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* WormNodeFactory.swift */; };
+		A9EED4142183418300E48508 /* WormNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* WormNodeFactory.swift */; };
+		A9EED4162183419800E48508 /* WormIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* WormIncreaseLevel.swift */; };
+		A9EED4172183419800E48508 /* WormIncreaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4152183419800E48508 /* WormIncreaseLevel.swift */; };
+		A9EED419218341A700E48508 /* WormPartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* WormPartNode.swift */; };
+		A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED418218341A700E48508 /* WormPartNode.swift */; };
 		A9EED41D218341BF00E48508 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41C218341BF00E48508 /* Updatable.swift */; };
 		A9EED41E218341BF00E48508 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41C218341BF00E48508 /* Updatable.swift */; };
 		A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */; };
 		A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */; };
 		A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4232183420600E48508 /* FruitGenerator.swift */; };
 		A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4232183420600E48508 /* FruitGenerator.swift */; };
-		A9EED4272183423700E48508 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* Item.swift */; };
-		A9EED4282183423700E48508 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* Item.swift */; };
+		A9EED4272183423700E48508 /* FoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* FoodType.swift */; };
+		A9EED4282183423700E48508 /* FoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4262183423700E48508 /* FoodType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
-		A968F5652181B32F00E28ED9 /* SnakeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNode.swift; sourceTree = "<group>"; };
+		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
 		A98C44E5218756DC00E74C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A9DD686A2180A6EB009866CB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		A9DD68712180A6ED009866CB /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DD68712180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68742180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DD68762180A6ED009866CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A9DD68792180A6ED009866CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9DD687C2180A6ED009866CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9DD687E2180A6ED009866CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9DD68832180A6ED009866CB /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DD68832180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68852180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DD68872180A6ED009866CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A9DD688A2180A6ED009866CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9DD688C2180A6ED009866CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9DD689D2180A71D009866CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9DD68A12180A74F009866CB /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		A9DD68A42180A80F009866CB /* CellMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMovement.swift; sourceTree = "<group>"; };
 		A9DD68A72180A868009866CB /* WorldSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSize.swift; sourceTree = "<group>"; };
-		A9DD68AA2180A89E009866CB /* MovementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProtocol.swift; sourceTree = "<group>"; };
-		A9DD68AD2180AA15009866CB /* SnakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeModel.swift; sourceTree = "<group>"; };
 		A9DD68B02180AEF8009866CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A9EED40C218339F600E48508 /* FruitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNode.swift; sourceTree = "<group>"; };
-		A9EED40F2183416E00E48508 /* SnakeParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeParts.swift; sourceTree = "<group>"; };
-		A9EED4122183418300E48508 /* SnakeNodeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNodeFactory.swift; sourceTree = "<group>"; };
-		A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeIncreaseLevel.swift; sourceTree = "<group>"; };
-		A9EED418218341A700E48508 /* SnakePartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakePartNode.swift; sourceTree = "<group>"; };
+		A9EED40C218339F600E48508 /* FoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNode.swift; sourceTree = "<group>"; };
+		A9EED4122183418300E48508 /* WormNodeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNodeFactory.swift; sourceTree = "<group>"; };
+		A9EED4152183419800E48508 /* WormIncreaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormIncreaseLevel.swift; sourceTree = "<group>"; };
+		A9EED418218341A700E48508 /* WormPartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormPartNode.swift; sourceTree = "<group>"; };
 		A9EED41C218341BF00E48508 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		A9EED41F218341D200E48508 /* PhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegate.swift; sourceTree = "<group>"; };
 		A9EED4232183420600E48508 /* FruitGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitGenerator.swift; sourceTree = "<group>"; };
-		A9EED4262183423700E48508 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A9EED4262183423700E48508 /* FoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A968F5642181B31A00E28ED9 /* Snake */ = {
+		A968F5642181B31A00E28ED9 /* Worm */ = {
 			isa = PBXGroup;
 			children = (
-				A9EED4292183426700E48508 /* Nodes & Factories */,
+				A9EED4292183426700E48508 /* Nodes */,
 				A9DD68A02180A72C009866CB /* Model */,
 			);
-			path = Snake;
+			path = Worm;
 			sourceTree = "<group>";
 		};
 		A9A33ADC21845F91003AC9A7 /* Spawning */ = {
@@ -141,14 +129,14 @@
 			isa = PBXGroup;
 			children = (
 				A9DD689D2180A71D009866CB /* .gitignore */,
-				A9DD68682180A6EB009866CB /* snake Shared */,
-				A9DD68732180A6ED009866CB /* snake iOS */,
-				A9DD68842180A6ED009866CB /* snake macOS */,
+				A9DD68682180A6EB009866CB /* hungry-worm Shared */,
+				A9DD68732180A6ED009866CB /* hungry-worm iOS */,
+				A9DD68842180A6ED009866CB /* hungry-worm macOS */,
 				A9DD68722180A6ED009866CB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A9DD68682180A6EB009866CB /* snake Shared */ = {
+		A9DD68682180A6EB009866CB /* hungry-worm Shared */ = {
 			isa = PBXGroup;
 			children = (
 				A9A33ADC21845F91003AC9A7 /* Spawning */,
@@ -158,21 +146,21 @@
 				A9EED42A2183428600E48508 /* Level */,
 				A9EED422218341FC00E48508 /* Fruits */,
 				A9EED41B218341B400E48508 /* Protocols */,
-				A968F5642181B31A00E28ED9 /* Snake */,
+				A968F5642181B31A00E28ED9 /* Worm */,
 			);
-			path = "snake Shared";
+			path = "hungry-worm Shared";
 			sourceTree = "<group>";
 		};
 		A9DD68722180A6ED009866CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9DD68712180A6ED009866CB /* snake.app */,
-				A9DD68832180A6ED009866CB /* snake.app */,
+				A9DD68712180A6ED009866CB /* hungry-worm.app */,
+				A9DD68832180A6ED009866CB /* hungry-worm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9DD68732180A6ED009866CB /* snake iOS */ = {
+		A9DD68732180A6ED009866CB /* hungry-worm iOS */ = {
 			isa = PBXGroup;
 			children = (
 				A9DD68742180A6ED009866CB /* AppDelegate.swift */,
@@ -181,10 +169,10 @@
 				A9DD687B2180A6ED009866CB /* LaunchScreen.storyboard */,
 				A9DD687E2180A6ED009866CB /* Info.plist */,
 			);
-			path = "snake iOS";
+			path = "hungry-worm iOS";
 			sourceTree = "<group>";
 		};
-		A9DD68842180A6ED009866CB /* snake macOS */ = {
+		A9DD68842180A6ED009866CB /* hungry-worm macOS */ = {
 			isa = PBXGroup;
 			children = (
 				A9DD68852180A6ED009866CB /* AppDelegate.swift */,
@@ -192,17 +180,15 @@
 				A9DD68892180A6ED009866CB /* Main.storyboard */,
 				A9DD688C2180A6ED009866CB /* Info.plist */,
 			);
-			path = "snake macOS";
+			path = "hungry-worm macOS";
 			sourceTree = "<group>";
 		};
 		A9DD68A02180A72C009866CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9EED4122183418300E48508 /* WormNodeFactory.swift */,
 				A9DD68A12180A74F009866CB /* Direction.swift */,
-				A9DD68A42180A80F009866CB /* CellMovement.swift */,
 				A9DD68A72180A868009866CB /* WorldSize.swift */,
-				A9DD68AA2180A89E009866CB /* MovementProtocol.swift */,
-				A9DD68AD2180AA15009866CB /* SnakeModel.swift */,
 				A9DD68B02180AEF8009866CB /* Extensions.swift */,
 			);
 			path = Model;
@@ -220,23 +206,21 @@
 		A9EED422218341FC00E48508 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
-				A9EED40C218339F600E48508 /* FruitNode.swift */,
+				A9EED40C218339F600E48508 /* FoodNode.swift */,
 				A9EED4232183420600E48508 /* FruitGenerator.swift */,
-				A9EED4262183423700E48508 /* Item.swift */,
+				A9EED4262183423700E48508 /* FoodType.swift */,
 			);
 			path = Fruits;
 			sourceTree = "<group>";
 		};
-		A9EED4292183426700E48508 /* Nodes & Factories */ = {
+		A9EED4292183426700E48508 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				A968F5652181B32F00E28ED9 /* SnakeNode.swift */,
-				A9EED40F2183416E00E48508 /* SnakeParts.swift */,
-				A9EED4122183418300E48508 /* SnakeNodeFactory.swift */,
-				A9EED4152183419800E48508 /* SnakeIncreaseLevel.swift */,
-				A9EED418218341A700E48508 /* SnakePartNode.swift */,
+				A968F5652181B32F00E28ED9 /* WormNode.swift */,
+				A9EED4152183419800E48508 /* WormIncreaseLevel.swift */,
+				A9EED418218341A700E48508 /* WormPartNode.swift */,
 			);
-			path = "Nodes & Factories";
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		A9EED42A2183428600E48508 /* Level */ = {
@@ -276,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9DD68702180A6ED009866CB /* snake iOS */ = {
+		A9DD68702180A6ED009866CB /* hungry-worm iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9DD68972180A6ED009866CB /* Build configuration list for PBXNativeTarget "snake iOS" */;
+			buildConfigurationList = A9DD68972180A6ED009866CB /* Build configuration list for PBXNativeTarget "hungry-worm iOS" */;
 			buildPhases = (
 				A9DD686D2180A6ED009866CB /* Sources */,
 				A9DD686E2180A6ED009866CB /* Frameworks */,
@@ -288,14 +272,14 @@
 			);
 			dependencies = (
 			);
-			name = "snake iOS";
+			name = "hungry-worm iOS";
 			productName = "snake iOS";
-			productReference = A9DD68712180A6ED009866CB /* snake.app */;
+			productReference = A9DD68712180A6ED009866CB /* hungry-worm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9DD68822180A6ED009866CB /* snake macOS */ = {
+		A9DD68822180A6ED009866CB /* hungry-worm macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9DD689A2180A6ED009866CB /* Build configuration list for PBXNativeTarget "snake macOS" */;
+			buildConfigurationList = A9DD689A2180A6ED009866CB /* Build configuration list for PBXNativeTarget "hungry-worm macOS" */;
 			buildPhases = (
 				A9DD687F2180A6ED009866CB /* Sources */,
 				A9DD68802180A6ED009866CB /* Frameworks */,
@@ -305,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = "snake macOS";
+			name = "hungry-worm macOS";
 			productName = "snake macOS";
-			productReference = A9DD68832180A6ED009866CB /* snake.app */;
+			productReference = A9DD68832180A6ED009866CB /* hungry-worm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -328,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9DD68672180A6EB009866CB /* Build configuration list for PBXProject "snake" */;
+			buildConfigurationList = A9DD68672180A6EB009866CB /* Build configuration list for PBXProject "hungry-worm" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -341,8 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9DD68702180A6ED009866CB /* snake iOS */,
-				A9DD68822180A6ED009866CB /* snake macOS */,
+				A9DD68702180A6ED009866CB /* hungry-worm iOS */,
+				A9DD68822180A6ED009866CB /* hungry-worm macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -382,25 +366,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EED4272183423700E48508 /* Item.swift in Sources */,
-				A9EED40D218339F600E48508 /* FruitNode.swift in Sources */,
+				A9EED4272183423700E48508 /* FoodType.swift in Sources */,
+				A9EED40D218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
-				A9EED4162183419800E48508 /* SnakeIncreaseLevel.swift in Sources */,
+				A9EED4162183419800E48508 /* WormIncreaseLevel.swift in Sources */,
 				A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */,
 				A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */,
-				A9EED4132183418300E48508 /* SnakeNodeFactory.swift in Sources */,
-				A968F5662181B32F00E28ED9 /* SnakeNode.swift in Sources */,
+				A9EED4132183418300E48508 /* WormNodeFactory.swift in Sources */,
+				A968F5662181B32F00E28ED9 /* WormNode.swift in Sources */,
 				A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */,
 				A9EED41D218341BF00E48508 /* Updatable.swift in Sources */,
-				A9DD68AB2180A89E009866CB /* MovementProtocol.swift in Sources */,
 				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
-				A9DD68A52180A80F009866CB /* CellMovement.swift in Sources */,
-				A9EED4102183416E00E48508 /* SnakeParts.swift in Sources */,
 				A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
-				A9DD68AE2180AA15009866CB /* SnakeModel.swift in Sources */,
-				A9EED419218341A700E48508 /* SnakePartNode.swift in Sources */,
+				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
 			);
@@ -410,25 +390,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EED4282183423700E48508 /* Item.swift in Sources */,
-				A9EED40E218339F600E48508 /* FruitNode.swift in Sources */,
+				A9EED4282183423700E48508 /* FoodType.swift in Sources */,
+				A9EED40E218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
-				A9EED4172183419800E48508 /* SnakeIncreaseLevel.swift in Sources */,
+				A9EED4172183419800E48508 /* WormIncreaseLevel.swift in Sources */,
 				A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68882180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68862180A6ED009866CB /* AppDelegate.swift in Sources */,
 				A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */,
-				A9EED4142183418300E48508 /* SnakeNodeFactory.swift in Sources */,
-				A968F5672181B32F00E28ED9 /* SnakeNode.swift in Sources */,
+				A9EED4142183418300E48508 /* WormNodeFactory.swift in Sources */,
+				A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */,
 				A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */,
 				A9EED41E218341BF00E48508 /* Updatable.swift in Sources */,
-				A9DD68AC2180A89E009866CB /* MovementProtocol.swift in Sources */,
 				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
-				A9DD68A62180A80F009866CB /* CellMovement.swift in Sources */,
-				A9EED4112183416E00E48508 /* SnakeParts.swift in Sources */,
 				A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
-				A9DD68AF2180AA15009866CB /* SnakeModel.swift in Sources */,
-				A9EED41A218341A700E48508 /* SnakePartNode.swift in Sources */,
+				A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
@@ -579,14 +555,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "snake iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/hungry-worm iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eleev.astemir.snake;
-				PRODUCT_NAME = snake;
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-worm";
+				PRODUCT_NAME = "hungry-worm";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,14 +575,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "snake iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/hungry-worm iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eleev.astemir.snake;
-				PRODUCT_NAME = snake;
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-worm";
+				PRODUCT_NAME = "hungry-worm";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,14 +597,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "snake macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/hungry-worm macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = eleev.astemir.snake;
-				PRODUCT_NAME = snake;
+				PRODUCT_NAME = "hungry-worm";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
@@ -641,14 +617,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "snake macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/hungry-worm macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = eleev.astemir.snake;
-				PRODUCT_NAME = snake;
+				PRODUCT_NAME = "hungry-worm";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
@@ -657,7 +633,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9DD68672180A6EB009866CB /* Build configuration list for PBXProject "snake" */ = {
+		A9DD68672180A6EB009866CB /* Build configuration list for PBXProject "hungry-worm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9DD68952180A6ED009866CB /* Debug */,
@@ -666,7 +642,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9DD68972180A6ED009866CB /* Build configuration list for PBXNativeTarget "snake iOS" */ = {
+		A9DD68972180A6ED009866CB /* Build configuration list for PBXNativeTarget "hungry-worm iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9DD68982180A6ED009866CB /* Debug */,
@@ -675,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9DD689A2180A6ED009866CB /* Build configuration list for PBXNativeTarget "snake macOS" */ = {
+		A9DD689A2180A6ED009866CB /* Build configuration list for PBXNativeTarget "hungry-worm macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9DD689B2180A6ED009866CB /* Debug */,

@@ -28,7 +28,7 @@ struct FruitGenerator {
     mutating func generate() -> FoodNode {
 //        let randomItem = Item.random() ?? Item.red
 //        let texture = randomItem.get()
-//
+//C
         let index = Int.random(in: 0..<spawnPoints.count)
         let point = spawnPoints.remove(at: index)
         

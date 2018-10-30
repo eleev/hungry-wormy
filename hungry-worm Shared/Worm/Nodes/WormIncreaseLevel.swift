@@ -1,5 +1,5 @@
 //
-//  SnakeIncreaseLevel.swift
+//  WormIncreaseLevel.swift
 //  snake
 //
 //  Created by Astemir Eleev on 26/10/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum SnakeIncreaseLevel: Int {
+enum WormIncreaseLevel: Int {
     case one = 1, two, three
 }
