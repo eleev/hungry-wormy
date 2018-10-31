@@ -10,7 +10,7 @@ import SpriteKit
 
 class FoodNode: SKSpriteNode {
     
-    init(position: CGPoint, zPosition: CGFloat, type: FoodType) {
+    init(position: CGPoint, zPosition: CGFloat, type: Food) {
         let textures = type.textures()
         super.init(texture: textures[0], color: .clear, size: CGSize(width: 64, height: 64))
         
@@ -23,7 +23,7 @@ class FoodNode: SKSpriteNode {
         
         animate()
         
-        let textureAnimation = SKAction.animate(with: textures, timePerFrame: 0.2)
+        let textureAnimation = SKAction.animate(with: textures, timePerFrame: 0.3)
         let foreverAction = SKAction.repeatForever(textureAnimation)
         run(foreverAction)
     }
