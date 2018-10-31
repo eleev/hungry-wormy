@@ -26,13 +26,13 @@ struct FruitGenerator {
     // MARK: - Methods
     
     mutating func generate() -> FoodNode {
-//        let randomItem = Item.random() ?? Item.red
-//        let texture = randomItem.get()
-//C
+        let randomFood =  FoodType.allCases.randomElement() ?? FoodType.bee
+        
+        
         let index = Int.random(in: 0..<spawnPoints.count)
         let point = spawnPoints.remove(at: index)
         
-        let node = FoodNode(position: point, zPosition: zPosition, type: .bee)
+        let node = FoodNode(position: point, zPosition: zPosition, type: randomFood)
         lastFruit = node
         return node
     }
