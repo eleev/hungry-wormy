@@ -64,7 +64,7 @@ class GameScene: SKScene {
         setUpScene()
     }
     
-    let timePerMove = 0.1
+    let timePerMove = 0.3
     
     override func update(_ currentTime: TimeInterval) {
         
