@@ -18,7 +18,8 @@ class GameScene: SKScene {
     private var spawnControllr: SpawnController!
     
     private var timeOfLastMove: TimeInterval = 0
-    
+    let timePerMove = 0.4
+
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
@@ -35,6 +36,9 @@ class GameScene: SKScene {
     // MARK: - Methods
     
     func setUpScene() {
+        #if os(iOS) || os(tvOS)
+        prepareSiwpeGestureRecognizers()
+        #endif
         
         physicsWorld.contactDelegate = self
         
@@ -63,8 +67,6 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         setUpScene()
     }
-    
-    let timePerMove = 0.3
     
     override func update(_ currentTime: TimeInterval) {
         
@@ -115,7 +117,7 @@ extension GameScene: SKPhysicsContactDelegate {
 }
 
 #if os(iOS) || os(tvOS)
-// Touch-based event handling
+/// Touch-based event handling, iOS & tvOS related setup code
 extension GameScene {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -130,6 +132,39 @@ extension GameScene {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
    
+    // MARK: - Setup
+    
+    fileprivate func prepareSiwpeGestureRecognizers() {
+        
+        for direction in [UISwipeGestureRecognizer.Direction.right,
+                          UISwipeGestureRecognizer.Direction.left,
+                          UISwipeGestureRecognizer.Direction.up,
+                          UISwipeGestureRecognizer.Direction.down] {
+                            
+                            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipe(_:)))
+                            gesture.direction = direction
+                            view?.addGestureRecognizer(gesture)
+        }
+        
+    }
+    
+    @objc func swipe(_ gr: UISwipeGestureRecognizer) {
+        let direction = gr.direction
+        
+        switch direction {
+        case UISwipeGestureRecognizer.Direction.right:
+            snake?.change(direction: .right)
+        case UISwipeGestureRecognizer.Direction.left:
+            snake?.change(direction: .left)
+        case UISwipeGestureRecognizer.Direction.up:
+            snake?.change(direction: .up)
+        case UISwipeGestureRecognizer.Direction.down:
+            snake?.change(direction: .down)
+        default:
+            assert(false, "The occured gesture is not supported")
+        }
+    }
+    
 }
 #endif
 
@@ -137,7 +172,7 @@ extension GameScene {
 
 import Carbon
 
-// Mouse-based event handling
+/// Mouse-based event handling
 extension GameScene {
 
     // MARK: - Properties
