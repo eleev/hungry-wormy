@@ -70,23 +70,11 @@ class WormNode: SKNode {
             let node = nodes[0]
             var newHeadNodePosition: CGPoint = node.position
 
-            switch direction {
-            case .left:
-                newHeadNodePosition.x -= CGSIZE
-            case .right:
-                newHeadNodePosition.x += CGSIZE
-            case .up:
-                newHeadNodePosition.y += CGSIZE
-            case .down:
-                newHeadNodePosition.y -= CGSIZE
-            case .none:
-                return
-            }
+            newHeadNodePosition = resolveSize(initialPosition: newHeadNodePosition)
             node.position = newHeadNodePosition
             
             return
         }
-        
         
         for index in (1..<nodes.count).reversed() {
             let node = nodes[index - 1]
@@ -94,19 +82,8 @@ class WormNode: SKNode {
             var newHeadNodePosition: CGPoint = oldHeadNodePosition
             
             let nextNode = nodes[index]
+            newHeadNodePosition = resolveSize(initialPosition: newHeadNodePosition)
 
-            switch direction {
-            case .left:
-                newHeadNodePosition.x -= CGSIZE
-            case .right:
-                newHeadNodePosition.x += CGSIZE
-            case .up:
-                newHeadNodePosition.y += CGSIZE
-            case .down:
-                newHeadNodePosition.y -= CGSIZE
-            case .none:
-                continue
-            }
             node.position = newHeadNodePosition
             nextNode.position = oldHeadNodePosition
         }
@@ -115,6 +92,24 @@ class WormNode: SKNode {
     func change(direction: Direction) {
         self.direction = direction
     }
+    private func resolveSize(initialPosition: CGPoint, shouldInverse: Bool = false) -> CGPoint {
+        var position = initialPosition
+        
+        switch direction {
+        case .left:
+            position.x = shouldInverse ? position.x + CGSIZE : position.x - CGSIZE
+        case .right:
+            position.x = shouldInverse ? position.x - CGSIZE : position.x + CGSIZE
+        case .up:
+            position.y = shouldInverse ? position.y - CGSIZE : position.y + CGSIZE
+        case .down:
+            position.y = shouldInverse ? position.y + CGSIZE : position.y - CGSIZE
+        case .none:
+            return position
+        }
+        return position
+    }
+    
     
     func grow(for level: WormIncreaseLevel = .one) {
         var growLevel = level.rawValue
@@ -128,19 +123,8 @@ class WormNode: SKNode {
             lastNode?.removeFromParent()
             
             var lastPosition = nodes.last?.position ?? node.position
-     
-            switch direction {
-            case .left:
-                lastPosition.x += CGSIZE
-            case .right:
-                lastPosition.x -= CGSIZE
-            case .up:
-                lastPosition.y += CGSIZE
-            case .down:
-                lastPosition.y -= CGSIZE
-            case .none:
-                break
-            }
+            lastPosition = resolveSize(initialPosition: lastPosition, shouldInverse: true)
+
             node.position = lastPosition
             node.zRotation = direction.toRotationDegrees().toRadians
             
