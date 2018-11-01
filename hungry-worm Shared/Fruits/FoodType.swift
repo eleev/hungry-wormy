@@ -45,7 +45,7 @@ extension FoodType {
         case .mouse:
             return [SKTexture(imageNamed: "mouse"), SKTexture(imageNamed: "mouse_move")]
         case .slime:
-            return [SKTexture(imageNamed: "slime"), SKTexture(imageNamed: "slime_move")]
+            return [SKTexture(imageNamed: "slimeBlock"), SKTexture(imageNamed: "slimeBlock_move")]
         }
     }
 }
