@@ -8,6 +8,13 @@
 
 import CoreGraphics
 
+extension CGSize {
+    
+    func scale(for amount: CGFloat) -> CGSize {
+        return CGSize(width: width / amount, height: height / amount)
+    }
+}
+
 extension Int {
     
     var toCGFloat: CGFloat {
