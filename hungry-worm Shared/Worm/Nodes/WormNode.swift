@@ -45,10 +45,12 @@ class WormNode: SKNode {
     var CGSIZE: CGFloat {
         return CGFloat(SIZE)
     }
-    
+    private var isAboutToBeKilled = false
+
     // MARK: - Initializsers
     
     init(position: CGPoint) {
+        isAboutToBeKilled = false
         factory = WormNodeFactory(nodeSize: SIZE, zPosition: 50)
         initialPosition = position
         
@@ -62,7 +64,20 @@ class WormNode: SKNode {
         fatalError("Could not create an instance of SnakeNode class")
     }
     
+    deinit {
+        kill()
+    }
+    
     // MARK: - Methods
+    
+    func kill() {
+        isAboutToBeKilled = true
+        
+        nodes.forEach { $0.removeFromParent() }
+        nodes.removeAll()
+        head.removeFromParent()
+        tail.removeFromParent()
+    }
     
     func move() {
         
@@ -92,6 +107,7 @@ class WormNode: SKNode {
     func change(direction: Direction) {
         self.direction = direction
     }
+    
     private func resolveSize(initialPosition: CGPoint, shouldInverse: Bool = false) -> CGPoint {
         var position = initialPosition
         
@@ -118,6 +134,7 @@ class WormNode: SKNode {
             let node = factory.produceBody()
             node.alpha = 0.0
             
+            #warning("Thread 1: Fatal error: Can't remove last element from an empty collection")
             // Store the last, tail node for later use
             let lastNode = nodes.removeLast() as? SnakeTailNode
             lastNode?.removeFromParent()
@@ -147,6 +164,9 @@ class WormNode: SKNode {
 extension WormNode: Updatable {
     
     func update() {
+        // If the worm is about to be killed ingnore the update loop updates
+        if isAboutToBeKilled { return }
+        
         move()
         head.update()
 
