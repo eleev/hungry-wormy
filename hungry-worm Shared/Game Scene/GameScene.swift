@@ -12,17 +12,37 @@ class GameScene: SKScene {
 
     // MARK: - Properties
     
+    private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint]) = ([], [])
     private var snake: WormNode?
     private var parser = TileLevel()
     fileprivate var fruitGenerator: FruitGenerator!
     private var spawnControllr: SpawnController!
+    
+    lazy fileprivate var physicsContactController: PhysicsContactController = {
+        guard let snake = self.snake else {
+            fatalError("Could not unwrap the required properties in order to initialize PhysicsContactController class")
+        }
+        return PhysicsContactController(worm: snake, fruitGenerator: fruitGenerator, scene: self, deathHandler: deathHandler)
+    }()
+    
+    lazy fileprivate var deathHandler: () -> () = { [weak self] in
+        self?.snake?.kill()
+        self?.snake = nil
+        
+        let waitAction = SKAction.wait(forDuration: 2)
+        let createAction = SKAction.run {
+            self?.createWorm()
+        }
+        let respawnActionSequnece = SKAction.sequence([waitAction, createAction])
+        self?.run(respawnActionSequnece)
+    }
     
     private var timeOfLastMove: TimeInterval = 0
     let timePerMove = 0.4
 
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
-        guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
+        guard let scene = SKScene(fileNamed: "DemoLevel-16x16") as? GameScene else {
             print("Failed to load GameScene.sks")
             abort()
         }
@@ -47,21 +67,17 @@ class GameScene: SKScene {
         }
         print("markerTileNode.numberOfRows: ", markerTileNode.numberOfRows, " markerTileNode.numberOfColumns", markerTileNode.numberOfColumns)
         
-        let markers = parser.parseMarkers(for: markerTileNode)
+        markers = parser.parseMarkers(for: markerTileNode)
         fruitGenerator = FruitGenerator(spawnPoints: markers.fruits, zPosition: 20)
-        let fruitNode = fruitGenerator.generate()
-        addChild(fruitNode)
         
         let walls = parser.parseWalls(for: wallsTileNode)
         walls.forEach { self.addChild($0) }
         
 
         spawnControllr = SpawnController()
-        let spawnPoint = spawnControllr.generate(outOf: markers.spawnPoints)
+        createWorm()
         
-        snake = WormNode(position: spawnPoint ?? .zero)
-        snake?.zPosition = 50
-        addChild(snake!)        
+        physicsContactController.generateFruit()
     }
     
     override func didMove(to view: SKView) {
@@ -78,41 +94,27 @@ class GameScene: SKScene {
         
         timeOfLastMove = currentTime
     }
+    
+    // MARK: - Utils
+    
+    func createWorm() {
+        let spawnPoint = spawnControllr.generate(outOf: markers.spawnPoints)
+        
+        snake = WormNode(position: spawnPoint ?? .zero)
+        snake?.zPosition = 50
+        addChild(snake!)
+    }
 }
 
 // Physics Simulation resolution
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
-        
-//        let bodyA = contact.bodyA.node?.name
-//        let bodyB = contact.bodyB.node?.name
-//
-        if contact.bodyA.node is FoodNode, contact.bodyB.node is WormPartNode {
-            debugPrint("body a is fruit & body b is snake")
-            
-            fruitGenerator.removeLastFruit()
-            let newFruit = fruitGenerator.generate()
-            addChild(newFruit)
-            
-//            let wait = SKAction.wait(forDuration: 1.0)
-//            let grow = SKAction.run { self.snake?.grow() }
-//            snake?.run(SKAction.sequence([wait, grow]))
-            snake?.grow()
-        } else if contact.bodyA.node is WormPartNode, contact.bodyB.node is FoodNode {
-            debugPrint("body a is snake & body b is fruitr")
-            
-            fruitGenerator.removeLastFruit()
-            let newFruit = fruitGenerator.generate()
-            addChild(newFruit)
-            
-//            let wait = SKAction.wait(forDuration: 1.0)
-//            let grow = SKAction.run { self.snake?.grow() }
-//            snake?.run(SKAction.sequence([wait, grow]))
-            snake?.grow()
-        }
-        
-//        debugPrint("bodyA: ", bodyA, " bodyB: ", bodyB)
+        physicsContactController.didBeginPhysicsContact(contact)
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        physicsContactController.didEndPhysicsContact(contact)
     }
 }
 
