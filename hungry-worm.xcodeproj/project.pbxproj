@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
+		A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */; };
+		A928AD22218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */; };
+		A928AD24218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */; };
+		A928AD25218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */; };
 		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
@@ -60,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
+		A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-14x14.sks"; sourceTree = "<group>"; };
+		A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-16x16.sks"; sourceTree = "<group>"; };
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 			children = (
 				A9DD686A2180A6EB009866CB /* GameScene.sks */,
 				A9DD686B2180A6EB009866CB /* GameScene.swift */,
+				A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */,
+				A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */,
 			);
 			path = "Game Scene";
 			sourceTree = "<group>";
@@ -341,6 +349,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DD688F2180A6ED009866CB /* GameScene.sks in Resources */,
+				A928AD24218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */,
+				A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
@@ -356,8 +366,10 @@
 			files = (
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
+				A928AD25218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD68902180A6ED009866CB /* GameScene.sks in Resources */,
+				A928AD22218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 			);
