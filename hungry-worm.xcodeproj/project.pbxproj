@@ -196,7 +196,6 @@
 		A9DD68A02180A72C009866CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A9EED4122183418300E48508 /* WormNodeFactory.swift */,
 				A9DD68A12180A74F009866CB /* Direction.swift */,
 				A9DD68A72180A868009866CB /* WorldSize.swift */,
 				A9DD68B02180AEF8009866CB /* Extensions.swift */,
@@ -229,6 +228,7 @@
 				A968F5652181B32F00E28ED9 /* WormNode.swift */,
 				A9EED4152183419800E48508 /* WormIncreaseLevel.swift */,
 				A9EED418218341A700E48508 /* WormPartNode.swift */,
+				A9EED4122183418300E48508 /* WormNodeFactory.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
