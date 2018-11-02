@@ -44,6 +44,8 @@ class TileLevel {
                 node.physicsBody?.isDynamic = false
                 node.physicsBody?.isResting = true
                 node.physicsBody?.affectedByGravity = false
+                node.physicsBody?.categoryBitMask = PhysicsTypes.wall.rawValue
+                node.physicsBody?.contactTestBitMask = PhysicsTypes.snake.rawValue
                 
                 nodes += [node]
             }
