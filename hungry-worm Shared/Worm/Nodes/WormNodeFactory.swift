@@ -13,6 +13,7 @@ struct WormNodeFactory {
     // MARK: - Properties
     
     var nodeSize: CGSize
+    var physicsBodySize: CGSize
     var zPosition: CGFloat
     
     // MARK: - Initializers
@@ -20,6 +21,8 @@ struct WormNodeFactory {
     init(nodeSize: Int, zPosition: CGFloat) {
         self.nodeSize = CGSize(width: nodeSize, height: nodeSize)
         self.zPosition = zPosition
+        
+        physicsBodySize = self.nodeSize.scale(for: 1.1)
     }
     
     // MARK: - Methods
@@ -32,29 +35,14 @@ struct WormNodeFactory {
         let foreverAnimation = SKAction.repeatForever(animation)
         node.run(foreverAnimation)
         
-        let physicsBody = SKPhysicsBody(rectangleOf: nodeSize)
-        physicsBody.isDynamic = true
-        physicsBody.affectedByGravity = false
-        physicsBody.contactTestBitMask = PhysicsTypes.snake.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
-        physicsBody.categoryBitMask = PhysicsTypes.snake.rawValue
-        physicsBody.collisionBitMask = 0
-        
-        node.physicsBody = physicsBody
+        node.physicsBody = producePhysicsBody()
         return node
     }
     
     func produceBody() -> WormPartNode {
         let headClosedTexture = SKTexture(imageNamed: "body")
         let node = WormPartNode(texture: headClosedTexture, size: nodeSize)
-        
-        let physicsBody = SKPhysicsBody(rectangleOf: nodeSize)
-        physicsBody.isDynamic = true
-        physicsBody.affectedByGravity = false
-        physicsBody.contactTestBitMask = PhysicsTypes.snake.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
-        physicsBody.categoryBitMask = PhysicsTypes.snake.rawValue
-        physicsBody.collisionBitMask = 0
-        
-        node.physicsBody = physicsBody
+        node.physicsBody = producePhysicsBody()
         return node
     }
     
@@ -62,18 +50,22 @@ struct WormNodeFactory {
         let headClosedTexture = SKTexture(imageNamed: "tail")
         let node = SnakeTailNode(texture: headClosedTexture, size: nodeSize)
         node.zRotation = CGFloat(180.0).toRadians
-        
-        let physicsBody = SKPhysicsBody(rectangleOf: nodeSize)
+        node.physicsBody = producePhysicsBody()
+        return node
+    }
+    
+    // MARK: - Private methods
+    
+    private func producePhysicsBody() -> SKPhysicsBody {
+        let physicsBody = SKPhysicsBody(rectangleOf: physicsBodySize)
         physicsBody.isDynamic = true
         physicsBody.affectedByGravity = false
         physicsBody.contactTestBitMask = PhysicsTypes.snake.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
         physicsBody.categoryBitMask = PhysicsTypes.snake.rawValue
         physicsBody.collisionBitMask = 0
         
-        node.physicsBody = physicsBody
-        return node
+        return physicsBody
     }
-    
     
 }
 
