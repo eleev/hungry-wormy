@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
+		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
@@ -57,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				A9EED422218341FC00E48508 /* Fruits */,
 				A9EED41B218341B400E48508 /* Protocols */,
 				A968F5642181B31A00E28ED9 /* Worm */,
+				A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */,
 			);
 			path = "hungry-worm Shared";
 			sourceTree = "<group>";
@@ -366,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
 				A9EED4272183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40D218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
 				A9EED4282183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40E218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
