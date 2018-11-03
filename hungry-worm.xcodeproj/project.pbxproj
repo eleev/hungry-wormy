@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */; };
+		A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */; };
 		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */; };
@@ -63,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpinnerNode.sks; sourceTree = "<group>"; };
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
 		A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-14x14.sks"; sourceTree = "<group>"; };
 		A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-16x16.sks"; sourceTree = "<group>"; };
@@ -117,6 +120,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A902D6D5218D9C1600698AD4 /* Obstacles */ = {
+			isa = PBXGroup;
+			children = (
+				A902D6D6218D9C1B00698AD4 /* Spinner */,
+			);
+			path = Obstacles;
+			sourceTree = "<group>";
+		};
+		A902D6D6218D9C1B00698AD4 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
 		A968F5642181B31A00E28ED9 /* Worm */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +168,7 @@
 		A9DD68682180A6EB009866CB /* hungry-worm Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A902D6D5218D9C1600698AD4 /* Obstacles */,
 				A9A33ADC21845F91003AC9A7 /* Controllers */,
 				A9EED42D218342AE00E48508 /* Actions */,
 				A9EED42C218342A200E48508 /* Game Scene */,
@@ -353,6 +373,7 @@
 				A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
+				A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
 				A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A968F55D2181936000E28ED9 /* TileSet.sks in Resources */,
@@ -372,6 +393,7 @@
 				A928AD22218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
+				A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 import CoreGraphics
+import SpriteKit
 
 extension CGSize {
     
@@ -42,5 +43,16 @@ extension CGPoint {
 
     static func -%(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         return CGPoint(x: abs(lhs.x - rhs.x), y: abs(lhs.y - rhs.y))
+    }
+}
+
+extension SKScene {
+    
+    /// A small fix that resolves the default behavior for nodes that were referenced from differnet .sks files. The thing is that they do not launch their animations by default, so this small `hack` fixes this issue.
+    ///
+    /// The method should be called in `didMove(to view: SKView)`
+    func launchReferenceAnimations() {
+        isPaused = true
+        isPaused = false
     }
 }
