@@ -126,12 +126,13 @@
 			path = Worm;
 			sourceTree = "<group>";
 		};
-		A9A33ADC21845F91003AC9A7 /* Spawning */ = {
+		A9A33ADC21845F91003AC9A7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */,
 				A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */,
 			);
-			path = Spawning;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A9DD68632180A6EB009866CB = {
@@ -148,7 +149,7 @@
 		A9DD68682180A6EB009866CB /* hungry-worm Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A9A33ADC21845F91003AC9A7 /* Spawning */,
+				A9A33ADC21845F91003AC9A7 /* Controllers */,
 				A9EED42D218342AE00E48508 /* Actions */,
 				A9EED42C218342A200E48508 /* Game Scene */,
 				A9EED42B2183429600E48508 /* Assets */,
@@ -156,7 +157,6 @@
 				A9EED422218341FC00E48508 /* Fruits */,
 				A9EED41B218341B400E48508 /* Protocols */,
 				A968F5642181B31A00E28ED9 /* Worm */,
-				A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */,
 			);
 			path = "hungry-worm Shared";
 			sourceTree = "<group>";
