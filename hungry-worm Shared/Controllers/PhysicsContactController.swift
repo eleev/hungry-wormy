@@ -12,7 +12,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     
     // MARK: - Properties
     
-    private weak var worm: WormNode?
+    weak var worm: WormNode?
     private weak var scene: SKScene?
     private var deathHandler: ()->()
     private var fruitGenerator: FruitGenerator?
