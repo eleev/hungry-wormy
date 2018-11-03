@@ -64,10 +64,6 @@ class WormNode: SKNode {
         fatalError("Could not create an instance of SnakeNode class")
     }
     
-    deinit {
-        kill()
-    }
-    
     // MARK: - Methods
     
     func kill() {
@@ -77,6 +73,8 @@ class WormNode: SKNode {
         nodes.removeAll()
         head.removeFromParent()
         tail.removeFromParent()
+        removeAllActions()
+        removeFromParent()
     }
     
     func move() {
@@ -134,7 +132,6 @@ class WormNode: SKNode {
             let node = factory.produceBody()
             node.alpha = 0.0
             
-            #warning("Thread 1: Fatal error: Can't remove last element from an empty collection")
             // Store the last, tail node for later use
             let lastNode = nodes.removeLast() as? SnakeTailNode
             lastNode?.removeFromParent()
