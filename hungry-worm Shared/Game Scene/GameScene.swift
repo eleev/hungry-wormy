@@ -32,6 +32,7 @@ class GameScene: SKScene {
         let waitAction = SKAction.wait(forDuration: 2)
         let createAction = SKAction.run {
             self?.createWorm()
+            self?.physicsContactController.worm = self?.snake
         }
         let respawnActionSequnece = SKAction.sequence([waitAction, createAction])
         self?.run(respawnActionSequnece)
@@ -65,8 +66,6 @@ class GameScene: SKScene {
         guard let wallsTileNode = scene?.childNode(withName: "Walls") as? SKTileMapNode, let markerTileNode = scene?.childNode(withName: "Markers") as? SKTileMapNode else {
             fatalError("Could not load Walls or Markers SKTileMapNode, the app cannot be futher executed")
         }
-        print("markerTileNode.numberOfRows: ", markerTileNode.numberOfRows, " markerTileNode.numberOfColumns", markerTileNode.numberOfColumns)
-        
         markers = parser.parseMarkers(for: markerTileNode)
         fruitGenerator = FruitGenerator(spawnPoints: markers.fruits, zPosition: 20)
         
@@ -85,13 +84,9 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
-        if (currentTime - timeOfLastMove) < timePerMove {
-            return
-        }
+        if (currentTime - timeOfLastMove) < timePerMove { return }
         
         snake?.update()
-        
         timeOfLastMove = currentTime
     }
     
