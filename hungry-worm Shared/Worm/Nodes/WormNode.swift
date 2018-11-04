@@ -15,6 +15,10 @@ class WormNode: SKNode {
     private let factory: WormNodeFactory
     private var nodes: [WormPartNode] = []
     
+    var lenght: Int {
+        return nodes.count
+    }
+    
     private var direction: Direction = .none {
         didSet {
             head.direction = direction
@@ -102,8 +106,13 @@ class WormNode: SKNode {
         }
     }
     
-    func change(direction: Direction) {
-        self.direction = direction
+    @discardableResult func change(direction: Direction) -> Bool {
+        // Will ignore impossible direction changes e.g. changing direction for 180 degrees (current is `up` and attempting to change to `down`)
+        if self.direction.isAbleToSwitch(toNew: direction) {
+            self.direction = direction
+            return true
+        }
+        return false
     }
     
     private func resolveSize(initialPosition: CGPoint, shouldInverse: Bool = false) -> CGPoint {
@@ -124,6 +133,14 @@ class WormNode: SKNode {
         return position
     }
     
+    func split(at wormNode: WormPartNode) -> Bool {
+        for node in nodes where node === wormNode {
+            debugPrint(#function + " found a node that needs to be removed as well as all the nodes below")
+            return true
+        }
+        
+        return false
+    }
     
     func grow(for level: WormIncreaseLevel = .one) {
         var growLevel = level.rawValue
