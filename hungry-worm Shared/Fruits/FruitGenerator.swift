@@ -28,7 +28,6 @@ struct FruitGenerator {
     mutating func generate() -> FoodNode {
         let randomFood =  FoodType.allCases.randomElement() ?? FoodType.bee
         
-        
         let index = Int.random(in: 0..<spawnPoints.count)
         let point = spawnPoints.remove(at: index)
         
@@ -44,31 +43,4 @@ struct FruitGenerator {
     func isDrained() -> Bool {
         return spawnPoints.isEmpty
     }
-}
-
-extension FruitGenerator: PhysicsContactDelegate {
-    
-    func didBeginPhysicsContact(_ contact: SKPhysicsContact, completion:  @escaping (Bool) -> ()) {
-        
-        func removeAndComplete(_ fruit: FoodNode) {
-            fruit.remove()
-            completion(true)
-        }
-        
-        // WormPart + FruitNode intersection
-        if contact.bodyA.node is WormPartNode, let fruit = contact.bodyB.node as? FoodNode  {
-            // Remove fruit and grow the worm
-            removeAndComplete(fruit)
-        } else if contact.bodyB.node is WormPartNode, let fruit =  contact.bodyA.node as? FoodNode {
-            // Remove fruit and grow the worm
-            removeAndComplete(fruit)
-        } else {
-            completion(false)
-        }
-    }
-    
-    func didEndPhysicsContact(_ contact: SKPhysicsContact) {
-        // Has no implementation
-    }
-    
 }
