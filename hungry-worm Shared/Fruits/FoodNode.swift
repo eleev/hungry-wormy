@@ -20,6 +20,9 @@ class FoodNode: SKSpriteNode {
         physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 54, height: 54))
         physicsBody?.isDynamic = false
         physicsBody?.isResting = true
+        physicsBody?.usesPreciseCollisionDetection = true
+        physicsBody?.categoryBitMask = PhysicsTypes.fruit.rawValue
+        physicsBody?.contactTestBitMask = PhysicsTypes.worm.rawValue
         
         animate()
         
@@ -44,7 +47,6 @@ class FoodNode: SKSpriteNode {
         // Animate the removal
         removeAllActions()
         removeFromParent()
-        
     }
     
 }
