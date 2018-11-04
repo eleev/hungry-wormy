@@ -45,7 +45,8 @@ class TileLevel {
                 node.physicsBody?.isResting = true
                 node.physicsBody?.affectedByGravity = false
                 node.physicsBody?.categoryBitMask = PhysicsTypes.wall.rawValue
-                node.physicsBody?.contactTestBitMask = PhysicsTypes.snake.rawValue
+                node.physicsBody?.contactTestBitMask = PhysicsTypes.worm.rawValue
+                node.physicsBody?.collisionBitMask = 0
                 
                 nodes += [node]
             }
