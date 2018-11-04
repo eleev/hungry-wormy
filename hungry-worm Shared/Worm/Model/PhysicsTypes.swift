@@ -9,7 +9,10 @@
 import Foundation
 
 enum PhysicsTypes: UInt32 {
-    case snake = 1
-    case wall = 2
-    case fruit = 4
+    case worm = 1
+    case wormBody = 2
+    case wormTail = 4
+    case wall = 8
+    case fruit = 16
+    case spinner = 32
 }

@@ -30,47 +30,57 @@ struct WormNodeFactory {
     func produceHead() -> WormHeadNode {
         let headClosedTexture = SKTexture(imageNamed: "head-closed")
         let node = WormHeadNode(texture: headClosedTexture, size: nodeSize)
+        node.name = "Worm Head"
         
         let animation = SKAction.animate(with: [headClosedTexture, SKTexture(imageNamed: "head-open")], timePerFrame: 0.25)
         let foreverAnimation = SKAction.repeatForever(animation)
         node.run(foreverAnimation)
         
-        node.physicsBody = producePhysicsBody()
+        let physicsBody = SKPhysicsBody(rectangleOf: physicsBodySize)
+        physicsBody.isDynamic = true
+        physicsBody.affectedByGravity = false
+        physicsBody.categoryBitMask = PhysicsTypes.worm.rawValue
+        physicsBody.contactTestBitMask = PhysicsTypes.wormBody.rawValue | PhysicsTypes.wormTail.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
+        physicsBody.collisionBitMask = 0
+        physicsBody.usesPreciseCollisionDetection = true
+        
+        node.physicsBody = physicsBody
+        
         return node
     }
     
     func produceBody() -> WormPartNode {
         let headClosedTexture = SKTexture(imageNamed: "body")
         let node = WormPartNode(texture: headClosedTexture, size: nodeSize)
-        node.physicsBody = producePhysicsBody()
+        node.name = "Worm Body"
+        
+        let physicsBody = SKPhysicsBody(rectangleOf: physicsBodySize)
+        physicsBody.isDynamic = true
+        physicsBody.affectedByGravity = false
+        physicsBody.categoryBitMask = PhysicsTypes.wormBody.rawValue
+        physicsBody.contactTestBitMask = PhysicsTypes.worm.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
+        physicsBody.collisionBitMask = 0
+        physicsBody.usesPreciseCollisionDetection = true
+        node.physicsBody = physicsBody
+        
         return node
     }
     
     func produceTail() -> SnakeTailNode {
         let headClosedTexture = SKTexture(imageNamed: "tail")
         let node = SnakeTailNode(texture: headClosedTexture, size: nodeSize)
+        node.name = "Worm Tail"
         node.zRotation = CGFloat(180.0).toRadians
-        node.physicsBody = producePhysicsBody()
-        return node
-    }
-    
-    // MARK: - Private methods
-    
-    private func producePhysicsBody() -> SKPhysicsBody {
+        
         let physicsBody = SKPhysicsBody(rectangleOf: physicsBodySize)
         physicsBody.isDynamic = true
         physicsBody.affectedByGravity = false
-        physicsBody.contactTestBitMask = PhysicsTypes.snake.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
-        physicsBody.categoryBitMask = PhysicsTypes.snake.rawValue
+        physicsBody.categoryBitMask = PhysicsTypes.wormTail.rawValue
+        physicsBody.contactTestBitMask = PhysicsTypes.worm.rawValue | PhysicsTypes.wall.rawValue | PhysicsTypes.fruit.rawValue
         physicsBody.collisionBitMask = 0
+        physicsBody.usesPreciseCollisionDetection = true
+        node.physicsBody = physicsBody
         
-        return physicsBody
+        return node
     }
-    
-}
-
-enum PhysicsTypes: UInt32 {
-    case snake = 1
-    case wall = 2
-    case fruit = 4
 }
