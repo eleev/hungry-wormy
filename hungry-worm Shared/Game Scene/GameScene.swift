@@ -39,11 +39,11 @@ class GameScene: SKScene {
     }
     
     private var timeOfLastMove: TimeInterval = 0
-    let timePerMove = 0.4
+    let timePerMove = 0.6
 
-    class func newGameScene() -> GameScene {
+    class func newGameScene(named name: String) -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
-        guard let scene = SKScene(fileNamed: "DemoLevel-16x16") as? GameScene else {
+        guard let scene = SKScene(fileNamed: name) as? GameScene else {
             print("Failed to load GameScene.sks")
             abort()
         }
