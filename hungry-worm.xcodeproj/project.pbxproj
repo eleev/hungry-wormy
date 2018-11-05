@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */; };
 		A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */; };
+		A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */; };
+		A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */; };
+		A902D6E2218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */; };
+		A902D6E3218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */; };
+		A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
+		A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
 		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
-		A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */; };
-		A928AD22218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */; };
-		A928AD24218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */; };
-		A928AD25218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */; };
+		A928AD21218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */; };
+		A928AD22218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */; };
+		A928AD24218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */; };
+		A928AD25218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */; };
 		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
@@ -23,6 +29,10 @@
 		A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
 		A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
+		A9923842218F6395008FD796 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene.sks */; };
+		A9923843218F6395008FD796 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene.sks */; };
+		A9923847218F6420008FD796 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9923846218F6420008FD796 /* MainMenuScene.swift */; };
+		A9923848218F6420008FD796 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9923846218F6420008FD796 /* MainMenuScene.swift */; };
 		A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
 		A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
 		A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68742180A6ED009866CB /* AppDelegate.swift */; };
@@ -34,8 +44,8 @@
 		A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68892180A6ED009866CB /* Main.storyboard */; };
 		A9DD688D2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
 		A9DD688E2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
-		A9DD688F2180A6ED009866CB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* GameScene.sks */; };
-		A9DD68902180A6ED009866CB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* GameScene.sks */; };
+		A9DD688F2180A6ED009866CB /* DemoLevel-32x32.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */; };
+		A9DD68902180A6ED009866CB /* DemoLevel-32x32.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */; };
 		A9DD68912180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
@@ -66,16 +76,21 @@
 
 /* Begin PBXFileReference section */
 		A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpinnerNode.sks; sourceTree = "<group>"; };
+		A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTypes.swift; sourceTree = "<group>"; };
+		A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-03-16x16.sks"; sourceTree = "<group>"; };
+		A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerNode.swift; sourceTree = "<group>"; };
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
-		A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-14x14.sks"; sourceTree = "<group>"; };
-		A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-16x16.sks"; sourceTree = "<group>"; };
+		A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-02-16x16.sks"; sourceTree = "<group>"; };
+		A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-01-16x16.sks"; sourceTree = "<group>"; };
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
 		A98C44E5218756DC00E74C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9923841218F6395008FD796 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
+		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		A9DD686A2180A6EB009866CB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-32x32.sks"; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A9DD68712180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68742180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,8 +147,29 @@
 			isa = PBXGroup;
 			children = (
 				A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */,
+				A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */,
 			);
 			path = Spinner;
+			sourceTree = "<group>";
+		};
+		A902D6DC218DB5E800698AD4 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */,
+				A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */,
+				A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */,
+				A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		A902D6DD218DB5F800698AD4 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A9923845218F640D008FD796 /* Scenes */,
+				A9923844218F6406008FD796 /* Classes */,
+			);
+			path = "Main Menu";
 			sourceTree = "<group>";
 		};
 		A968F5642181B31A00E28ED9 /* Worm */ = {
@@ -143,6 +179,22 @@
 				A9DD68A02180A72C009866CB /* Model */,
 			);
 			path = Worm;
+			sourceTree = "<group>";
+		};
+		A9923844218F6406008FD796 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9923846218F6420008FD796 /* MainMenuScene.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A9923845218F640D008FD796 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9923841218F6395008FD796 /* MainMenuScene.sks */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		A9A33ADC21845F91003AC9A7 /* Controllers */ = {
@@ -168,6 +220,8 @@
 		A9DD68682180A6EB009866CB /* hungry-worm Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A902D6DD218DB5F800698AD4 /* Main Menu */,
+				A902D6DC218DB5E800698AD4 /* Levels */,
 				A902D6D5218D9C1600698AD4 /* Obstacles */,
 				A9A33ADC21845F91003AC9A7 /* Controllers */,
 				A9EED42D218342AE00E48508 /* Actions */,
@@ -219,6 +273,7 @@
 				A9DD68A12180A74F009866CB /* Direction.swift */,
 				A9DD68A72180A868009866CB /* WorldSize.swift */,
 				A9DD68B02180AEF8009866CB /* Extensions.swift */,
+				A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,10 +328,7 @@
 		A9EED42C218342A200E48508 /* Game Scene */ = {
 			isa = PBXGroup;
 			children = (
-				A9DD686A2180A6EB009866CB /* GameScene.sks */,
 				A9DD686B2180A6EB009866CB /* GameScene.swift */,
-				A928AD20218CA89A00D79D11 /* DemoLevel-14x14.sks */,
-				A928AD23218CAB6700D79D11 /* DemoLevel-16x16.sks */,
 			);
 			path = "Game Scene";
 			sourceTree = "<group>";
@@ -368,9 +420,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DD688F2180A6ED009866CB /* GameScene.sks in Resources */,
-				A928AD24218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */,
-				A928AD21218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
+				A9DD688F2180A6ED009866CB /* DemoLevel-32x32.sks in Resources */,
+				A928AD24218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */,
+				A902D6E2218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */,
+				A928AD21218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */,
+				A9923842218F6395008FD796 /* MainMenuScene.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
@@ -387,11 +441,13 @@
 			files = (
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
-				A928AD25218CAB6700D79D11 /* DemoLevel-16x16.sks in Resources */,
+				A928AD25218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
-				A9DD68902180A6ED009866CB /* GameScene.sks in Resources */,
-				A928AD22218CA89A00D79D11 /* DemoLevel-14x14.sks in Resources */,
+				A9DD68902180A6ED009866CB /* DemoLevel-32x32.sks in Resources */,
+				A928AD22218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
+				A902D6E3218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */,
+				A9923843218F6395008FD796 /* MainMenuScene.sks in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 			);
@@ -405,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
+				A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4272183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40D218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
@@ -415,11 +472,13 @@
 				A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */,
 				A9EED4132183418300E48508 /* WormNodeFactory.swift in Sources */,
 				A968F5662181B32F00E28ED9 /* WormNode.swift in Sources */,
+				A9923847218F6420008FD796 /* MainMenuScene.swift in Sources */,
 				A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */,
 				A9EED41D218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
 				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
+				A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
 			);
@@ -430,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
+				A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4282183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40E218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
@@ -440,11 +500,13 @@
 				A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */,
 				A9EED4142183418300E48508 /* WormNodeFactory.swift in Sources */,
 				A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */,
+				A9923848218F6420008FD796 /* MainMenuScene.swift in Sources */,
 				A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */,
 				A9EED41E218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
 				A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */,
+				A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
