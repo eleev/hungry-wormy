@@ -73,7 +73,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     // MARK: - Private methods
     
     private func resolveWormGrowing(for nodeA: SKNode?, and nodeB: SKNode?) {
-        func growWorm(using fruit: FoodNode) {            
+        func growWorm(using fruit: FoodNode) {
             fruit.remove()
             
             generateFruit()
