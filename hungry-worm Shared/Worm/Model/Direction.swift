@@ -23,7 +23,7 @@ extension Direction {
         case .up, .down:
             isSwitched = direction == .left || direction == .right
         case .none:
-            return false
+            return true
         }
         return isSwitched
     }
