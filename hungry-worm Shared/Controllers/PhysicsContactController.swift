@@ -16,6 +16,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     private weak var scene: SKScene?
     private var deathHandler: ()->()
     private var fruitGenerator: FruitGenerator?
+    private var timeBombGenerator: TimeBombGenerator?
     
     private var drawContactPoint: (_ point: CGPoint) -> SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
@@ -35,9 +36,10 @@ class PhysicsContactController: PhysicsContactDelegate {
     
     // MARK: - Initializers
     
-    init(worm: WormNode, fruitGenerator: FruitGenerator, scene: SKScene, deathHandler: @escaping ()->()) {
+    init(worm: WormNode, fruitGenerator: FruitGenerator, timeBombGenerator: TimeBombGenerator, scene: SKScene, deathHandler: @escaping ()->()) {
         self.worm = worm
         self.fruitGenerator = fruitGenerator
+        self.timeBombGenerator = timeBombGenerator
         self.scene = scene
         self.deathHandler = deathHandler
     }
@@ -46,6 +48,23 @@ class PhysicsContactController: PhysicsContactDelegate {
         fruitGenerator?.removeLastFruit()
         let fruitNode = fruitGenerator?.generate()
         scene?.addChild(fruitNode!)
+    }
+    
+    func generateTimeBom() {
+        timeBombGenerator?.removeLast()
+        
+        if let bombNode = timeBombGenerator?.generate() {
+            let waitDuration = TimeInterval((3...15).randomElement() ?? 3)
+            
+            let wait = SKAction.wait(forDuration: waitDuration)
+            let spawnBombNode = SKAction.run { [weak self] in
+                bombNode.alpha = 0.0
+                self?.scene?.addChild(bombNode)
+                bombNode.run(SKAction.fadeAlpha(to: 1.0, duration: 1.5))
+            }
+            let sequence = SKAction.sequence([wait, spawnBombNode])
+            scene?.run(sequence)
+        }
     }
     
     // MARK: - Conformance to PhysocsContactDelegate protocol
@@ -57,8 +76,10 @@ class PhysicsContactController: PhysicsContactDelegate {
         let bodyA = contact.bodyA
         let bodyB = contact.bodyB
         
-        resolveWormWallCollision(for: bodyA, and: bodyB)
-        resolveWormSelfCollision(for: bodyA, and: bodyB)
+        resolveWormWallCollision(               for: bodyA, and: bodyB  )
+        resolveWormSelfCollision(               for: bodyA, and: bodyB  )
+        resolveWormSpinnerCollision(            for: bodyA, and: bodyB  )
+        resolveWormSpinnerHeadTailCollision(    for: bodyA, and: bodyB  )
         
         let nodeA = bodyA.node
         let nodeB = bodyB.node
@@ -87,10 +108,42 @@ class PhysicsContactController: PhysicsContactDelegate {
         }
     }
     
+    private func resolveWormSpinnerCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        
+        func splitIfPossible() {
+            if let contactNode = bodyB.node as? WormPartNode {
+                worm?.split(at: contactNode)
+            }
+        }
+        
+        if bodyA.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyB.categoryBitMask == PhysicsTypes.wormBody.rawValue {
+            splitIfPossible()
+        } else if bodyB.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyA.categoryBitMask == PhysicsTypes.wormBody.rawValue {
+            splitIfPossible()
+        }
+    }
+    
+    private func resolveWormSpinnerHeadTailCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        
+        if bodyA.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
+            deathHandler()
+        } else if bodyB.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyA.categoryBitMask == PhysicsTypes.worm.rawValue {
+            deathHandler()
+        }
+    }
+    
+    private func resolveTimeBombCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        if bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
+            
+        } else if bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyA.categoryBitMask == PhysicsTypes.worm.rawValue {
+            
+        }
+    }
+    
     private func resolveWormWallCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
         if bodyA.categoryBitMask == PhysicsTypes.wall.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
+
 //            debugPrint("Part of the Worm that caused the death: ", bodyB.node?.name as Any)
-            
 //            let node = drawContactPoint(lastContactPoint!)
 //            scene?.addChild(node)
             
@@ -107,4 +160,13 @@ class PhysicsContactController: PhysicsContactDelegate {
             deathHandler()
         }
     }
+    
+    private func resolveWormTimeBombCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        if bodyA.categoryBitMask == PhysicsTypes.worm.rawValue, bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
+            generateTimeBom()
+        } else if bodyB.categoryBitMask == PhysicsTypes.worm.rawValue, bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
+            generateTimeBom()
+        }
+    }
+    
 }
