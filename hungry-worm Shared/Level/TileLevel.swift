@@ -55,10 +55,11 @@ class TileLevel {
         return nodes
     }
     
-    func parseMarkers(for tileMapNode: SKTileMapNode) -> (fruits: [CGPoint], spawnPoints: [CGPoint]) {
+    func parseMarkers(for tileMapNode: SKTileMapNode) -> (fruits: [CGPoint], spawnPoints: [CGPoint], timeBombs: [CGPoint]) {
      
         var fruits = [CGPoint]()
         var spawnPoints = [CGPoint]()
+        var timeBombs = [CGPoint]()
         
         for i in 0..<tileMapNode.numberOfRows {
             for j in 0..<tileMapNode.numberOfColumns {
@@ -70,14 +71,19 @@ class TileLevel {
                 nodePosition.x += tileDef.size.width / 2
                 nodePosition.y += tileDef.size.height / 2
                 
-                if tileDef.name == "Food" {
+                switch tileDef.name {
+                case "Food":
                     fruits += [nodePosition]
-                } else if tileDef.name == "Player Spawn Point" {
+                case "Player Spawn Point":
                     spawnPoints += [nodePosition]
+                case "TimeBomb":
+                    timeBombs += [nodePosition]
+                default:
+                    continue
                 }
             }
         }
         tileMapNode.removeFromParent()
-        return (fruits: fruits, spawnPoints: spawnPoints)
+        return (fruits: fruits, spawnPoints: spawnPoints, timeBombs: timeBombs)
     }
 }
