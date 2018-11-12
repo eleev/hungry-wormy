@@ -38,9 +38,8 @@ class WormNode: SKNode {
     private lazy var tail: SnakeTailNode = {
         let tail = factory.produceTail()
         tail.zPosition = 49
+        resetTailNode()
         
-        tail.position = initialPosition
-        tail.position.y -= 32
         nodes += [tail]
         return tail
     }()
@@ -133,9 +132,24 @@ class WormNode: SKNode {
         return position
     }
     
-    func split(at wormNode: WormPartNode) -> Bool {
-        for node in nodes where node === wormNode {
-            debugPrint(#function + " found a node that needs to be removed as well as all the nodes below")
+    @discardableResult func split(at wormNode: WormPartNode) -> Bool {
+        var indexToRemove: Int = -1
+        for (index, node) in nodes.enumerated() where node === wormNode {
+            var slice = nodes[index..<nodes.count - 1]
+            indexToRemove = index
+            
+            for sliceNode in slice {
+                sliceNode.removeAllActions()
+                sliceNode.removeFromParent()
+            }
+            slice.removeAll()
+            
+            break
+        }
+        
+        if indexToRemove != -1 {
+            nodes.removeSubrange(indexToRemove..<nodes.count - 1)
+            resetTailNode()
             return true
         }
         
@@ -172,6 +186,11 @@ class WormNode: SKNode {
             
             growLevel -= 1
         }
+    }
+    
+    private func resetTailNode() {
+        tail.position = initialPosition
+        tail.position.y -= 32
     }
 }
 
