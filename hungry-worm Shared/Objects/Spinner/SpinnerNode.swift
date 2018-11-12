@@ -13,10 +13,12 @@ class SpinnerNode: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        zPosition = 100
+        
         physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.2)
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = PhysicsTypes.spinner.rawValue
-        physicsBody?.contactTestBitMask = PhysicsTypes.worm.rawValue | PhysicsTypes.wormBody.rawValue | PhysicsTypes.wormTail.rawValue
+        physicsBody?.contactTestBitMask = PhysicsTypes.worm.rawValue | PhysicsTypes.wormBody.rawValue
     }
     
 }
