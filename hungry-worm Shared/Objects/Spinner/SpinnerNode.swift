@@ -19,6 +19,7 @@ class SpinnerNode: SKSpriteNode {
         physicsBody?.affectedByGravity = false
         physicsBody?.categoryBitMask = PhysicsTypes.spinner.rawValue
         physicsBody?.contactTestBitMask = PhysicsTypes.worm.rawValue | PhysicsTypes.wormBody.rawValue
+        physicsBody?.collisionBitMask = 0
     }
     
 }
