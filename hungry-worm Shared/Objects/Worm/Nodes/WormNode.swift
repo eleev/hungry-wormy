@@ -37,8 +37,10 @@ class WormNode: SKNode {
     }()
     private lazy var tail: SnakeTailNode = {
         let tail = factory.produceTail()
+        
         tail.zPosition = 49
-        resetTailNode()
+        tail.position = initialPosition
+        tail.position.y -= 32
         
         nodes += [tail]
         return tail
