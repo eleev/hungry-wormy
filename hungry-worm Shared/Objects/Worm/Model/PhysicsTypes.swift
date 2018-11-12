@@ -15,4 +15,5 @@ enum PhysicsTypes: UInt32 {
     case wall = 8
     case fruit = 16
     case spinner = 32
+    case timeBomb = 64
 }
