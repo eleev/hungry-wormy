@@ -12,17 +12,19 @@ class GameScene: SKScene {
 
     // MARK: - Properties
     
-    private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint]) = ([], [])
+    private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint], timeBombs: [CGPoint]) = ([], [], [])
     private var snake: WormNode?
     private var parser = TileLevel()
+    
     fileprivate var fruitGenerator: FruitGenerator!
     private var spawnControllr: SpawnController!
+    private var timeBombGenerator: TimeBombGenerator!
     
     lazy fileprivate var physicsContactController: PhysicsContactController = {
         guard let snake = self.snake else {
             fatalError("Could not unwrap the required properties in order to initialize PhysicsContactController class")
         }
-        return PhysicsContactController(worm: snake, fruitGenerator: fruitGenerator, scene: self, deathHandler: deathHandler)
+        return PhysicsContactController(worm: snake, fruitGenerator: fruitGenerator, timeBombGenerator: timeBombGenerator, scene: self, deathHandler: deathHandler)
     }()
     
     lazy fileprivate var deathHandler: () -> () = { [weak self] in
@@ -39,7 +41,7 @@ class GameScene: SKScene {
     }
     
     private var timeOfLastMove: TimeInterval = 0
-    let timePerMove = 0.6
+    private(set) var timePerMove = 0.0
 
     class func newGameScene(named name: String) -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
@@ -63,20 +65,24 @@ class GameScene: SKScene {
         
         physicsWorld.contactDelegate = self
         
+        timePerMove = Double(userData?["timePerMove"] as? Float ?? 0.6)
+        
         guard let wallsTileNode = scene?.childNode(withName: "Walls") as? SKTileMapNode, let markerTileNode = scene?.childNode(withName: "Markers") as? SKTileMapNode else {
             fatalError("Could not load Walls or Markers SKTileMapNode, the app cannot be futher executed")
         }
         markers = parser.parseMarkers(for: markerTileNode)
+
         fruitGenerator = FruitGenerator(spawnPoints: markers.fruits, zPosition: 20)
-        
+        timeBombGenerator = TimeBombGenerator(spawnPoints: markers.timeBombs)
+
         let walls = parser.parseWalls(for: wallsTileNode)
         walls.forEach { self.addChild($0) }
         
-
         spawnControllr = SpawnController()
         createWorm()
         
         physicsContactController.generateFruit()
+        physicsContactController.generateTimeBomb()
     }
     
     override func didMove(to view: SKView) {
@@ -221,4 +227,3 @@ extension GameScene {
 
 }
 #endif
-
