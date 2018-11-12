@@ -11,16 +11,24 @@
 		A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */; };
 		A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */; };
 		A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */; };
-		A902D6E2218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */; };
-		A902D6E3218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */; };
+		A902D6E2218ED52F00698AD4 /* Level-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */; };
+		A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */; };
 		A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
 		A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
+		A916BE5821999A2C005B803C /* TimeBombNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5721999A2C005B803C /* TimeBombNode.swift */; };
+		A916BE5921999A31005B803C /* TimeBombNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5721999A2C005B803C /* TimeBombNode.swift */; };
+		A916BE5B21999A43005B803C /* TimeBombNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE5A21999A43005B803C /* TimeBombNode.sks */; };
+		A916BE5C21999A43005B803C /* TimeBombNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE5A21999A43005B803C /* TimeBombNode.sks */; };
+		A916BE5E2199AAC7005B803C /* TimeBombGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */; };
+		A916BE5F2199AAC7005B803C /* TimeBombGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */; };
+		A916BE642199DFE9005B803C /* Level-04-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE632199DFE9005B803C /* Level-04-16x16.sks */; };
+		A916BE652199DFE9005B803C /* Level-04-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE632199DFE9005B803C /* Level-04-16x16.sks */; };
 		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
-		A928AD21218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */; };
-		A928AD22218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */; };
-		A928AD24218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */; };
-		A928AD25218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */; };
+		A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */; };
+		A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */; };
+		A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
+		A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
 		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
@@ -44,8 +52,6 @@
 		A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68892180A6ED009866CB /* Main.storyboard */; };
 		A9DD688D2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
 		A9DD688E2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
-		A9DD688F2180A6ED009866CB /* DemoLevel-32x32.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */; };
-		A9DD68902180A6ED009866CB /* DemoLevel-32x32.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */; };
 		A9DD68912180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
@@ -77,11 +83,15 @@
 /* Begin PBXFileReference section */
 		A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpinnerNode.sks; sourceTree = "<group>"; };
 		A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTypes.swift; sourceTree = "<group>"; };
-		A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-03-16x16.sks"; sourceTree = "<group>"; };
+		A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-03-16x16.sks"; sourceTree = "<group>"; };
 		A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerNode.swift; sourceTree = "<group>"; };
+		A916BE5721999A2C005B803C /* TimeBombNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBombNode.swift; sourceTree = "<group>"; };
+		A916BE5A21999A43005B803C /* TimeBombNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TimeBombNode.sks; sourceTree = "<group>"; };
+		A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBombGenerator.swift; sourceTree = "<group>"; };
+		A916BE632199DFE9005B803C /* Level-04-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-04-16x16.sks"; sourceTree = "<group>"; };
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
-		A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-02-16x16.sks"; sourceTree = "<group>"; };
-		A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-01-16x16.sks"; sourceTree = "<group>"; };
+		A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-02-16x16.sks"; sourceTree = "<group>"; };
+		A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-01-16x16.sks"; sourceTree = "<group>"; };
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
@@ -90,7 +100,6 @@
 		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DemoLevel-32x32.sks"; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A9DD68712180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68742180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,12 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A902D6D5218D9C1600698AD4 /* Obstacles */ = {
+		A902D6D5218D9C1600698AD4 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				A968F5642181B31A00E28ED9 /* Worm */,
+				A9EED422218341FC00E48508 /* Food */,
+				A916BE5621999A1A005B803C /* TimeBomb */,
 				A902D6D6218D9C1B00698AD4 /* Spinner */,
 			);
-			path = Obstacles;
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		A902D6D6218D9C1B00698AD4 /* Spinner */ = {
@@ -155,10 +167,10 @@
 		A902D6DC218DB5E800698AD4 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				A9DD686A2180A6EB009866CB /* DemoLevel-32x32.sks */,
-				A928AD20218CA89A00D79D11 /* DemoLevel-02-16x16.sks */,
-				A928AD23218CAB6700D79D11 /* DemoLevel-01-16x16.sks */,
-				A902D6E1218ED52F00698AD4 /* DemoLevel-03-16x16.sks */,
+				A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */,
+				A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */,
+				A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */,
+				A916BE632199DFE9005B803C /* Level-04-16x16.sks */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -170,6 +182,16 @@
 				A9923844218F6406008FD796 /* Classes */,
 			);
 			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		A916BE5621999A1A005B803C /* TimeBomb */ = {
+			isa = PBXGroup;
+			children = (
+				A916BE5721999A2C005B803C /* TimeBombNode.swift */,
+				A916BE5A21999A43005B803C /* TimeBombNode.sks */,
+				A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */,
+			);
+			path = TimeBomb;
 			sourceTree = "<group>";
 		};
 		A968F5642181B31A00E28ED9 /* Worm */ = {
@@ -222,15 +244,13 @@
 			children = (
 				A902D6DD218DB5F800698AD4 /* Main Menu */,
 				A902D6DC218DB5E800698AD4 /* Levels */,
-				A902D6D5218D9C1600698AD4 /* Obstacles */,
+				A902D6D5218D9C1600698AD4 /* Objects */,
 				A9A33ADC21845F91003AC9A7 /* Controllers */,
 				A9EED42D218342AE00E48508 /* Actions */,
 				A9EED42C218342A200E48508 /* Game Scene */,
 				A9EED42B2183429600E48508 /* Assets */,
 				A9EED42A2183428600E48508 /* Level */,
-				A9EED422218341FC00E48508 /* Fruits */,
 				A9EED41B218341B400E48508 /* Protocols */,
-				A968F5642181B31A00E28ED9 /* Worm */,
 			);
 			path = "hungry-worm Shared";
 			sourceTree = "<group>";
@@ -287,14 +307,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		A9EED422218341FC00E48508 /* Fruits */ = {
+		A9EED422218341FC00E48508 /* Food */ = {
 			isa = PBXGroup;
 			children = (
 				A9EED40C218339F600E48508 /* FoodNode.swift */,
 				A9EED4232183420600E48508 /* FruitGenerator.swift */,
 				A9EED4262183423700E48508 /* FoodType.swift */,
 			);
-			path = Fruits;
+			path = Food;
 			sourceTree = "<group>";
 		};
 		A9EED4292183426700E48508 /* Nodes */ = {
@@ -420,14 +440,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DD688F2180A6ED009866CB /* DemoLevel-32x32.sks in Resources */,
-				A928AD24218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */,
-				A902D6E2218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */,
-				A928AD21218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */,
+				A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
+				A902D6E2218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
+				A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A9923842218F6395008FD796 /* MainMenuScene.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
+				A916BE642199DFE9005B803C /* Level-04-16x16.sks in Resources */,
+				A916BE5B21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
 				A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A968F55D2181936000E28ED9 /* TileSet.sks in Resources */,
@@ -439,15 +460,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A916BE5C21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
-				A928AD25218CAB6700D79D11 /* DemoLevel-01-16x16.sks in Resources */,
+				A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
-				A9DD68902180A6ED009866CB /* DemoLevel-32x32.sks in Resources */,
-				A928AD22218CA89A00D79D11 /* DemoLevel-02-16x16.sks in Resources */,
+				A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
-				A902D6E3218ED52F00698AD4 /* DemoLevel-03-16x16.sks in Resources */,
+				A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
 				A9923843218F6395008FD796 /* MainMenuScene.sks in Resources */,
+				A916BE652199DFE9005B803C /* Level-04-16x16.sks in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 			);
@@ -480,6 +502,8 @@
 				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
+				A916BE5E2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
+				A916BE5821999A2C005B803C /* TimeBombNode.swift in Sources */,
 				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +532,8 @@
 				A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
+				A916BE5F2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
+				A916BE5921999A31005B803C /* TimeBombNode.swift in Sources */,
 				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
