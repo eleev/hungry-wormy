@@ -50,7 +50,7 @@ class PhysicsContactController: PhysicsContactDelegate {
         scene?.addChild(fruitNode!)
     }
     
-    func generateTimeBom() {
+    func generateTimeBomb() {
         timeBombGenerator?.removeLast()
         
         if let bombNode = timeBombGenerator?.generate() {
@@ -163,9 +163,9 @@ class PhysicsContactController: PhysicsContactDelegate {
     
     private func resolveWormTimeBombCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
         if bodyA.categoryBitMask == PhysicsTypes.worm.rawValue, bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
-            generateTimeBom()
+            generateTimeBomb()
         } else if bodyB.categoryBitMask == PhysicsTypes.worm.rawValue, bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
-            generateTimeBom()
+            generateTimeBomb()
         }
     }
     
