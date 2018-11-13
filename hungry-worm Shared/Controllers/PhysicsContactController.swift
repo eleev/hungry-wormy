@@ -110,16 +110,16 @@ class PhysicsContactController: PhysicsContactDelegate {
     
     private func resolveWormSpinnerCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
         
-        func splitIfPossible() {
-            if let contactNode = bodyB.node as? WormPartNode {
+        func splitIfPossible(for bodyPart: SKNode?) {
+            if let contactNode = bodyPart as? WormPartNode {
                 worm?.split(at: contactNode)
             }
         }
         
         if bodyA.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyB.categoryBitMask == PhysicsTypes.wormBody.rawValue {
-            splitIfPossible()
+            splitIfPossible(for: bodyB.node)
         } else if bodyB.categoryBitMask == PhysicsTypes.spinner.rawValue, bodyA.categoryBitMask == PhysicsTypes.wormBody.rawValue {
-            splitIfPossible()
+            splitIfPossible(for: bodyA.node)
         }
     }
     
