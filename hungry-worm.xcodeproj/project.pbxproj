@@ -15,6 +15,19 @@
 		A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */; };
 		A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
 		A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */; };
+		A910EA7A219AB4DB007AD105 /* MainMenuScene-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */; };
+		A910EA7D219AC65B007AD105 /* HUD.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7C219AC65B007AD105 /* HUD.sks */; };
+		A910EA7E219AC65B007AD105 /* HUD.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7C219AC65B007AD105 /* HUD.sks */; };
+		A910EA80219AC72B007AD105 /* PauseMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7F219AC72B007AD105 /* PauseMenu.sks */; };
+		A910EA81219AC72B007AD105 /* PauseMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7F219AC72B007AD105 /* PauseMenu.sks */; };
+		A910EA83219AC830007AD105 /* ResultsMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA82219AC830007AD105 /* ResultsMenu.sks */; };
+		A910EA84219AC830007AD105 /* ResultsMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA82219AC830007AD105 /* ResultsMenu.sks */; };
+		A910EA87219ACEBC007AD105 /* StarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA86219ACEBC007AD105 /* StarNode.sks */; };
+		A910EA88219ACEBC007AD105 /* StarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA86219ACEBC007AD105 /* StarNode.sks */; };
+		A910EA8A219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */; };
+		A910EA8B219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */; };
+		A910EA91219ACF5E007AD105 /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910EA90219ACF5E007AD105 /* StarNode.swift */; };
+		A910EA92219ACF5E007AD105 /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910EA90219ACF5E007AD105 /* StarNode.swift */; };
 		A916BE5821999A2C005B803C /* TimeBombNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5721999A2C005B803C /* TimeBombNode.swift */; };
 		A916BE5921999A31005B803C /* TimeBombNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5721999A2C005B803C /* TimeBombNode.swift */; };
 		A916BE5B21999A43005B803C /* TimeBombNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE5A21999A43005B803C /* TimeBombNode.sks */; };
@@ -37,8 +50,7 @@
 		A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
 		A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
-		A9923842218F6395008FD796 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene.sks */; };
-		A9923843218F6395008FD796 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene.sks */; };
+		A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */; };
 		A9923847218F6420008FD796 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9923846218F6420008FD796 /* MainMenuScene.swift */; };
 		A9923848218F6420008FD796 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9923846218F6420008FD796 /* MainMenuScene.swift */; };
 		A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
@@ -85,6 +97,13 @@
 		A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTypes.swift; sourceTree = "<group>"; };
 		A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-03-16x16.sks"; sourceTree = "<group>"; };
 		A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerNode.swift; sourceTree = "<group>"; };
+		A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "MainMenuScene-macOS.sks"; sourceTree = "<group>"; };
+		A910EA7C219AC65B007AD105 /* HUD.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HUD.sks; sourceTree = "<group>"; };
+		A910EA7F219AC72B007AD105 /* PauseMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseMenu.sks; sourceTree = "<group>"; };
+		A910EA82219AC830007AD105 /* ResultsMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ResultsMenu.sks; sourceTree = "<group>"; };
+		A910EA86219ACEBC007AD105 /* StarNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarNode.sks; sourceTree = "<group>"; };
+		A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HighlightedStarNode.sks; sourceTree = "<group>"; };
+		A910EA90219ACF5E007AD105 /* StarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarNode.swift; sourceTree = "<group>"; };
 		A916BE5721999A2C005B803C /* TimeBombNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBombNode.swift; sourceTree = "<group>"; };
 		A916BE5A21999A43005B803C /* TimeBombNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TimeBombNode.sks; sourceTree = "<group>"; };
 		A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBombGenerator.swift; sourceTree = "<group>"; };
@@ -96,7 +115,7 @@
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
 		A98C44E5218756DC00E74C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9923841218F6395008FD796 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
+		A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "MainMenuScene-iOS.sks"; sourceTree = "<group>"; };
 		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -178,10 +197,32 @@
 		A902D6DD218DB5F800698AD4 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				A910EA7B219AC644007AD105 /* UI */,
 				A9923845218F640D008FD796 /* Scenes */,
 				A9923844218F6406008FD796 /* Classes */,
 			);
 			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		A910EA7B219AC644007AD105 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA8F219ACF50007AD105 /* StarNode */,
+				A910EA7C219AC65B007AD105 /* HUD.sks */,
+				A910EA7F219AC72B007AD105 /* PauseMenu.sks */,
+				A910EA82219AC830007AD105 /* ResultsMenu.sks */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A910EA8F219ACF50007AD105 /* StarNode */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA86219ACEBC007AD105 /* StarNode.sks */,
+				A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */,
+				A910EA90219ACF5E007AD105 /* StarNode.swift */,
+			);
+			path = StarNode;
 			sourceTree = "<group>";
 		};
 		A916BE5621999A1A005B803C /* TimeBomb */ = {
@@ -214,7 +255,8 @@
 		A9923845218F640D008FD796 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A9923841218F6395008FD796 /* MainMenuScene.sks */,
+				A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */,
+				A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -443,7 +485,10 @@
 				A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
 				A902D6E2218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
 				A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
-				A9923842218F6395008FD796 /* MainMenuScene.sks in Resources */,
+				A910EA7D219AC65B007AD105 /* HUD.sks in Resources */,
+				A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */,
+				A910EA83219AC830007AD105 /* ResultsMenu.sks in Resources */,
+				A910EA80219AC72B007AD105 /* PauseMenu.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
@@ -452,6 +497,8 @@
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
 				A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A968F55D2181936000E28ED9 /* TileSet.sks in Resources */,
+				A910EA8A219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */,
+				A910EA87219ACEBC007AD105 /* StarNode.sks in Resources */,
 				A9DD689E2180A71D009866CB /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,14 +509,19 @@
 			files = (
 				A916BE5C21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
+				A910EA7E219AC65B007AD105 /* HUD.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
+				A910EA8B219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */,
 				A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
+				A910EA84219AC830007AD105 /* ResultsMenu.sks in Resources */,
 				A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
-				A9923843218F6395008FD796 /* MainMenuScene.sks in Resources */,
+				A910EA7A219AB4DB007AD105 /* MainMenuScene-macOS.sks in Resources */,
+				A910EA88219ACEBC007AD105 /* StarNode.sks in Resources */,
 				A916BE652199DFE9005B803C /* Level-04-16x16.sks in Resources */,
+				A910EA81219AC72B007AD105 /* PauseMenu.sks in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 			);
@@ -499,6 +551,7 @@
 				A9EED41D218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
+				A910EA91219ACF5E007AD105 /* StarNode.swift in Sources */,
 				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
@@ -529,6 +582,7 @@
 				A9EED41E218341BF00E48508 /* Updatable.swift in Sources */,
 				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
+				A910EA92219ACF5E007AD105 /* StarNode.swift in Sources */,
 				A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
