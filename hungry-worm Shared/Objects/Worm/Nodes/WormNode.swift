@@ -134,28 +134,31 @@ class WormNode: SKNode {
         return position
     }
     
-    @discardableResult func split(at wormNode: WormPartNode) -> Bool {
-        var indexToRemove: Int = -1
-        for (index, node) in nodes.enumerated() where node === wormNode {
-            var slice = nodes[index..<nodes.count - 1]
-            indexToRemove = index
+    func split(at wormNode: WormPartNode, completion: @escaping (_ hasAdded: Bool) -> () = { bool in }) {
+        // Prevent +2 split calls to concurrently modify one non atomic data structure
+        DispatchQueue.main.sync(flags: .barrier) {
+            var indexToRemove: Int = -1
             
-            for sliceNode in slice {
-                sliceNode.removeAllActions()
-                sliceNode.removeFromParent()
+            for (index, node) in nodes.enumerated() where node === wormNode {
+                var slice = nodes[index..<nodes.count - 1]
+                indexToRemove = index
+                
+                for sliceNode in slice {
+                    sliceNode.removeAllActions()
+                    sliceNode.removeFromParent()
+                }
+                slice.removeAll()
+                
+                break
             }
-            slice.removeAll()
+            let shouldResetTail = indexToRemove != -1
             
-            break
+            if shouldResetTail {
+                nodes.removeSubrange(indexToRemove..<nodes.count - 1)
+                resetTailNode()
+            }
+            completion(shouldResetTail)
         }
-        
-        if indexToRemove != -1 {
-            nodes.removeSubrange(indexToRemove..<nodes.count - 1)
-            resetTailNode()
-            return true
-        }
-        
-        return false
     }
     
     func grow(for level: WormIncreaseLevel = .one) {
