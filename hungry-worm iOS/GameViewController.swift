@@ -15,11 +15,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let scene = SKScene(fileNamed: "MainMenuScene") as? MainMenuScene else {
+        guard let scene = SKScene(fileNamed: "MainMenuScene-iOS") as? MainMenuScene else {
             print("Failed to load MainMenuScene.sks")
             abort()
         }
-        scene.scaleMode = .aspectFit
+        scene.scaleMode = .aspectFill
         
         // Present the scene
         let skView = self.view as! SKView
@@ -31,15 +31,11 @@ class GameViewController: UIViewController {
     }
 
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+        return .portrait
     }
 
     override var prefersStatusBarHidden: Bool {
