@@ -211,8 +211,8 @@
 		A910EA7B219AC644007AD105 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A91920FC219DB4FB008CAEAA /* Pause HUD */,
 				A910EA8F219ACF50007AD105 /* StarNode */,
-				A910EA7C219AC65B007AD105 /* HUD.sks */,
 				A910EA7F219AC72B007AD105 /* PauseMenu.sks */,
 				A910EA82219AC830007AD105 /* ResultsMenu.sks */,
 			);
@@ -237,6 +237,14 @@
 				A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */,
 			);
 			path = TimeBomb;
+			sourceTree = "<group>";
+		};
+		A91920FC219DB4FB008CAEAA /* Pause HUD */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA7C219AC65B007AD105 /* HUD.sks */,
+			);
+			path = "Pause HUD";
 			sourceTree = "<group>";
 		};
 		A968F5642181B31A00E28ED9 /* Worm */ = {
