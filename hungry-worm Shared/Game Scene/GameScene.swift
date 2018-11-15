@@ -124,16 +124,22 @@ extension GameScene: SKPhysicsContactDelegate {
 /// Touch-based event handling, iOS & tvOS related setup code
 extension GameScene {
 
+    // MARK: - Touch handling overrides
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Has not been implemented yet
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Has not been implemented yet
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Has not been implemented yet
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Has not been implemented yet
     }
    
     // MARK: - Setup
@@ -187,15 +193,18 @@ extension GameScene {
     static let upArrow = UInt16(kVK_UpArrow)
     static let backSpace = UInt16(kVK_Space)
     
-    // MARK: - Mouse handling
+    // MARK: - Mouse handling overrides
     
     override func mouseDown(with event: NSEvent) {
+        // Has not been implemented yet
     }
     
     override func mouseDragged(with event: NSEvent) {
+        // Has not been implemented yet
     }
     
     override func mouseUp(with event: NSEvent) {
+        // Has not been implemented yet
     }
     
     // MARK: - Keyboard handling
