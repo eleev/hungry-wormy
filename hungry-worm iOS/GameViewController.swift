@@ -12,14 +12,20 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    class func mainMenuScene() -> SKScene {
         guard let scene = SKScene(fileNamed: "MainMenuScene-iOS") as? MainMenuScene else {
             print("Failed to load MainMenuScene.sks")
             abort()
         }
         scene.scaleMode = .aspectFill
+        
+        return scene
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let scene = GameViewController.mainMenuScene()
         
         // Present the scene
         let skView = self.view as! SKView
