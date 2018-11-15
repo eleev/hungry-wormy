@@ -36,6 +36,8 @@
 		A916BE5F2199AAC7005B803C /* TimeBombGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */; };
 		A916BE642199DFE9005B803C /* Level-04-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE632199DFE9005B803C /* Level-04-16x16.sks */; };
 		A916BE652199DFE9005B803C /* Level-04-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A916BE632199DFE9005B803C /* Level-04-16x16.sks */; };
+		A91920FA219DAA08008CAEAA /* Level-05-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A91920F9219DAA08008CAEAA /* Level-05-16x16.sks */; };
+		A91920FB219DAA08008CAEAA /* Level-05-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A91920F9219DAA08008CAEAA /* Level-05-16x16.sks */; };
 		A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */; };
 		A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */; };
@@ -108,6 +110,7 @@
 		A916BE5A21999A43005B803C /* TimeBombNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TimeBombNode.sks; sourceTree = "<group>"; };
 		A916BE5D2199AAC7005B803C /* TimeBombGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBombGenerator.swift; sourceTree = "<group>"; };
 		A916BE632199DFE9005B803C /* Level-04-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-04-16x16.sks"; sourceTree = "<group>"; };
+		A91920F9219DAA08008CAEAA /* Level-05-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-05-16x16.sks"; sourceTree = "<group>"; };
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
 		A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-02-16x16.sks"; sourceTree = "<group>"; };
 		A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-01-16x16.sks"; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */,
 				A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */,
 				A916BE632199DFE9005B803C /* Level-04-16x16.sks */,
+				A91920F9219DAA08008CAEAA /* Level-05-16x16.sks */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -487,6 +491,7 @@
 				A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A910EA7D219AC65B007AD105 /* HUD.sks in Resources */,
 				A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */,
+				A91920FA219DAA08008CAEAA /* Level-05-16x16.sks in Resources */,
 				A910EA83219AC830007AD105 /* ResultsMenu.sks in Resources */,
 				A910EA80219AC72B007AD105 /* PauseMenu.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
@@ -517,6 +522,7 @@
 				A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A910EA84219AC830007AD105 /* ResultsMenu.sks in Resources */,
+				A91920FB219DAA08008CAEAA /* Level-05-16x16.sks in Resources */,
 				A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
 				A910EA7A219AB4DB007AD105 /* MainMenuScene-macOS.sks in Resources */,
 				A910EA88219ACEBC007AD105 /* StarNode.sks in Resources */,
