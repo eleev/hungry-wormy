@@ -136,11 +136,17 @@ class WormNode: SKNode {
     
     func split(at wormNode: WormPartNode, completion: @escaping (_ hasAdded: Bool) -> () = { bool in }) {
         // Prevent +2 split calls to concurrently modify one non atomic data structure
-        DispatchQueue.main.sync(flags: .barrier) {
+        DispatchQueue.main.async(flags: .barrier) { [weak self] in
             var indexToRemove: Int = -1
             
+            guard let nodes = self?.nodes else {
+                completion(false)
+                return
+            }
+            let nodesCount = nodes.count - 1
+            
             for (index, node) in nodes.enumerated() where node === wormNode {
-                var slice = nodes[index..<nodes.count - 1]
+                var slice = nodes[index..<nodesCount]
                 indexToRemove = index
                 
                 for sliceNode in slice {
@@ -154,8 +160,8 @@ class WormNode: SKNode {
             let shouldResetTail = indexToRemove != -1
             
             if shouldResetTail {
-                nodes.removeSubrange(indexToRemove..<nodes.count - 1)
-                resetTailNode()
+                self?.nodes.removeSubrange(indexToRemove..<nodesCount)
+                self?.resetTailNode()
             }
             completion(shouldResetTail)
         }
