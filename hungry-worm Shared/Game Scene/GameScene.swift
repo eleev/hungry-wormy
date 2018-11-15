@@ -56,11 +56,13 @@ class GameScene: SKScene {
         return scene
     }
     
+    fileprivate var pauseHudNode: SKNode?
+    
     // MARK: - Methods
     
     func setUpScene() {
         #if os(iOS) || os(tvOS)
-        prepareSiwpeGestureRecognizers()
+        prepareSwipeGestureRecognizers()
         #endif
         
         physicsWorld.contactDelegate = self
@@ -88,6 +90,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         launchReferenceAnimations()
         setUpScene()
+        prepareHud()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -97,6 +100,20 @@ class GameScene: SKScene {
         timeOfLastMove = currentTime
     }
     
+    deinit {
+        snake?.kill()
+        snake = nil
+        
+        children.forEach { (node) in
+            node.removeAllActions()
+            node.removeAllChildren()
+            node.removeFromParent()
+        }
+        
+        scene?.removeAllActions()
+        scene?.removeAllChildren()
+        scene?.removeFromParent()
+    }
     // MARK: - Utils
     
     func createWorm() {
@@ -105,6 +122,30 @@ class GameScene: SKScene {
         snake = WormNode(position: spawnPoint ?? .zero)
         snake?.zPosition = 50
         addChild(snake!)
+    }
+    
+    /// Prepares the HUD layout paddings for a particular scene size
+    private func prepareHud() {
+        pauseHudNode = scene?.childNode(withName: "//Pause")
+        let height = (view?.frame.height ?? 1.0) / 2
+        pauseHudNode?.position.y = height + 40
+    }
+    
+    private func handlePauseMenu() {
+        // show the pause menu
+        
+        var scene: SKScene?
+        
+        #if os(macOS)
+        scene = GameViewController.mainMenuScene()
+        #elseif os(iOS)
+        scene = GameViewController.mainMenuScene()
+        #endif
+        
+        guard let uscene = scene else {
+            fatalError("Could not create a SKScene instance for the current platform")
+        }
+        view?.presentScene(uscene, transition: .doorsCloseVertical(withDuration: 1.0))
     }
 }
 
@@ -127,7 +168,14 @@ extension GameScene {
     // MARK: - Touch handling overrides
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Has not been implemented yet
+        guard let location = touches.first?.location(in: self) else {
+            return
+        }
+        let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
+        
+        if let _ = pauseNode {
+            handlePauseMenu()
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -144,7 +192,7 @@ extension GameScene {
    
     // MARK: - Setup
     
-    fileprivate func prepareSiwpeGestureRecognizers() {
+    fileprivate func prepareSwipeGestureRecognizers() {
         
         for direction in [UISwipeGestureRecognizer.Direction.right,
                           UISwipeGestureRecognizer.Direction.left,
@@ -192,11 +240,19 @@ extension GameScene {
     static let rightArrow = UInt16(kVK_RightArrow)
     static let upArrow = UInt16(kVK_UpArrow)
     static let backSpace = UInt16(kVK_Space)
+    static let escape = UInt16(kVK_Escape)
     
     // MARK: - Mouse handling overrides
     
     override func mouseDown(with event: NSEvent) {
         // Has not been implemented yet
+        
+        let location = event.location(in: self)
+        let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
+        
+        if let _ = pauseNode {
+            handlePauseMenu()
+        }
     }
     
     override func mouseDragged(with event: NSEvent) {
@@ -211,26 +267,20 @@ extension GameScene {
     
     override func keyDown(with event: NSEvent) {
         let keyCode = event.keyCode
-        print("changed movement direction to")
         
-        if keyCode == GameScene.leftArrow {
-            print("left")
+        switch keyCode {
+        case GameScene.leftArrow:
             snake?.change(direction: .left)
-        }
-        
-        if keyCode == GameScene.rightArrow {
-            print("right")
+        case GameScene.rightArrow:
             snake?.change(direction: .right)
-        }
-        
-        if keyCode == GameScene.upArrow {
-            print("up")
+        case GameScene.upArrow:
             snake?.change(direction: .up)
-        }
-        
-        if keyCode == GameScene.downArrow {
-            print("down")
+        case GameScene.downArrow:
             snake?.change(direction: .down)
+        case GameScene.escape:
+            handlePauseMenu()
+        default:
+            break
         }
     }
 
