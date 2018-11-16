@@ -76,6 +76,8 @@
 		A9DD68A92180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
 		A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 		A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
+		A9DE1DFA219F136400D83B84 /* Level-06-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */; };
+		A9DE1DFB219F136400D83B84 /* Level-06-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */; };
 		A9EED40D218339F600E48508 /* FoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FoodNode.swift */; };
 		A9EED40E218339F600E48508 /* FoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED40C218339F600E48508 /* FoodNode.swift */; };
 		A9EED4132183418300E48508 /* WormNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EED4122183418300E48508 /* WormNodeFactory.swift */; };
@@ -138,6 +140,7 @@
 		A9DD68A12180A74F009866CB /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		A9DD68A72180A868009866CB /* WorldSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSize.swift; sourceTree = "<group>"; };
 		A9DD68B02180AEF8009866CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-06-16x16.sks"; sourceTree = "<group>"; };
 		A9EED40C218339F600E48508 /* FoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNode.swift; sourceTree = "<group>"; };
 		A9EED4122183418300E48508 /* WormNodeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNodeFactory.swift; sourceTree = "<group>"; };
 		A9EED4152183419800E48508 /* WormIncreaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormIncreaseLevel.swift; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 				A902D6E1218ED52F00698AD4 /* Level-03-16x16.sks */,
 				A916BE632199DFE9005B803C /* Level-04-16x16.sks */,
 				A91920F9219DAA08008CAEAA /* Level-05-16x16.sks */,
+				A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -513,6 +517,7 @@
 				A910EA8A219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */,
 				A910EA87219ACEBC007AD105 /* StarNode.sks in Resources */,
 				A9DD689E2180A71D009866CB /* .gitignore in Resources */,
+				A9DE1DFA219F136400D83B84 /* Level-06-16x16.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9DE1DFB219F136400D83B84 /* Level-06-16x16.sks in Resources */,
 				A916BE5C21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
 				A910EA7E219AC65B007AD105 /* HUD.sks in Resources */,
