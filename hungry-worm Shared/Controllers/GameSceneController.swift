@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameSceneController: SKScene {
 
     // MARK: - Properties
     
@@ -43,9 +43,9 @@ class GameScene: SKScene {
     private var timeOfLastMove: TimeInterval = 0
     private(set) var timePerMove = 0.0
 
-    class func newGameScene(named name: String) -> GameScene {
+    class func newGameScene(named name: String) -> GameSceneController {
         // Load 'GameScene.sks' as an SKScene.
-        guard let scene = SKScene(fileNamed: name) as? GameScene else {
+        guard let scene = SKScene(fileNamed: name) as? GameSceneController else {
             print("Failed to load GameScene.sks")
             abort()
         }
@@ -150,7 +150,7 @@ class GameScene: SKScene {
 }
 
 // Physics Simulation resolution
-extension GameScene: SKPhysicsContactDelegate {
+extension GameSceneController: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         physicsContactController.didBeginPhysicsContact(contact)
@@ -163,7 +163,7 @@ extension GameScene: SKPhysicsContactDelegate {
 
 #if os(iOS) || os(tvOS)
 /// Touch-based event handling, iOS & tvOS related setup code
-extension GameScene {
+extension GameSceneController {
 
     // MARK: - Touch handling overrides
     
@@ -199,7 +199,7 @@ extension GameScene {
                           UISwipeGestureRecognizer.Direction.up,
                           UISwipeGestureRecognizer.Direction.down] {
                             
-                            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipe(_:)))
+                            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(GameSceneController.swipe(_:)))
                             gesture.direction = direction
                             view?.addGestureRecognizer(gesture)
         }
