@@ -66,8 +66,8 @@
 		A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68892180A6ED009866CB /* Main.storyboard */; };
 		A9DD688D2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
 		A9DD688E2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
-		A9DD68912180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
-		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
+		A9DD68912180A6ED009866CB /* GameSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameSceneController.swift */; };
+		A9DD68922180A6ED009866CB /* GameSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameSceneController.swift */; };
 		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD689F2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD68A22180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
@@ -124,7 +124,7 @@
 		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A9DD686B2180A6EB009866CB /* GameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneController.swift; sourceTree = "<group>"; };
 		A9DD68712180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DD68742180A6ED009866CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DD68762180A6ED009866CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A902D6D5218D9C1600698AD4 /* Objects */ = {
+		A902D6D5218D9C1600698AD4 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
 				A968F5642181B31A00E28ED9 /* Worm */,
@@ -177,7 +177,7 @@
 				A916BE5621999A1A005B803C /* TimeBomb */,
 				A902D6D6218D9C1B00698AD4 /* Spinner */,
 			);
-			path = Objects;
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		A902D6D6218D9C1B00698AD4 /* Spinner */ = {
@@ -202,14 +202,13 @@
 			path = Levels;
 			sourceTree = "<group>";
 		};
-		A902D6DD218DB5F800698AD4 /* Main Menu */ = {
+		A902D6DD218DB5F800698AD4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				A910EA7B219AC644007AD105 /* UI */,
-				A9923845218F640D008FD796 /* Scenes */,
-				A9923844218F6406008FD796 /* Classes */,
+				A9923845218F640D008FD796 /* Main Menu */,
 			);
-			path = "Main Menu";
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		A910EA7B219AC644007AD105 /* UI */ = {
@@ -260,26 +259,36 @@
 			path = Worm;
 			sourceTree = "<group>";
 		};
-		A9923844218F6406008FD796 /* Classes */ = {
+		A9912D0421A14B640036137B /* States */ = {
 			isa = PBXGroup;
 			children = (
-				A9923846218F6420008FD796 /* MainMenuScene.swift */,
 			);
-			path = Classes;
+			path = States;
 			sourceTree = "<group>";
 		};
-		A9923845218F640D008FD796 /* Scenes */ = {
+		A9912D0521A14C340036137B /* Tile Level */ = {
+			isa = PBXGroup;
+			children = (
+				A968F55B2181936000E28ED9 /* TileSet.sks */,
+				A968F56121819A0B00E28ED9 /* TileLevel.swift */,
+			);
+			path = "Tile Level";
+			sourceTree = "<group>";
+		};
+		A9923845218F640D008FD796 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
 				A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */,
 				A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */,
+				A9923846218F6420008FD796 /* MainMenuScene.swift */,
 			);
-			path = Scenes;
+			path = "Main Menu";
 			sourceTree = "<group>";
 		};
 		A9A33ADC21845F91003AC9A7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9DD686B2180A6EB009866CB /* GameSceneController.swift */,
 				A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */,
 				A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */,
 			);
@@ -300,14 +309,14 @@
 		A9DD68682180A6EB009866CB /* hungry-worm Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A902D6DD218DB5F800698AD4 /* Main Menu */,
-				A902D6DC218DB5E800698AD4 /* Levels */,
-				A902D6D5218D9C1600698AD4 /* Objects */,
-				A9A33ADC21845F91003AC9A7 /* Controllers */,
+				A9912D0421A14B640036137B /* States */,
 				A9EED42D218342AE00E48508 /* Actions */,
-				A9EED42C218342A200E48508 /* Game Scene */,
+				A902D6DD218DB5F800698AD4 /* Scenes */,
+				A902D6DC218DB5E800698AD4 /* Levels */,
+				A902D6D5218D9C1600698AD4 /* Nodes */,
+				A9A33ADC21845F91003AC9A7 /* Controllers */,
 				A9EED42B2183429600E48508 /* Assets */,
-				A9EED42A2183428600E48508 /* Level */,
+				A9EED42A2183428600E48508 /* Helpers */,
 				A9EED41B218341B400E48508 /* Protocols */,
 			);
 			path = "hungry-worm Shared";
@@ -386,13 +395,12 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
-		A9EED42A2183428600E48508 /* Level */ = {
+		A9EED42A2183428600E48508 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A968F55B2181936000E28ED9 /* TileSet.sks */,
-				A968F56121819A0B00E28ED9 /* TileLevel.swift */,
+				A9912D0521A14C340036137B /* Tile Level */,
 			);
-			path = Level;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A9EED42B2183429600E48508 /* Assets */ = {
@@ -401,14 +409,6 @@
 				A98C44E5218756DC00E74C4E /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		A9EED42C218342A200E48508 /* Game Scene */ = {
-			isa = PBXGroup;
-			children = (
-				A9DD686B2180A6EB009866CB /* GameScene.swift */,
-			);
-			path = "Game Scene";
 			sourceTree = "<group>";
 		};
 		A9EED42D218342AE00E48508 /* Actions */ = {
@@ -558,7 +558,7 @@
 				A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4272183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40D218339F600E48508 /* FoodNode.swift in Sources */,
-				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
+				A9DD68912180A6ED009866CB /* GameSceneController.swift in Sources */,
 				A9EED4162183419800E48508 /* WormIncreaseLevel.swift in Sources */,
 				A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */,
@@ -589,7 +589,7 @@
 				A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4282183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40E218339F600E48508 /* FoodNode.swift in Sources */,
-				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
+				A9DD68922180A6ED009866CB /* GameSceneController.swift in Sources */,
 				A9EED4172183419800E48508 /* WormIncreaseLevel.swift in Sources */,
 				A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68882180A6ED009866CB /* GameViewController.swift in Sources */,
