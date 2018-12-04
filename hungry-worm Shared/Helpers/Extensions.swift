@@ -61,3 +61,8 @@ extension FloatingPoint {
     var toRadians: Self { return self * .pi / 180 }
     var toDegrees: Self { return self * 180 / .pi }
 }
+
+
+func *(lhs: CGSize, value: CGFloat) -> CGSize {
+    return CGSize(width: lhs.width * value, height: lhs.height * value)
+}
