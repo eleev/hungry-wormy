@@ -18,10 +18,7 @@
 		A910EA7A219AB4DB007AD105 /* MainMenuScene-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */; };
 		A910EA7D219AC65B007AD105 /* HUD.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7C219AC65B007AD105 /* HUD.sks */; };
 		A910EA7E219AC65B007AD105 /* HUD.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7C219AC65B007AD105 /* HUD.sks */; };
-		A910EA80219AC72B007AD105 /* PauseMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7F219AC72B007AD105 /* PauseMenu.sks */; };
-		A910EA81219AC72B007AD105 /* PauseMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA7F219AC72B007AD105 /* PauseMenu.sks */; };
-		A910EA83219AC830007AD105 /* ResultsMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA82219AC830007AD105 /* ResultsMenu.sks */; };
-		A910EA84219AC830007AD105 /* ResultsMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA82219AC830007AD105 /* ResultsMenu.sks */; };
+		A910EA83219AC830007AD105 /* ResultsMenu-iOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA82219AC830007AD105 /* ResultsMenu-iOS.sks */; };
 		A910EA87219ACEBC007AD105 /* StarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA86219ACEBC007AD105 /* StarNode.sks */; };
 		A910EA88219ACEBC007AD105 /* StarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA86219ACEBC007AD105 /* StarNode.sks */; };
 		A910EA8A219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */ = {isa = PBXBuildFile; fileRef = A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */; };
@@ -44,6 +41,14 @@
 		A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */; };
 		A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
 		A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
+		A94A97FD21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */; };
+		A94A97FE21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */; };
+		A94A980021A28CE90087C018 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FF21A28CE90087C018 /* Scenes.swift */; };
+		A94A980121A28CE90087C018 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FF21A28CE90087C018 /* Scenes.swift */; };
+		A94A980321A28F1A0087C018 /* ButtonNodeResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A980221A28F1A0087C018 /* ButtonNodeResponderType.swift */; };
+		A94A980421A28F1A0087C018 /* ButtonNodeResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A980221A28F1A0087C018 /* ButtonNodeResponderType.swift */; };
+		A94A980721A28F670087C018 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A980621A28F670087C018 /* ButtonNode.swift */; };
+		A94A980821A28F670087C018 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A980621A28F670087C018 /* ButtonNode.swift */; };
 		A968F55D2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F55E2181936000E28ED9 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A968F55B2181936000E28ED9 /* TileSet.sks */; };
 		A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
@@ -57,6 +62,20 @@
 		A9923848218F6420008FD796 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9923846218F6420008FD796 /* MainMenuScene.swift */; };
 		A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
 		A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */; };
+		A9BBF47121B5207B00D152A3 /* SceneOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47021B5207B00D152A3 /* SceneOverlay.swift */; };
+		A9BBF47221B5207E00D152A3 /* SceneOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47021B5207B00D152A3 /* SceneOverlay.swift */; };
+		A9BBF47521B54ABD00D152A3 /* PauseMenuScene-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BBF47321B54AB600D152A3 /* PauseMenuScene-macOS.sks */; };
+		A9BBF47721B54AC700D152A3 /* PauseMenuScene-iOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BBF47621B54AC700D152A3 /* PauseMenuScene-iOS.sks */; };
+		A9BBF47A21B6748A00D152A3 /* PauseTogglable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47921B6748A00D152A3 /* PauseTogglable.swift */; };
+		A9BBF47D21B674EB00D152A3 /* PauseTogglable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47921B6748A00D152A3 /* PauseTogglable.swift */; };
+		A9BBF47F21B6750000D152A3 /* GameScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47E21B6750000D152A3 /* GameScene+iOS.swift */; };
+		A9BBF48221B6752500D152A3 /* GameScene+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF47B21B674D100D152A3 /* GameScene+macOS.swift */; };
+		A9BBF48321B6759300D152A3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
+		A9BBF48A21B6789600D152A3 /* ResultsMenu-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BBF48921B6789600D152A3 /* ResultsMenu-macOS.sks */; };
+		A9BBF48C21B6795400D152A3 /* ButtonIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF48B21B6795400D152A3 /* ButtonIdentifier.swift */; };
+		A9BBF48D21B6795400D152A3 /* ButtonIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF48B21B6795400D152A3 /* ButtonIdentifier.swift */; };
+		A9BBF49021B6796B00D152A3 /* ControlInputDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF48F21B6796B00D152A3 /* ControlInputDirection.swift */; };
+		A9BBF49121B6796B00D152A3 /* ControlInputDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBF48F21B6796B00D152A3 /* ControlInputDirection.swift */; };
 		A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68742180A6ED009866CB /* AppDelegate.swift */; };
 		A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68762180A6ED009866CB /* GameViewController.swift */; };
 		A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68782180A6ED009866CB /* Main.storyboard */; };
@@ -66,14 +85,11 @@
 		A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68892180A6ED009866CB /* Main.storyboard */; };
 		A9DD688D2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
 		A9DD688E2180A6ED009866CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DD68692180A6EB009866CB /* Actions.sks */; };
-		A9DD68912180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD68922180A6ED009866CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD686B2180A6EB009866CB /* GameScene.swift */; };
 		A9DD689E2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD689F2180A71D009866CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9DD689D2180A71D009866CB /* .gitignore */; };
 		A9DD68A22180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
 		A9DD68A32180A74F009866CB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A12180A74F009866CB /* Direction.swift */; };
-		A9DD68A82180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
-		A9DD68A92180A868009866CB /* WorldSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68A72180A868009866CB /* WorldSize.swift */; };
 		A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 		A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD68B02180AEF8009866CB /* Extensions.swift */; };
 		A9DE1DFA219F136400D83B84 /* Level-06-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */; };
@@ -103,8 +119,7 @@
 		A902D6E4218EFC0B00698AD4 /* SpinnerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerNode.swift; sourceTree = "<group>"; };
 		A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "MainMenuScene-macOS.sks"; sourceTree = "<group>"; };
 		A910EA7C219AC65B007AD105 /* HUD.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HUD.sks; sourceTree = "<group>"; };
-		A910EA7F219AC72B007AD105 /* PauseMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseMenu.sks; sourceTree = "<group>"; };
-		A910EA82219AC830007AD105 /* ResultsMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ResultsMenu.sks; sourceTree = "<group>"; };
+		A910EA82219AC830007AD105 /* ResultsMenu-iOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "ResultsMenu-iOS.sks"; sourceTree = "<group>"; };
 		A910EA86219ACEBC007AD105 /* StarNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarNode.sks; sourceTree = "<group>"; };
 		A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HighlightedStarNode.sks; sourceTree = "<group>"; };
 		A910EA90219ACF5E007AD105 /* StarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarNode.swift; sourceTree = "<group>"; };
@@ -116,6 +131,10 @@
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
 		A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-02-16x16.sks"; sourceTree = "<group>"; };
 		A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-01-16x16.sks"; sourceTree = "<group>"; };
+		A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingUtilityScene.swift; sourceTree = "<group>"; };
+		A94A97FF21A28CE90087C018 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
+		A94A980221A28F1A0087C018 /* ButtonNodeResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNodeResponderType.swift; sourceTree = "<group>"; };
+		A94A980621A28F670087C018 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
@@ -123,6 +142,15 @@
 		A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "MainMenuScene-iOS.sks"; sourceTree = "<group>"; };
 		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnController.swift; sourceTree = "<group>"; };
+		A9BBF47021B5207B00D152A3 /* SceneOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOverlay.swift; sourceTree = "<group>"; };
+		A9BBF47321B54AB600D152A3 /* PauseMenuScene-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "PauseMenuScene-macOS.sks"; sourceTree = "<group>"; };
+		A9BBF47621B54AC700D152A3 /* PauseMenuScene-iOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "PauseMenuScene-iOS.sks"; sourceTree = "<group>"; };
+		A9BBF47921B6748A00D152A3 /* PauseTogglable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseTogglable.swift; sourceTree = "<group>"; };
+		A9BBF47B21B674D100D152A3 /* GameScene+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+macOS.swift"; sourceTree = "<group>"; };
+		A9BBF47E21B6750000D152A3 /* GameScene+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+iOS.swift"; sourceTree = "<group>"; };
+		A9BBF48921B6789600D152A3 /* ResultsMenu-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "ResultsMenu-macOS.sks"; sourceTree = "<group>"; };
+		A9BBF48B21B6795400D152A3 /* ButtonIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIdentifier.swift; sourceTree = "<group>"; };
+		A9BBF48F21B6796B00D152A3 /* ControlInputDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlInputDirection.swift; sourceTree = "<group>"; };
 		A9DD68692180A6EB009866CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A9DD686B2180A6EB009866CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A9DD68712180A6ED009866CB /* hungry-worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hungry-worm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +166,6 @@
 		A9DD688C2180A6ED009866CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9DD689D2180A71D009866CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9DD68A12180A74F009866CB /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		A9DD68A72180A868009866CB /* WorldSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSize.swift; sourceTree = "<group>"; };
 		A9DD68B02180AEF8009866CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A9DE1DF9219F136400D83B84 /* Level-06-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-06-16x16.sks"; sourceTree = "<group>"; };
 		A9EED40C218339F600E48508 /* FoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNode.swift; sourceTree = "<group>"; };
@@ -172,6 +199,7 @@
 		A902D6D5218D9C1600698AD4 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				A94A980521A28F510087C018 /* ButtonNode */,
 				A9EED40C218339F600E48508 /* FoodNode.swift */,
 				A968F5652181B32F00E28ED9 /* WormNode.swift */,
 				A9EED418218341A700E48508 /* WormPartNode.swift */,
@@ -198,8 +226,12 @@
 		A902D6DD218DB5F800698AD4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A9BBF47821B6747800D152A3 /* Utils */,
 				A9DD686B2180A6EB009866CB /* GameScene.swift */,
+				A9BBF47E21B6750000D152A3 /* GameScene+iOS.swift */,
+				A9BBF47B21B674D100D152A3 /* GameScene+macOS.swift */,
 				A9923846218F6420008FD796 /* MainMenuScene.swift */,
+				A9BBF47021B5207B00D152A3 /* SceneOverlay.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -207,15 +239,9 @@
 		A94A97F821A289480087C018 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A916BE5A21999A43005B803C /* TimeBombNode.sks */,
-				A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */,
-				A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */,
-				A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */,
-				A910EA82219AC830007AD105 /* ResultsMenu.sks */,
-				A910EA7F219AC72B007AD105 /* PauseMenu.sks */,
-				A910EA7C219AC65B007AD105 /* HUD.sks */,
-				A910EA86219ACEBC007AD105 /* StarNode.sks */,
-				A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */,
+				A9BBF48821B6786800D152A3 /* Shared */,
+				A9BBF48721B6785800D152A3 /* macOS */,
+				A9BBF48621B6785300D152A3 /* iOS */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -226,7 +252,6 @@
 				A968F56121819A0B00E28ED9 /* TileLevel.swift */,
 				A9EED4262183423700E48508 /* FoodType.swift */,
 				A9DD68A12180A74F009866CB /* Direction.swift */,
-				A9DD68A72180A868009866CB /* WorldSize.swift */,
 				A902D6DE218DB7F100698AD4 /* PhysicsTypes.swift */,
 				A9EED4152183419800E48508 /* WormIncreaseLevel.swift */,
 			);
@@ -243,6 +268,17 @@
 			path = "Generators & Factories";
 			sourceTree = "<group>";
 		};
+		A94A980521A28F510087C018 /* ButtonNode */ = {
+			isa = PBXGroup;
+			children = (
+				A94A980221A28F1A0087C018 /* ButtonNodeResponderType.swift */,
+				A94A980621A28F670087C018 /* ButtonNode.swift */,
+				A9BBF48B21B6795400D152A3 /* ButtonIdentifier.swift */,
+				A9BBF48F21B6796B00D152A3 /* ControlInputDirection.swift */,
+			);
+			path = ButtonNode;
+			sourceTree = "<group>";
+		};
 		A9912D0421A14B640036137B /* States */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +293,55 @@
 				A9A33ADD21845FD3003AC9A7 /* SpawnController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9BBF47821B6747800D152A3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9BBF47921B6748A00D152A3 /* PauseTogglable.swift */,
+				A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */,
+				A94A97FF21A28CE90087C018 /* Scenes.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A9BBF48521B677DE00D152A3 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA86219ACEBC007AD105 /* StarNode.sks */,
+				A910EA89219ACEE1007AD105 /* HighlightedStarNode.sks */,
+				A916BE5A21999A43005B803C /* TimeBombNode.sks */,
+				A902D6D7218D9C3300698AD4 /* SpinnerNode.sks */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		A9BBF48621B6785300D152A3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */,
+				A910EA82219AC830007AD105 /* ResultsMenu-iOS.sks */,
+				A9BBF47621B54AC700D152A3 /* PauseMenuScene-iOS.sks */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		A9BBF48721B6785800D152A3 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */,
+				A9BBF48921B6789600D152A3 /* ResultsMenu-macOS.sks */,
+				A9BBF47321B54AB600D152A3 /* PauseMenuScene-macOS.sks */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		A9BBF48821B6786800D152A3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A910EA7C219AC65B007AD105 /* HUD.sks */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		A9DD68632180A6EB009866CB = {
@@ -338,6 +423,7 @@
 		A9EED42B2183429600E48508 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A9BBF48521B677DE00D152A3 /* Nodes */,
 				A94A97F821A289480087C018 /* Scenes */,
 				A9EED42D218342AE00E48508 /* Actions */,
 				A902D6DC218DB5E800698AD4 /* Levels */,
@@ -440,11 +526,11 @@
 				A910EA7D219AC65B007AD105 /* HUD.sks in Resources */,
 				A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */,
 				A91920FA219DAA08008CAEAA /* Level-05-16x16.sks in Resources */,
-				A910EA83219AC830007AD105 /* ResultsMenu.sks in Resources */,
-				A910EA80219AC72B007AD105 /* PauseMenu.sks in Resources */,
+				A910EA83219AC830007AD105 /* ResultsMenu-iOS.sks in Resources */,
 				A9DD687A2180A6ED009866CB /* Main.storyboard in Resources */,
 				A9DD688D2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D8218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
+				A9BBF47721B54AC700D152A3 /* PauseMenuScene-iOS.sks in Resources */,
 				A916BE642199DFE9005B803C /* Level-04-16x16.sks in Resources */,
 				A916BE5B21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A9DD687D2180A6ED009866CB /* LaunchScreen.storyboard in Resources */,
@@ -464,6 +550,7 @@
 				A9DE1DFB219F136400D83B84 /* Level-06-16x16.sks in Resources */,
 				A916BE5C21999A43005B803C /* TimeBombNode.sks in Resources */,
 				A968F55E2181936000E28ED9 /* TileSet.sks in Resources */,
+				A9BBF48A21B6789600D152A3 /* ResultsMenu-macOS.sks in Resources */,
 				A910EA7E219AC65B007AD105 /* HUD.sks in Resources */,
 				A9DD689F2180A71D009866CB /* .gitignore in Resources */,
 				A910EA8B219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */,
@@ -471,13 +558,12 @@
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
 				A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
-				A910EA84219AC830007AD105 /* ResultsMenu.sks in Resources */,
 				A91920FB219DAA08008CAEAA /* Level-05-16x16.sks in Resources */,
 				A902D6E3218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
 				A910EA7A219AB4DB007AD105 /* MainMenuScene-macOS.sks in Resources */,
 				A910EA88219ACEBC007AD105 /* StarNode.sks in Resources */,
 				A916BE652199DFE9005B803C /* Level-04-16x16.sks in Resources */,
-				A910EA81219AC72B007AD105 /* PauseMenu.sks in Resources */,
+				A9BBF47521B54ABD00D152A3 /* PauseMenuScene-macOS.sks in Resources */,
 				A9DD688E2180A6ED009866CB /* Actions.sks in Resources */,
 				A902D6D9218D9C3300698AD4 /* SpinnerNode.sks in Resources */,
 			);
@@ -491,26 +577,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				A928AD1E218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
+				A9BBF47121B5207B00D152A3 /* SceneOverlay.swift in Sources */,
+				A9BBF47F21B6750000D152A3 /* GameScene+iOS.swift in Sources */,
 				A902D6E5218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4272183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40D218339F600E48508 /* FoodNode.swift in Sources */,
-				A9DD68912180A6ED009866CB /* GameScene.swift in Sources */,
 				A9EED4162183419800E48508 /* WormIncreaseLevel.swift in Sources */,
+				A9BBF48C21B6795400D152A3 /* ButtonIdentifier.swift in Sources */,
+				A9BBF49021B6796B00D152A3 /* ControlInputDirection.swift in Sources */,
 				A9DD68B12180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68772180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68752180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A94A980321A28F1A0087C018 /* ButtonNodeResponderType.swift in Sources */,
 				A9A33ADE21845FD3003AC9A7 /* SpawnController.swift in Sources */,
 				A9EED4132183418300E48508 /* WormNodeFactory.swift in Sources */,
 				A968F5662181B32F00E28ED9 /* WormNode.swift in Sources */,
+				A94A980721A28F670087C018 /* ButtonNode.swift in Sources */,
 				A9923847218F6420008FD796 /* MainMenuScene.swift in Sources */,
+				A94A97FD21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */,
 				A9EED4242183420600E48508 /* FruitGenerator.swift in Sources */,
+				A9BBF47A21B6748A00D152A3 /* PauseTogglable.swift in Sources */,
 				A9EED41D218341BF00E48508 /* Updatable.swift in Sources */,
-				A9DD68A82180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED420218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
+				A9BBF48321B6759300D152A3 /* GameScene.swift in Sources */,
 				A910EA91219ACF5E007AD105 /* StarNode.swift in Sources */,
 				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
+				A94A980021A28CE90087C018 /* Scenes.swift in Sources */,
 				A916BE5E2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
 				A916BE5821999A2C005B803C /* TimeBombNode.swift in Sources */,
 				A9DD68A22180A74F009866CB /* Direction.swift in Sources */,
@@ -522,28 +616,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				A928AD1F218CA04A00D79D11 /* PhysicsContactController.swift in Sources */,
+				A9BBF47221B5207E00D152A3 /* SceneOverlay.swift in Sources */,
 				A902D6E6218EFC0B00698AD4 /* SpinnerNode.swift in Sources */,
 				A9EED4282183423700E48508 /* FoodType.swift in Sources */,
 				A9EED40E218339F600E48508 /* FoodNode.swift in Sources */,
 				A9DD68922180A6ED009866CB /* GameScene.swift in Sources */,
 				A9EED4172183419800E48508 /* WormIncreaseLevel.swift in Sources */,
+				A9BBF48D21B6795400D152A3 /* ButtonIdentifier.swift in Sources */,
+				A9BBF49121B6796B00D152A3 /* ControlInputDirection.swift in Sources */,
 				A9DD68B22180AEF8009866CB /* Extensions.swift in Sources */,
 				A9DD68882180A6ED009866CB /* GameViewController.swift in Sources */,
 				A9DD68862180A6ED009866CB /* AppDelegate.swift in Sources */,
+				A94A980421A28F1A0087C018 /* ButtonNodeResponderType.swift in Sources */,
 				A9A33ADF21845FD3003AC9A7 /* SpawnController.swift in Sources */,
 				A9EED4142183418300E48508 /* WormNodeFactory.swift in Sources */,
 				A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */,
+				A94A980821A28F670087C018 /* ButtonNode.swift in Sources */,
 				A9923848218F6420008FD796 /* MainMenuScene.swift in Sources */,
+				A94A97FE21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */,
 				A9EED4252183420600E48508 /* FruitGenerator.swift in Sources */,
+				A9BBF47D21B674EB00D152A3 /* PauseTogglable.swift in Sources */,
 				A9EED41E218341BF00E48508 /* Updatable.swift in Sources */,
-				A9DD68A92180A868009866CB /* WorldSize.swift in Sources */,
 				A9EED421218341D200E48508 /* PhysicsContactDelegate.swift in Sources */,
 				A910EA92219ACF5E007AD105 /* StarNode.swift in Sources */,
 				A9EED41A218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
+				A94A980121A28CE90087C018 /* Scenes.swift in Sources */,
 				A916BE5F2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
 				A916BE5921999A31005B803C /* TimeBombNode.swift in Sources */,
+				A9BBF48221B6752500D152A3 /* GameScene+macOS.swift in Sources */,
 				A9DD68A32180A74F009866CB /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
