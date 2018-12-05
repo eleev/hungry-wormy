@@ -8,12 +8,42 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: RoutingUtilityScene {
 
     // MARK: - Properties
     
+    private var overlaySceneFileName: String {
+        return Scenes.pause.getName()
+    }
+    
+    /// The current scene overlay (if any) that is displayed over this scene.
+    private var overlay: SceneOverlay? {
+        didSet {
+            // Clear the `buttons` in preparation for new buttons in the overlay.
+            pauseHudNode?.run(SKAction.hide())
+            
+            // Animate the old overlay out.
+            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
+                debugPrint(#function + " remove old overlay")
+                oldValue?.backgroundNode.removeFromParent()
+            }
+            
+            if let overlay = overlay, let scene = scene {
+                debugPrint(#function + " added overaly")
+                overlay.backgroundNode.removeFromParent()
+                scene.addChild(overlay.backgroundNode)
+                
+                // Animate the overlay in.
+                overlay.backgroundNode.alpha = 1.0
+                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: 0.25))
+                
+                pauseHudNode?.run(SKAction.unhide())
+            }
+        }
+    }
+    
     private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint], timeBombs: [CGPoint]) = ([], [], [])
-    private var snake: WormNode?
+    var snake: WormNode?
     private var parser = TileLevel()
     
     fileprivate var fruitGenerator: FruitGenerator!
@@ -56,7 +86,7 @@ class GameScene: SKScene {
         return scene
     }
     
-    fileprivate var pauseHudNode: SKNode?
+    var pauseHudNode: SKNode?
     
     // MARK: - Methods
     
@@ -65,6 +95,7 @@ class GameScene: SKScene {
         prepareSwipeGestureRecognizers()
         #endif
         
+        pauseToggleDelegate = self
         physicsWorld.contactDelegate = self
         
         timePerMove = Double(userData?["timePerMove"] as? Float ?? 0.6)
@@ -127,29 +158,26 @@ class GameScene: SKScene {
     /// Prepares the HUD layout paddings for a particular scene size
     private func prepareHud() {
         pauseHudNode = scene?.childNode(withName: "//Pause")
-        let height = (view?.frame.height ?? 1.0) / 2
-        pauseHudNode?.position.y = height + 40
+        let height = (view?.frame.height ?? 1.0)
+        pauseHudNode?.position.y = height - 40
+        pauseHudNode?.position.x -= 48
     }
     
-    private func handlePauseMenu() {
-        // show the pause menu
-        
-        var scene: SKScene?
-        
-        #if os(macOS)
-        scene = GameViewController.mainMenuScene()
-        #elseif os(iOS)
-        scene = GameViewController.mainMenuScene()
-        #endif
-        
-        guard let uscene = scene else {
-            fatalError("Could not create a SKScene instance for the current platform")
+    /// Game pause toggler
+    func togglePause() {
+        if let _ = self.overlay {
+            self.isPaused = false
+            self.overlay = nil
+            return
         }
-        view?.presentScene(uscene, transition: .doorsCloseVertical(withDuration: 1.0))
+        
+        self.isPaused = true
+        let overlay = SceneOverlay(overlaySceneFileName: overlaySceneFileName, zPosition: 1000)
+        self.overlay = overlay
     }
 }
 
-// Physics Simulation resolution
+// MARK: - Conformance to SKPhysicsContactDelegate protocol
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -161,128 +189,9 @@ extension GameScene: SKPhysicsContactDelegate {
     }
 }
 
-#if os(iOS) || os(tvOS)
-/// Touch-based event handling, iOS & tvOS related setup code
-extension GameScene {
-
-    // MARK: - Touch handling overrides
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let location = touches.first?.location(in: self) else {
-            return
-        }
-        let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
-        
-        if let _ = pauseNode {
-            handlePauseMenu()
-        }
+// MARK: - Conformance to PuaeTogglable protocol
+extension GameScene: PauseTogglable {
+    func didTogglePause() {
+        togglePause()
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Has not been implemented yet
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Has not been implemented yet
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Has not been implemented yet
-    }
-   
-    // MARK: - Setup
-    
-    fileprivate func prepareSwipeGestureRecognizers() {
-        
-        for direction in [UISwipeGestureRecognizer.Direction.right,
-                          UISwipeGestureRecognizer.Direction.left,
-                          UISwipeGestureRecognizer.Direction.up,
-                          UISwipeGestureRecognizer.Direction.down] {
-                            
-                            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipe(_:)))
-                            gesture.direction = direction
-                            view?.addGestureRecognizer(gesture)
-        }
-        
-    }
-    
-    @objc func swipe(_ gr: UISwipeGestureRecognizer) {
-        let direction = gr.direction
-        
-        switch direction {
-        case UISwipeGestureRecognizer.Direction.right:
-            snake?.change(direction: .right)
-        case UISwipeGestureRecognizer.Direction.left:
-            snake?.change(direction: .left)
-        case UISwipeGestureRecognizer.Direction.up:
-            snake?.change(direction: .up)
-        case UISwipeGestureRecognizer.Direction.down:
-            snake?.change(direction: .down)
-        default:
-            assert(false, "The occured gesture is not supported")
-        }
-    }
-    
 }
-#endif
-
-#if os(OSX)
-
-import Carbon
-
-/// Mouse-based event handling
-extension GameScene {
-
-    // MARK: - Properties
-    
-    static let downArrow = UInt16(kVK_DownArrow)
-    static let leftArrow = UInt16(kVK_LeftArrow)
-    static let rightArrow = UInt16(kVK_RightArrow)
-    static let upArrow = UInt16(kVK_UpArrow)
-    static let backSpace = UInt16(kVK_Space)
-    static let escape = UInt16(kVK_Escape)
-    
-    // MARK: - Mouse handling overrides
-    
-    override func mouseDown(with event: NSEvent) {
-        // Has not been implemented yet
-        
-        let location = event.location(in: self)
-        let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
-        
-        if let _ = pauseNode {
-            handlePauseMenu()
-        }
-    }
-    
-    override func mouseDragged(with event: NSEvent) {
-        // Has not been implemented yet
-    }
-    
-    override func mouseUp(with event: NSEvent) {
-        // Has not been implemented yet
-    }
-    
-    // MARK: - Keyboard handling
-    
-    override func keyDown(with event: NSEvent) {
-        let keyCode = event.keyCode
-        
-        switch keyCode {
-        case GameScene.leftArrow:
-            snake?.change(direction: .left)
-        case GameScene.rightArrow:
-            snake?.change(direction: .right)
-        case GameScene.upArrow:
-            snake?.change(direction: .up)
-        case GameScene.downArrow:
-            snake?.change(direction: .down)
-        case GameScene.escape:
-            handlePauseMenu()
-        default:
-            break
-        }
-    }
-
-}
-#endif
