@@ -61,13 +61,23 @@ class GameScene: RoutingUtilityScene {
         self?.snake?.kill()
         self?.snake = nil
         
-        let waitAction = SKAction.wait(forDuration: 2)
+        #warning("Show the Results Menu Scene")
+        
+//        let waitAction = SKAction.wait(forDuration: 2)
+//        let createAction = SKAction.run {
+//            self?.createWorm()
+//            self?.physicsContactController.worm = self?.snake
+//        }
+//        let respawnActionSequnece = SKAction.sequence([waitAction, createAction])
+//        self?.run(respawnActionSequnece)
+    }
+    
+    lazy fileprivate var restartHandler: ()->() = { [ weak self ] in
         let createAction = SKAction.run {
             self?.createWorm()
             self?.physicsContactController.worm = self?.snake
         }
-        let respawnActionSequnece = SKAction.sequence([waitAction, createAction])
-        self?.run(respawnActionSequnece)
+        self?.run(createAction)
     }
     
     private var timeOfLastMove: TimeInterval = 0
@@ -96,6 +106,7 @@ class GameScene: RoutingUtilityScene {
         #endif
         
         pauseToggleDelegate = self
+        restartToggleDelegate = self
         physicsWorld.contactDelegate = self
         
         timePerMove = Double(userData?["timePerMove"] as? Float ?? 0.6)
@@ -189,9 +200,16 @@ extension GameScene: SKPhysicsContactDelegate {
     }
 }
 
-// MARK: - Conformance to PuaeTogglable protocol
+// MARK: - Conformance to PauseTogglable protocol
 extension GameScene: PauseTogglable {
     func didTogglePause() {
         togglePause()
+    }
+}
+
+// MARK: - Conformance to RestartTogglable protocol
+extension GameScene: RestartTogglable {
+    func didRequestRestart() {
+        restartHandler()
     }
 }
