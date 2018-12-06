@@ -13,6 +13,7 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
     // MARK: - Properties
     
     weak var pauseToggleDelegate: PauseTogglable?
+    weak var restartToggleDelegate: RestartTogglable?
     
     #if os(iOS)
     let selection = UISelectionFeedbackGenerator()
@@ -37,6 +38,8 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
         let sceneScaleMode: SKSceneScaleMode = RoutingUtilityScene.sceneScaleMode
         
         switch identifier {
+        case .restart:
+            restartToggleDelegate?.didRequestRestart()
         case .resume:
             pauseToggleDelegate?.didTogglePause()
         case .menu:
