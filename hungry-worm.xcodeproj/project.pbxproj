@@ -57,6 +57,8 @@
 		A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F56121819A0B00E28ED9 /* TileLevel.swift */; };
 		A968F5662181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
 		A968F5672181B32F00E28ED9 /* WormNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F5652181B32F00E28ED9 /* WormNode.swift */; };
+		A983E8C421BD62810076BB08 /* DeathMenu-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A983E8C321BD62810076BB08 /* DeathMenu-macOS.sks */; };
+		A983E8C621BD62A20076BB08 /* DeathMenu-macOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A983E8C521BD62A20076BB08 /* DeathMenu-macOS.sks */; };
 		A98C44E6218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98C44E5218756DC00E74C4E /* Assets.xcassets */; };
 		A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */; };
@@ -141,6 +143,8 @@
 		A968F55B2181936000E28ED9 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		A968F56121819A0B00E28ED9 /* TileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileLevel.swift; sourceTree = "<group>"; };
 		A968F5652181B32F00E28ED9 /* WormNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormNode.swift; sourceTree = "<group>"; };
+		A983E8C321BD62810076BB08 /* DeathMenu-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DeathMenu-macOS.sks"; sourceTree = "<group>"; };
+		A983E8C521BD62A20076BB08 /* DeathMenu-macOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "DeathMenu-macOS.sks"; sourceTree = "<group>"; };
 		A98C44E5218756DC00E74C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "MainMenuScene-iOS.sks"; sourceTree = "<group>"; };
 		A9923846218F6420008FD796 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 			children = (
 				A9923841218F6395008FD796 /* MainMenuScene-iOS.sks */,
 				A910EA82219AC830007AD105 /* ResultsMenu-iOS.sks */,
+				A983E8C321BD62810076BB08 /* DeathMenu-macOS.sks */,
 				A9BBF47621B54AC700D152A3 /* PauseMenuScene-iOS.sks */,
 			);
 			path = iOS;
@@ -335,6 +340,7 @@
 			children = (
 				A910EA79219AB4DB007AD105 /* MainMenuScene-macOS.sks */,
 				A9BBF48921B6789600D152A3 /* ResultsMenu-macOS.sks */,
+				A983E8C521BD62A20076BB08 /* DeathMenu-macOS.sks */,
 				A9BBF47321B54AB600D152A3 /* PauseMenuScene-macOS.sks */,
 			);
 			path = macOS;
@@ -526,6 +532,7 @@
 			files = (
 				A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
 				A902D6E2218ED52F00698AD4 /* Level-03-16x16.sks in Resources */,
+				A983E8C421BD62810076BB08 /* DeathMenu-macOS.sks in Resources */,
 				A928AD21218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A910EA7D219AC65B007AD105 /* HUD.sks in Resources */,
 				A9923842218F6395008FD796 /* MainMenuScene-iOS.sks in Resources */,
@@ -560,6 +567,7 @@
 				A910EA8B219ACEE1007AD105 /* HighlightedStarNode.sks in Resources */,
 				A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */,
 				A9DD688B2180A6ED009866CB /* Main.storyboard in Resources */,
+				A983E8C621BD62A20076BB08 /* DeathMenu-macOS.sks in Resources */,
 				A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */,
 				A98C44E7218756DC00E74C4E /* Assets.xcassets in Resources */,
 				A91920FB219DAA08008CAEAA /* Level-05-16x16.sks in Resources */,
