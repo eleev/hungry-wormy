@@ -12,29 +12,16 @@ enum Scenes: String {
     case main = "MainMenuScene"
     case game = "GameScene"
     case pause = "PauseMenuScene"
-    
-    // The code is not used right now, but needs to be reviewed before publishing
-//    case setting = "SettingsScene"
-//    case score = "ScoreScene"
-//    case pause = "PauseScene"
-//    case failed = "FailedScene"
-//    case characters = "CharactersScene"
+    case death = "DeathMenuScene"
+    case results = "ResultsMenuScene"
 }
 
 extension Scenes {
     func getName() -> String {
         #if os(iOS)
-        
-        // The code is not used right now, but needs to be reviewed before publishing
-//        let padId = " iPad"
-//        let isPad = UIDevice.current.userInterfaceIdiom == .pad
-//        return isPad ? self.rawValue + padId : self.rawValue
         return rawValue + "-iOS"
-        
         #elseif os(macOS)
-        
         return rawValue + "-macOS"
-        
         #endif
     }
 
