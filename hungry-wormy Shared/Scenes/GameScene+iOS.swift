@@ -22,7 +22,7 @@ extension GameScene {
         let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
         
         if let _ = pauseNode {
-            togglePause()
+            toggleOverlayScene(for: .pause, shouldPause: true)
         }
     }
     
@@ -59,13 +59,13 @@ extension GameScene {
         
         switch direction {
         case UISwipeGestureRecognizer.Direction.right:
-            snake?.change(direction: .right)
+            wormy?.change(direction: .right)
         case UISwipeGestureRecognizer.Direction.left:
-            snake?.change(direction: .left)
+            wormy?.change(direction: .left)
         case UISwipeGestureRecognizer.Direction.up:
-            snake?.change(direction: .up)
+            wormy?.change(direction: .up)
         case UISwipeGestureRecognizer.Direction.down:
-            snake?.change(direction: .down)
+            wormy?.change(direction: .down)
         default:
             assert(false, "The occured gesture is not supported")
         }

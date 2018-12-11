@@ -32,9 +32,9 @@ extension GameScene {
         
         let location = event.location(in: self)
         let pauseNode = nodes(at: location).first { $0.name == pauseHudNode?.name ?? "Pause" }
-        
+
         if let _ = pauseNode {
-            togglePause()
+            toggleOverlayScene(for: .pause, shouldPause: true)
         }
     }
     
@@ -53,15 +53,19 @@ extension GameScene {
         
         switch keyCode {
         case GameScene.leftArrow:
-            snake?.change(direction: .left)
+            wormy?.change(direction: .left)
         case GameScene.rightArrow:
-            snake?.change(direction: .right)
+            wormy?.change(direction: .right)
         case GameScene.upArrow:
-            snake?.change(direction: .up)
+            wormy?.change(direction: .up)
         case GameScene.downArrow:
-            snake?.change(direction: .down)
+            wormy?.change(direction: .down)
         case GameScene.escape:
-            togglePause()
+            debugPrint("escape key was pressed")
+            if lastOverlayType == nil || lastOverlayType == .pause {
+                debugPrint("pause toggle is about to be called")
+                toggleOverlayScene(for: .pause, shouldPause: true)
+            }
         default:
             break
         }

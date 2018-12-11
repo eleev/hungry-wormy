@@ -12,9 +12,7 @@ class GameScene: RoutingUtilityScene {
 
     // MARK: - Properties
     
-    private var overlaySceneFileName: String {
-        return Scenes.pause.getName()
-    }
+    private(set) var lastOverlayType: OverlayType?
     
     /// The current scene overlay (if any) that is displayed over this scene.
     private var overlay: SceneOverlay? {
@@ -43,7 +41,7 @@ class GameScene: RoutingUtilityScene {
     }
     
     private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint], timeBombs: [CGPoint]) = ([], [], [])
-    var snake: WormNode?
+    var wormy: WormNode?
     private var parser = TileLevel()
     
     fileprivate var fruitGenerator: FruitGenerator!
@@ -51,33 +49,37 @@ class GameScene: RoutingUtilityScene {
     private var timeBombGenerator: TimeBombGenerator!
     
     lazy fileprivate var physicsContactController: PhysicsContactController = {
-        guard let snake = self.snake else {
+        guard let snake = self.wormy else {
             fatalError("Could not unwrap the required properties in order to initialize PhysicsContactController class")
         }
         return PhysicsContactController(worm: snake, fruitGenerator: fruitGenerator, timeBombGenerator: timeBombGenerator, scene: self, deathHandler: deathHandler)
     }()
     
     lazy fileprivate var deathHandler: () -> () = { [weak self] in
-        self?.snake?.kill()
-        self?.snake = nil
+        self?.wormy?.kill()
+        self?.wormy = nil
         
-        #warning("Show the Results Menu Scene")
-        
-//        let waitAction = SKAction.wait(forDuration: 2)
-//        let createAction = SKAction.run {
-//            self?.createWorm()
-//            self?.physicsContactController.worm = self?.snake
-//        }
-//        let respawnActionSequnece = SKAction.sequence([waitAction, createAction])
-//        self?.run(respawnActionSequnece)
+        self?.toggleOverlayScene(for: .death)
     }
     
     lazy fileprivate var restartHandler: ()->() = { [ weak self ] in
-        let createAction = SKAction.run {
+//        let createAction = SKAction.run {
+//            self?.createWorm()
+//            self?.physicsContactController.worm = self?.wormy
+//        }
+//        self?.run(createAction)
+        
+        let wait = SKAction.wait(forDuration: 1.0)
+        let create = SKAction.run {
             self?.createWorm()
-            self?.physicsContactController.worm = self?.snake
+            self?.physicsContactController.worm = self?.wormy
         }
-        self?.run(createAction)
+        let sequence = SKAction.sequence([wait, create])
+        
+        DispatchQueue.main.async {
+            self?.scene?.run(sequence)
+        }
+        
     }
     
     private var timeOfLastMove: TimeInterval = 0
@@ -138,32 +140,32 @@ class GameScene: RoutingUtilityScene {
     override func update(_ currentTime: TimeInterval) {
         if (currentTime - timeOfLastMove) < timePerMove { return }
         
-        snake?.update()
+        wormy?.update()
         timeOfLastMove = currentTime
     }
     
     deinit {
-        snake?.kill()
-        snake = nil
+        wormy?.kill()
+        wormy = nil
         
-        children.forEach { (node) in
-            node.removeAllActions()
-            node.removeAllChildren()
-            node.removeFromParent()
-        }
-        
-        scene?.removeAllActions()
-        scene?.removeAllChildren()
-        scene?.removeFromParent()
+//        children.forEach { (node) in
+//            node.removeAllActions()
+//            node.removeAllChildren()
+//            node.removeFromParent()
+//        }
+//
+//        scene?.removeAllActions()
+//        scene?.removeAllChildren()
+//        scene?.removeFromParent()
     }
     // MARK: - Utils
     
     func createWorm() {
         let spawnPoint = spawnControllr.generate(outOf: markers.spawnPoints)
         
-        snake = WormNode(position: spawnPoint ?? .zero)
-        snake?.zPosition = 50
-        addChild(snake!)
+        wormy = WormNode(position: spawnPoint ?? .zero)
+        wormy?.zPosition = 50
+        addChild(wormy!)
     }
     
     /// Prepares the HUD layout paddings for a particular scene size
@@ -174,16 +176,24 @@ class GameScene: RoutingUtilityScene {
         pauseHudNode?.position.x -= 48
     }
     
-    /// Game pause toggler
-    func togglePause() {
+    func toggleOverlayScene(for overlay: OverlayType, shouldPause: Bool = false) {
+        debugPrint(#function)
+        
+        lastOverlayType = overlay
+        
         if let _ = self.overlay {
-            self.isPaused = false
+            if shouldPause {
+                self.isPaused = false
+            }
             self.overlay = nil
             return
         }
         
-        self.isPaused = true
-        let overlay = SceneOverlay(overlaySceneFileName: overlaySceneFileName, zPosition: 1000)
+        if shouldPause {
+            self.isPaused = true
+        }
+
+        let overlay = SceneOverlay(overlaySceneFileName: overlay.sceneName, zPosition: 1000)
         self.overlay = overlay
     }
 }
@@ -203,13 +213,18 @@ extension GameScene: SKPhysicsContactDelegate {
 // MARK: - Conformance to PauseTogglable protocol
 extension GameScene: PauseTogglable {
     func didTogglePause() {
-        togglePause()
+        toggleOverlayScene(for: .pause, shouldPause: true)
     }
 }
 
 // MARK: - Conformance to RestartTogglable protocol
 extension GameScene: RestartTogglable {
     func didRequestRestart() {
+        lastOverlayType = nil
+        overlay?.backgroundNode.removeFromParent()
+        overlay?.contentNode.removeFromParent()
+        overlay = nil
+        
         restartHandler()
     }
 }
