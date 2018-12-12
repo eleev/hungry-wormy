@@ -134,7 +134,10 @@ class GameScene: RoutingUtilityScene {
     override func didMove(to view: SKView) {
         launchReferenceAnimations()
         setUpScene()
+        
+        #if (iOS) || os(tvOS)
         prepareHud()
+        #endif
     }
     
     override func update(_ currentTime: TimeInterval) {
