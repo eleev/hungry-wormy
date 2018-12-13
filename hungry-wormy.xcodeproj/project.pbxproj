@@ -41,8 +41,8 @@
 		A928AD22218CA89A00D79D11 /* Level-02-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */; };
 		A928AD24218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
 		A928AD25218CAB6700D79D11 /* Level-01-16x16.sks in Resources */ = {isa = PBXBuildFile; fileRef = A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */; };
-		A9498F9021B9789F00D498ED /* RestartTogglable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9498F8F21B9789F00D498ED /* RestartTogglable.swift */; };
-		A9498F9121B978A200D498ED /* RestartTogglable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9498F8F21B9789F00D498ED /* RestartTogglable.swift */; };
+		A9498F9021B9789F00D498ED /* Restarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9498F8F21B9789F00D498ED /* Restarable.swift */; };
+		A9498F9121B978A200D498ED /* Restarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9498F8F21B9789F00D498ED /* Restarable.swift */; };
 		A94A97FD21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */; };
 		A94A97FE21A28CAD0087C018 /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */; };
 		A94A980021A28CE90087C018 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97FF21A28CE90087C018 /* Scenes.swift */; };
@@ -137,7 +137,7 @@
 		A928AD1D218CA04A00D79D11 /* PhysicsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactController.swift; sourceTree = "<group>"; };
 		A928AD20218CA89A00D79D11 /* Level-02-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-02-16x16.sks"; sourceTree = "<group>"; };
 		A928AD23218CAB6700D79D11 /* Level-01-16x16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-01-16x16.sks"; sourceTree = "<group>"; };
-		A9498F8F21B9789F00D498ED /* RestartTogglable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartTogglable.swift; sourceTree = "<group>"; };
+		A9498F8F21B9789F00D498ED /* Restarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restarable.swift; sourceTree = "<group>"; };
 		A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingUtilityScene.swift; sourceTree = "<group>"; };
 		A94A97FF21A28CE90087C018 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 		A94A980221A28F1A0087C018 /* ButtonNodeResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNodeResponderType.swift; sourceTree = "<group>"; };
@@ -289,13 +289,6 @@
 			path = ButtonNode;
 			sourceTree = "<group>";
 		};
-		A9912D0421A14B640036137B /* States */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = States;
-			sourceTree = "<group>";
-		};
 		A9A33ADC21845F91003AC9A7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				A9BBF47921B6748A00D152A3 /* PauseTogglable.swift */,
-				A9498F8F21B9789F00D498ED /* RestartTogglable.swift */,
+				A9498F8F21B9789F00D498ED /* Restarable.swift */,
 				A94A97FC21A28CAD0087C018 /* RoutingUtilityScene.swift */,
 				A94A97FF21A28CE90087C018 /* Scenes.swift */,
 				A98FA47721BE568E00235747 /* OverlayType.swift */,
@@ -374,7 +367,6 @@
 			children = (
 				A94A97FB21A28A150087C018 /* Generators & Factories */,
 				A94A97FA21A28A050087C018 /* Model */,
-				A9912D0421A14B640036137B /* States */,
 				A902D6DD218DB5F800698AD4 /* Scenes */,
 				A902D6D5218D9C1600698AD4 /* Nodes */,
 				A9A33ADC21845F91003AC9A7 /* Controllers */,
@@ -621,7 +613,7 @@
 				A9EED419218341A700E48508 /* WormPartNode.swift in Sources */,
 				A902D6DF218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56221819A0B00E28ED9 /* TileLevel.swift in Sources */,
-				A9498F9021B9789F00D498ED /* RestartTogglable.swift in Sources */,
+				A9498F9021B9789F00D498ED /* Restarable.swift in Sources */,
 				A94A980021A28CE90087C018 /* Scenes.swift in Sources */,
 				A916BE5E2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
 				A916BE5821999A2C005B803C /* TimeBombNode.swift in Sources */,
@@ -662,7 +654,7 @@
 				A902D6E0218DB7F100698AD4 /* PhysicsTypes.swift in Sources */,
 				A968F56321819A0B00E28ED9 /* TileLevel.swift in Sources */,
 				A94A980121A28CE90087C018 /* Scenes.swift in Sources */,
-				A9498F9121B978A200D498ED /* RestartTogglable.swift in Sources */,
+				A9498F9121B978A200D498ED /* Restarable.swift in Sources */,
 				A916BE5F2199AAC7005B803C /* TimeBombGenerator.swift in Sources */,
 				A916BE5921999A31005B803C /* TimeBombNode.swift in Sources */,
 				A9BBF48221B6752500D152A3 /* GameScene+macOS.swift in Sources */,
