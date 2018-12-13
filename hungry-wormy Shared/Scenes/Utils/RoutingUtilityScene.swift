@@ -13,7 +13,7 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
     // MARK: - Properties
     
     weak var pauseToggleDelegate: PauseTogglable?
-    weak var restartToggleDelegate: RestartTogglable?
+    weak var restartToggleDelegate: Restarable?
     
     #if os(iOS)
     let selection = UISelectionFeedbackGenerator()
@@ -39,7 +39,12 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
         
         switch identifier {
         case .restart:
-            restartToggleDelegate?.didRequestRestart()
+            guard let sceneName = restartToggleDelegate?.sceneToRestart else {
+                fatalError("Could not unwrap the scene name")
+            }
+            sceneToPresent = GameScene.newGameScene(named: sceneName)
+            sceneToPresent?.name = sceneName
+            transition = SKTransition.crossFade(withDuration: 1.5)
         case .resume:
             pauseToggleDelegate?.didTogglePause()
         case .menu:
