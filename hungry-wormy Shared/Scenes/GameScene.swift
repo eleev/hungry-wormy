@@ -41,7 +41,7 @@ class GameScene: RoutingUtilityScene {
     }
     
     private var markers: (fruits: [CGPoint], spawnPoints: [CGPoint], timeBombs: [CGPoint]) = ([], [], [])
-    var wormy: WormNode?
+    private(set) var wormy: WormNode?
     private var parser = TileLevel()
     
     fileprivate var fruitGenerator: FruitGenerator!
@@ -57,29 +57,16 @@ class GameScene: RoutingUtilityScene {
     
     lazy fileprivate var deathHandler: () -> () = { [weak self] in
         self?.wormy?.kill()
+        self?.physicsContactController.worm = nil
         self?.wormy = nil
         
+        self?.physicsWorld.contactDelegate = nil
         self?.toggleOverlayScene(for: .death)
     }
     
     lazy fileprivate var restartHandler: ()->() = { [ weak self ] in
-//        let createAction = SKAction.run {
-//            self?.createWorm()
-//            self?.physicsContactController.worm = self?.wormy
-//        }
-//        self?.run(createAction)
-        
-        let wait = SKAction.wait(forDuration: 1.0)
-        let create = SKAction.run {
-            self?.createWorm()
-            self?.physicsContactController.worm = self?.wormy
-        }
-        let sequence = SKAction.sequence([wait, create])
-        
-        DispatchQueue.main.async {
-            self?.scene?.run(sequence)
-        }
-        
+        self?.createWorm()
+        self?.physicsContactController.worm = self?.wormy
     }
     
     private var timeOfLastMove: TimeInterval = 0
@@ -109,7 +96,6 @@ class GameScene: RoutingUtilityScene {
         
         pauseToggleDelegate = self
         restartToggleDelegate = self
-        physicsWorld.contactDelegate = self
         
         timePerMove = Double(userData?["timePerMove"] as? Float ?? 0.6)
         
@@ -151,15 +137,14 @@ class GameScene: RoutingUtilityScene {
         wormy?.kill()
         wormy = nil
         
-//        children.forEach { (node) in
-//            node.removeAllActions()
-//            node.removeAllChildren()
-//            node.removeFromParent()
-//        }
-//
-//        scene?.removeAllActions()
-//        scene?.removeAllChildren()
-//        scene?.removeFromParent()
+        children.forEach { (node) in
+            node.removeAllActions()
+            node.removeAllChildren()
+            node.removeFromParent()
+        }
+        scene?.removeAllActions()
+        scene?.removeAllChildren()
+        scene?.removeFromParent()
     }
     // MARK: - Utils
     
@@ -169,6 +154,8 @@ class GameScene: RoutingUtilityScene {
         wormy = WormNode(position: spawnPoint ?? .zero)
         wormy?.zPosition = 50
         addChild(wormy!)
+        
+        physicsWorld.contactDelegate = self
     }
     
     /// Prepares the HUD layout paddings for a particular scene size
@@ -220,14 +207,10 @@ extension GameScene: PauseTogglable {
     }
 }
 
-// MARK: - Conformance to RestartTogglable protocol
-extension GameScene: RestartTogglable {
-    func didRequestRestart() {
-        lastOverlayType = nil
-        overlay?.backgroundNode.removeFromParent()
-        overlay?.contentNode.removeFromParent()
-        overlay = nil
-        
-        restartHandler()
+// MARK: - Conformance to Restarable protocol
+extension GameScene: Restarable {
+    
+    var sceneToRestart: String {
+        return (scene?.name)! 
     }
 }
