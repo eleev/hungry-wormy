@@ -133,14 +133,16 @@ class PhysicsContactController: PhysicsContactDelegate {
     }
     
     private func resolveTimeBombCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
-        if bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
-            
-        } else if bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyA.categoryBitMask == PhysicsTypes.worm.rawValue {
-            
-        }
+        fatalError("The method has not been implemented yet")
+//        if bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
+//
+//        } else if bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue, bodyA.categoryBitMask == PhysicsTypes.worm.rawValue {
+//
+//        }
     }
     
     private func resolveWormWallCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        
         if bodyA.categoryBitMask == PhysicsTypes.wall.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
 
 //            debugPrint("Part of the Worm that caused the death: ", bodyB.node?.name as Any)
@@ -154,6 +156,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     }
     
     private func resolveWormSelfCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        
         if bodyA.categoryBitMask == PhysicsTypes.wormBody.rawValue || bodyA.categoryBitMask == PhysicsTypes.wormTail.rawValue, bodyB.categoryBitMask == PhysicsTypes.worm.rawValue {
             deathHandler()
         } else if bodyB.categoryBitMask == PhysicsTypes.wormBody.rawValue ||  bodyA.categoryBitMask == PhysicsTypes.wormTail.rawValue, bodyA.categoryBitMask == PhysicsTypes.worm.rawValue {
@@ -162,6 +165,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     }
     
     private func resolveWormTimeBombCollision(for bodyA: SKPhysicsBody, and bodyB: SKPhysicsBody) {
+        
         if bodyA.categoryBitMask == PhysicsTypes.worm.rawValue, bodyB.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
             generateTimeBomb()
         } else if bodyB.categoryBitMask == PhysicsTypes.worm.rawValue, bodyA.categoryBitMask == PhysicsTypes.timeBomb.rawValue {
