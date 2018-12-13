@@ -51,6 +51,7 @@ class MainMenuScene: SKScene {
     
     private func presentScene(named name: String) {
         let scene = GameScene.newGameScene(named: name)
+        scene.name = name
         
         // Present the scene
         view?.presentScene(scene, transition: .crossFade(withDuration: 1.0))
