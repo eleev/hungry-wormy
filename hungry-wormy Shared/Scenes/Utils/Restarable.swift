@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol RestartTogglable: class {
-    func didRequestRestart() 
+protocol Restarable: class {
+    var sceneToRestart: String { get }
 }
