@@ -32,7 +32,7 @@ class GameViewController: NSViewController {
         skView.presentScene(scene)
         
         skView.ignoresSiblingOrder = true
-        skView.showsPhysics = false
+        skView.showsPhysics = true
         skView.showsFPS = true
         skView.showsNodeCount = true
     }
