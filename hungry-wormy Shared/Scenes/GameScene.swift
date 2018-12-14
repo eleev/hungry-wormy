@@ -52,8 +52,18 @@ class GameScene: RoutingUtilityScene {
         guard let snake = self.wormy else {
             fatalError("Could not unwrap the required properties in order to initialize PhysicsContactController class")
         }
-        return PhysicsContactController(worm: snake, fruitGenerator: fruitGenerator, timeBombGenerator: timeBombGenerator, scene: self, deathHandler: deathHandler)
+        return PhysicsContactController(worm: snake,
+                                        fruitGenerator: fruitGenerator,
+                                        timeBombGenerator: timeBombGenerator,
+                                        scene: self,
+                                        deathHandler: deathHandler,
+                                        completionHandler: completionHandler)
     }()
+    
+    lazy fileprivate var completionHandler: () -> () = { [weak self] in
+        self?.physicsWorld.contactDelegate = nil
+        self?.toggleOverlayScene(for: .results)
+    }
     
     lazy fileprivate var deathHandler: () -> () = { [weak self] in
         self?.wormy?.kill()
@@ -167,8 +177,6 @@ class GameScene: RoutingUtilityScene {
     }
     
     func toggleOverlayScene(for overlay: OverlayType, shouldPause: Bool = false) {
-        debugPrint(#function)
-        
         lastOverlayType = overlay
         
         if let _ = self.overlay {
