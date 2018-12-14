@@ -15,6 +15,7 @@ class PhysicsContactController: PhysicsContactDelegate {
     weak var worm: WormNode?
     private weak var scene: SKScene?
     private var deathHandler: ()->()
+    private var completionHandler: ()->()
     private var fruitGenerator: FruitGenerator?
     private var timeBombGenerator: TimeBombGenerator?
     
@@ -36,18 +37,28 @@ class PhysicsContactController: PhysicsContactDelegate {
     
     // MARK: - Initializers
     
-    init(worm: WormNode, fruitGenerator: FruitGenerator, timeBombGenerator: TimeBombGenerator, scene: SKScene, deathHandler: @escaping ()->()) {
+    init(worm: WormNode,
+         fruitGenerator: FruitGenerator,
+         timeBombGenerator: TimeBombGenerator,
+         scene: SKScene,
+         deathHandler: @escaping ()->(),
+         completionHandler: @escaping ()->()) {
         self.worm = worm
         self.fruitGenerator = fruitGenerator
         self.timeBombGenerator = timeBombGenerator
         self.scene = scene
         self.deathHandler = deathHandler
+        self.completionHandler = completionHandler
     }
     
     func generateFruit() {
         fruitGenerator?.removeLastFruit()
-        let fruitNode = fruitGenerator?.generate()
-        scene?.addChild(fruitNode!)
+        guard let fruitNode = fruitGenerator?.generate() else {
+            // All the fruits have been eaten, the main and the only condition for completion has been fulfilled
+            completionHandler()
+            return
+        }
+        scene?.addChild(fruitNode)
     }
     
     func generateTimeBomb() {
