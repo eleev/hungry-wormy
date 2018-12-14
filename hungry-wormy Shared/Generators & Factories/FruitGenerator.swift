@@ -25,7 +25,9 @@ struct FruitGenerator {
     
     // MARK: - Methods
     
-    mutating func generate() -> FoodNode {
+    mutating func generate() -> FoodNode? {
+        guard !spawnPoints.isEmpty else { return nil }
+        
         let randomFood = FoodType.allCases.randomElement() ?? FoodType.bee
         
         let index = Int.random(in: 0..<spawnPoints.count)
