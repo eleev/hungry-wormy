@@ -144,6 +144,7 @@ class GameScene: RoutingUtilityScene {
     }
     
     deinit {
+        physicsContactController.worm = nil
         wormy?.kill()
         wormy = nil
         
@@ -152,9 +153,9 @@ class GameScene: RoutingUtilityScene {
             node.removeAllChildren()
             node.removeFromParent()
         }
-        scene?.removeAllActions()
-        scene?.removeAllChildren()
-        scene?.removeFromParent()
+        removeAllActions()
+        removeAllChildren()
+        removeFromParent()
     }
     // MARK: - Utils
     
