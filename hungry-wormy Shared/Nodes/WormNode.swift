@@ -7,6 +7,9 @@
 //
 
 import SpriteKit
+#if os(iOS)
+import UIKit
+#endif
 
 class WormNode: SKNode {
     
@@ -51,7 +54,11 @@ class WormNode: SKNode {
         return CGFloat(SIZE)
     }
     private var isAboutToBeKilled = false
-
+    
+    #if os(iOS)
+    private var impactGenerator = UIImpactFeedbackGenerator(style: .light)
+    #endif
+    
     // MARK: - Initializsers
     
     init(position: CGPoint) {
@@ -110,6 +117,9 @@ class WormNode: SKNode {
     @discardableResult func change(direction: Direction) -> Bool {
         // Will ignore impossible direction changes e.g. changing direction for 180 degrees (current is `up` and attempting to change to `down`)
         if self.direction.isAbleToSwitch(toNew: direction) {
+            #if os(iOS)
+            impactGenerator.impactOccurred()
+            #endif
             self.direction = direction
             return true
         }
