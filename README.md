@@ -31,6 +31,14 @@ Please wait while the `.gif` files are loading...
 - Fully native implementation: `Swift` & `SpriteKit` only. 
 - `No external` dependencies.
 
+# 📝 Controls
+
+## iOS
+On `iOS` all the controlls are handled by `swipe` gestures. There are **4** gestures for swipe `up`, `left`, `down` and `right`. You will get the `haptic` feedback on the supported devices for when the `direction` of the `wormy` is changed. If you double swipe to a direction, the second swipe will be ignored.
+
+## macOS
+On `macOS` all the controlsl are handled by `arrow` keys. There are **4** keys for turning to `up ⬆️`, `left ⬅️`, `down ⬇️` and `right ➡️` directions. If you double tap to a direction, the second one will be ignored. In order to `pause/resume` the game you need to tap on `escape` key. 
+
 # 🏗 How to create a new level
 
 # 👨‍💻 Author 
