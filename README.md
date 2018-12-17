@@ -19,9 +19,9 @@ Please wait while the `.gif` files are loading...
 </p>
 
 <p float="left">
-  <img src="Assets/Demo/Demo01.gif" width="285" /> 
-  <img src="Assets/Demo/Demo02.gif" width="285" />
-  <img src="Assets/Demo/Demo03.gif" width="285" />
+  <img src="Assets/Demo/Demo01.gif" width="288" /> 
+  <img src="Assets/Demo/Demo02.gif" width="288" />
+  <img src="Assets/Demo/Demo03.gif" width="288" />
 </p>
 
 # 🍱 Features
