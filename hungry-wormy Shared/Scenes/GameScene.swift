@@ -130,8 +130,8 @@ class GameScene: RoutingUtilityScene {
     override func didMove(to view: SKView) {
         launchReferenceAnimations()
         setUpScene()
-        
-        #if (iOS) || os(tvOS)
+                
+        #if os(iOS) || os(tvOS)
         prepareHud()
         #endif
     }
@@ -173,7 +173,9 @@ class GameScene: RoutingUtilityScene {
     private func prepareHud() {
         pauseHudNode = scene?.childNode(withName: "//Pause")
         let height = (view?.frame.height ?? 1.0)
-        pauseHudNode?.position.y = height - 40
+        let positionY = height - height / 2.2
+        
+        pauseHudNode?.position.y = positionY
         pauseHudNode?.position.x -= 48
     }
     
