@@ -39,6 +39,9 @@ On `iOS` all the controlls are handled by `swipe` gestures. There are **4** gest
 ## macOS
 On `macOS` all the controlsl are handled by `arrow` keys. There are **4** keys for turning to `up ⬆️`, `left ⬅️`, `down ⬇️` and `right ➡️` directions. If you double tap to a direction, the second one will be ignored. In order to `pause/resume` the game you need to tap on `escape` key. 
 
+# 🔗 Dependencies
+The project currently has one dependency, which is [device-kit](https://github.com/jVirus/device-kit) framework.
+
 # 🏗 How to create a new level
 
 # 👨‍💻 Author 
@@ -46,3 +49,5 @@ On `macOS` all the controlsl are handled by `arrow` keys. There are **4** keys f
 
 # 🔖 Licence
 The project is available under [MIT licence](https://github.com/jVirus/hungry-wormy/blob/master/LICENSE)
+
+[device-kit](https://github.com/jVirus/device-kit) framework is available under [MIT licence](https://github.com/jVirus/device-kit/blob/master/LICENSE)
