@@ -12,6 +12,17 @@
 🐛 `Hungry Wormy` is a retro game reincarnation implemented on top of SpriteKit framework for `iOS` & `macOS`.
 
 # 📺 Demo
+Please wait while the `.gif` files are loading...
+
+<p align="center">
+  <img src="Assets/Demo/Demo00.gif" width="285" />
+</p>
+
+<p float="left">
+  <img src="Assets/Demo/Demo01.gif" width="285" /> 
+  <img src="Assets/Demo/Demo02.gif" width="285" />
+  <img src="Assets/Demo/Demo03.gif" width="285" />
+</p>
 
 # 🍱 Features
 - Cross-platform: `macOS` & `iOS`. `tvOS` can be easily added as an update.
