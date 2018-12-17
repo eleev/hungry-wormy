@@ -1,0 +1,16 @@
+PODS:
+  - device-kit (1.1.0)
+
+DEPENDENCIES:
+  - device-kit (~> 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - device-kit
+
+SPEC CHECKSUMS:
+  device-kit: 0f8254b64de889097b91a80dfb2f8387d4f90601
+
+PODFILE CHECKSUM: 27c84ac347c451d18fa4d1c0936cb556eec6d424
+
+COCOAPODS: 1.5.3
