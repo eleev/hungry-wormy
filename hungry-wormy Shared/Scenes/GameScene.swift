@@ -130,7 +130,7 @@ class GameScene: RoutingUtilityScene {
     override func didMove(to view: SKView) {
         launchReferenceAnimations()
         setUpScene()
-                
+        
         #if os(iOS) || os(tvOS)
         prepareHud()
         #endif
