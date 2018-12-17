@@ -16,27 +16,25 @@ class GameScene: RoutingUtilityScene {
     // MARK: - Properties
     
     private(set) var lastOverlayType: OverlayType?
+    private let overlayDuration: TimeInterval = 0.25
     
     /// The current scene overlay (if any) that is displayed over this scene.
     private var overlay: SceneOverlay? {
         didSet {
             // Clear the `buttons` in preparation for new buttons in the overlay.
-            pauseHudNode?.run(SKAction.hide())
             
             // Animate the old overlay out.
-            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
-                debugPrint(#function + " remove old overlay")
+            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: overlayDuration)) {
                 oldValue?.backgroundNode.removeFromParent()
             }
             
             if let overlay = overlay, let scene = scene {
-                debugPrint(#function + " added overaly")
                 overlay.backgroundNode.removeFromParent()
                 scene.addChild(overlay.backgroundNode)
                 
                 // Animate the overlay in.
                 overlay.backgroundNode.alpha = 1.0
-                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: 0.25))
+                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: overlayDuration))
                 
                 pauseHudNode?.run(SKAction.unhide())
             }
@@ -105,6 +103,7 @@ class GameScene: RoutingUtilityScene {
     func setUpScene() {
         #if os(iOS) || os(tvOS)
         prepareSwipeGestureRecognizers()
+        prepareHud()
         #endif
         
         pauseToggleDelegate = self
@@ -133,10 +132,6 @@ class GameScene: RoutingUtilityScene {
     override func didMove(to view: SKView) {
         launchReferenceAnimations()
         setUpScene()
-        
-        #if os(iOS) || os(tvOS)
-        prepareHud()
-        #endif
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -150,16 +145,8 @@ class GameScene: RoutingUtilityScene {
         physicsContactController.worm = nil
         wormy?.kill()
         wormy = nil
-        
-        children.forEach { (node) in
-            node.removeAllActions()
-            node.removeAllChildren()
-            node.removeFromParent()
-        }
-        removeAllActions()
-        removeAllChildren()
-        removeFromParent()
     }
+    
     // MARK: - Utils
     
     func createWorm() {
@@ -175,7 +162,6 @@ class GameScene: RoutingUtilityScene {
     /// Prepares the HUD layout paddings for a particular scene size
     #if os(iOS) || os(tvOS)
     private func prepareHud() {
-        
         pauseHudNode = scene?.childNode(withName: "//Pause")
         let height = (view?.frame.height ?? 1.0)
         var positionY: CGFloat
