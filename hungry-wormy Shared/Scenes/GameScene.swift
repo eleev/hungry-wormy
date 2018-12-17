@@ -7,6 +7,9 @@
 //
 
 import SpriteKit
+#if os(iOS) || os(tvOS)
+import device_kit
+#endif
 
 class GameScene: RoutingUtilityScene {
 
@@ -170,14 +173,24 @@ class GameScene: RoutingUtilityScene {
     }
     
     /// Prepares the HUD layout paddings for a particular scene size
+    #if os(iOS) || os(tvOS)
     private func prepareHud() {
+        
         pauseHudNode = scene?.childNode(withName: "//Pause")
         let height = (view?.frame.height ?? 1.0)
-        let positionY = height - height / 2.2
+        var positionY: CGFloat
+        let deviceType = UIDevice.current.deviceType
+        
+        switch deviceType { case .iPad, .iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPadMini, .iPadMini3, .iPadMini4, .iPadPro9Inch, .iPadPro11Inch, .iPadPro12Inch, .iPadPro10p5Inch, .iPadPro12p9Inch:
+            positionY = height - height / 2.2
+        default:
+            positionY = height - 48
+        }
         
         pauseHudNode?.position.y = positionY
         pauseHudNode?.position.x -= 48
     }
+    #endif
     
     func toggleOverlayScene(for overlay: OverlayType, shouldPause: Bool = false) {
         lastOverlayType = overlay
