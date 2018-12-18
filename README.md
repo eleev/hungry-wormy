@@ -102,6 +102,9 @@ In `Assets/Scenes/macOS/MainMenuScene-macOS.sks` & `Assets/Scenes/iOS/MainMenuSc
 #### 10. Done! 
 You have written zero lines of code and added a new level to the game.
  
+# 🖼 Assets
+The game uses assets taken from [kenney.nl](https://kenney.nl) that are published under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) licence.
+ 
 # 👨‍💻 Author 
 [Astemir Eleev](https://github.com/jVirus)
 
