@@ -15,7 +15,7 @@
 Please wait while the `.gif` files are loading...
 
 <p align="center">
-  <img src="Assets/Demo/Demo00.gif" width="285" />
+  <img src="Assets/Demo/Demo00.gif" width="880" />
 </p>
 
 <p float="left">
