@@ -4,9 +4,11 @@
 [![Language](https://img.shields.io/badge/language-Swift-orange.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 17/December/2018.**
+**Last Update: 20/December/2018.**
 
 ![](logo-hungry_wormy.png)
+
+### If you like the project, please give it a star ⭐ It will show the creator your appreciation and help others to discover the repo.
 
 # ✍️ About
 🐛 `Hungry Wormy` is a retro game reincarnation implemented on top of SpriteKit framework for `iOS` & `macOS`.
@@ -15,7 +17,7 @@
 Please wait while the `.gif` files are loading...
 
 <p align="center">
-  <img src="Assets/Demo/Demo00.gif" width="880" />
+  <img src="Assets/Demo/Demo00.gif" width="870" />
 </p>
 
 <p float="left">
