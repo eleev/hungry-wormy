@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension UIDevice {
+extension UIDevice {
     
     /// Allows to get access to the current device type and model
     public var deviceType: DeviceType {

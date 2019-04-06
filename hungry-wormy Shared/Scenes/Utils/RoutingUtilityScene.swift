@@ -63,6 +63,8 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
                     pushDirection = .right
                 case .right:
                     pushDirection = .left
+                @unknown default:
+                    fatalError("The trnasition direction is unknown. Please review the latest changes of the API or contact the author to resolve the issue.")
                 }
                 RoutingUtilityScene.lastPushTransitionDirection = pushDirection
             }

@@ -21,7 +21,7 @@ public struct StorageStatus {
     
     private var freeSpaceInBytes: Int64 {
         if #available(iOS 11.0, *) {
-            if let space = try? URL(fileURLWithPath: NSHomeDirectory() as String).resourceValues(forKeys: [URLResourceKey.volumeAvailableCapacityForImportantUsageKey]).volumeAvailableCapacityForImportantUsage {
+            if let space = ((try? URL(fileURLWithPath: NSHomeDirectory() as String).resourceValues(forKeys: [URLResourceKey.volumeAvailableCapacityForImportantUsageKey]).volumeAvailableCapacityForImportantUsage) as Int64??) {
                 return space ?? 0
             } else {
                 return 0
