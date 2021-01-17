@@ -923,6 +923,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-wormy";
 				PRODUCT_NAME = "hungry-wormy";
 				SDKROOT = iphoneos;
@@ -945,6 +946,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-wormy";
 				PRODUCT_NAME = "hungry-wormy";
 				SDKROOT = iphoneos;
@@ -968,6 +970,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-wormy";
 				PRODUCT_NAME = "hungry-wormy";
 				SDKROOT = macosx;
@@ -989,6 +992,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.hungry-wormy";
 				PRODUCT_NAME = "hungry-wormy";
 				SDKROOT = macosx;
