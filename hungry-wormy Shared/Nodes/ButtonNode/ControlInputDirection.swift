@@ -11,7 +11,7 @@ import simd
 enum ControlInputDirection: Int {
     case up = 0, down, left, right
     
-    init?(vector: float2) {
+    init?(vector: SIMD2<Float>) {
         // Require sufficient displacement to specify direction.
         guard length(vector) >= 0.5 else { return nil }
         
