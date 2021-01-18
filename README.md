@@ -2,9 +2,11 @@
 
 [![Platforms](https://img.shields.io/badge/platforms-macOS%20%26%20iOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/language-Swift_5.3-orange.svg)]()
+[![Last Commit](https://img.shields.io/github/last-commit/jvirus/hungry-wormy)]()
+[![NLOC](https://img.shields.io/tokei/lines/github/jvirus/hungry-wormy)]()
+[![Contributors](https://img.shields.io/github/contributors/jvirus/hungry-wormy)]()
+[![Repo Size](https://img.shields.io/github/repo-size/jvirus/hungry-wormy)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
-
-**Last Update: 17/January/2021.**
 
 ![](logo-hungry_wormy.png)
 
